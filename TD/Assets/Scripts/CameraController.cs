@@ -2,7 +2,7 @@
 
 public class CameraController : MonoBehaviour
 {
-
+    #region VariablesPC
     private bool isMoving = true;
 
     public float panSpeed = 35.0f;
@@ -11,11 +11,27 @@ public class CameraController : MonoBehaviour
     public float scrollSpeed;
     public float minY;
     public float maxY;
+    #endregion
 
-   void Update()
-   {
-        cameraMovement();
-   }
+    #region VariablesANDRIOD
+
+    public GameObject GameObjectCamera;
+
+    Vector2 StartPos;
+    Vector2 StartDragPos;
+    Vector2 NewDragPos;
+    Vector2 FingerPos;
+
+    float DistanceBetweenFingers;
+    bool ZoomInOut;
+
+    #endregion
+
+
+    void Update()
+    {
+        cameraMovementPhone();
+    }
     
     void cameraMovement()
     {
@@ -28,7 +44,7 @@ public class CameraController : MonoBehaviour
             return;
         #endregion
 
-        #region Camera Movement
+        #region Camera MovementPC
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThick)
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
@@ -60,6 +76,38 @@ public class CameraController : MonoBehaviour
 
     }
 
+    void cameraMovementPhone()
+    {
+        //checking for input in touchcount is equal to 0 and for zooming in and out
+        //set ZoomInOut to false
+        if(Input.touchCount == 0 && ZoomInOut)
+        {
+            ZoomInOut = false;
+        }
+
+        if(Input.touchCount == 1)
+        {
+            if(!ZoomInOut)
+            {
+                if (Input.GetTouch(0).phase == TouchPhase.Moved)
+                {
+                    Vector2 NewPos = WorldPos();
+                    //Vector2 PosDifference = 
+                }
+            }
+        }
+
+    }
+
+    Vector2 WorldPos()
+    {
+        return GameObjectCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+    }
+    
+    Vector2 WorldPosFinger(int FingerIndex)
+    {
+        return GameObjectCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.GetTouch(FingerIndex).position);
+    }
 
 
 }
