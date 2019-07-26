@@ -22,8 +22,8 @@ public class CameraController : MonoBehaviour
     Vector2 NewDragPos;
     Vector2 FingerPos;
 
-    float DistanceBetweenFingers;
-    bool ZoomInOut;
+    private float DistanceBetweenFingers;
+    private bool ZoomInOut;
 
     #endregion
 
@@ -92,11 +92,39 @@ public class CameraController : MonoBehaviour
                 if (Input.GetTouch(0).phase == TouchPhase.Moved)
                 {
                     Vector2 NewPos = WorldPos();
-                    //Vector2 PosDifference = 
+                    Vector2 PosDifference = NewPos - StartPos;
+                    GameObjectCamera.transform.Translate(-PosDifference);
                 }
+                StartPos = WorldPos();
             }
         }
+        else if (Input.touchCount == 2)
+        {
+            if (Input.GetTouch(1).phase ==TouchPhase.Moved)
+            {
+                ZoomInOut = true;
 
+                NewDragPos = WorldPosFinger(1);
+                Vector2 positionDifference = NewDragPos - StartDragPos;
+
+                if(Vector2.Distance(NewDragPos, FingerPos) < DistanceBetweenFingers)
+                {
+                    GameObjectCamera.GetComponent<Camera>().orthographicSize += (positionDifference.magnitude);
+                }
+                if (Vector2.Distance(NewDragPos, FingerPos) >= DistanceBetweenFingers)
+                {
+                    GameObjectCamera.GetComponent<Camera>().orthographicSize -= (positionDifference.magnitude);
+                }
+
+                DistanceBetweenFingers = Vector2.Distance(NewDragPos, FingerPos);
+
+            }
+
+            StartDragPos = WorldPosFinger(1);
+            FingerPos = WorldPosFinger(0);
+
+        }
+                              
     }
 
     Vector2 WorldPos()

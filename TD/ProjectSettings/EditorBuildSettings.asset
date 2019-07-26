@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: aae303cb28840d1448aba4121528f5e0
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 3ed7b897d25294e4da908e23404bf3fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Justin.unity
     guid: e76cac5f637cb414bbcf621a2474377b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Joel.unity
     guid: 44df29452b749a14fa09e5c8a5cc503e
+  - enabled: 0
+    path: Assets/Scenes/AI_Test.unity
+    guid: 7f7e99d407cc23d43882e4380abc3d9b
   m_configObjects: {}
