@@ -10432,7 +10432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478284e73544bb2448692573f79dc86b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTurretPrefab: {fileID: 100000, guid: c7a54abf54eb53e4382c4ce3994e8ccf, type: 3}
+  standardTurretPrefab: {fileID: 9047521118289807649, guid: c6e1d19d58d14bd4c86a908bdcbbe621,
+    type: 3}
   aaTurretPrefab: {fileID: 5750716951838750980, guid: c1a1cc463ffa00d46b32497cc7a1a0c5,
     type: 3}
   railTurretPrefab: {fileID: 0}
