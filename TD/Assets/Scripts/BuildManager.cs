@@ -12,6 +12,17 @@ public class BuildManager : MonoBehaviour
 
     public static BuildManager instance;
     #endregion
+    #region Variables
+    [Header("Turret Prefabs")]
+    [Tooltip("Add the turret prefabs inside here! (BasicTurret goes here)")]
+    public GameObject standardTurretPrefab;
+    [Tooltip("Add the turret prefabs inside here! (AATurret goes here)")]
+    public GameObject aaTurretPrefab;
+    [Tooltip("Add the turret prefabs inside here! (RailTurret goes here)")]
+    public GameObject railTurretPrefab;
+
+    private GameObject turretToBuild;
+    #endregion
 
     private void Awake()
     {
@@ -23,20 +34,15 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject standardTurretPrefab;
-
-    private void Start()
-    {
-        turretToBuild = standardTurretPrefab;
-    }
-
-    private GameObject turretToBuild;
-
     public GameObject getTurretToBuild()
     {
         return turretToBuild;
     }
 
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
+    }
 
 
 }
