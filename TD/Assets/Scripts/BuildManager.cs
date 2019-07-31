@@ -21,7 +21,7 @@ public class BuildManager : MonoBehaviour
     [Tooltip("Add the turret prefabs inside here! (RailTurret goes here)")]
     public GameObject railTurretPrefab;
 
-    private GameObject turretToBuild;
+    private TurretBluePrint turretToBuild;
     #endregion
 
     private void Awake()
@@ -34,15 +34,29 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject getTurretToBuild()
+    public bool CanBuild
     {
-        return turretToBuild;
+        get { return turretToBuild != null; }
     }
 
-    public void SetTurretToBuild(GameObject turret)
+    public void buildTurretOn(Node node)
+    {
+        if(PlayerStats.money < turretToBuild.costingValue)
+        {
+            Debug.Log("YOU'RE POOR AF!");
+            return;
+        }
+
+        PlayerStats.money -= turretToBuild.costingValue;
+
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPos(), Quaternion.identity);
+        node.turret = turret;
+
+        Debug.Log("Turret Built! Remaining money: " + PlayerStats.money);
+    }
+
+    public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
     }
-
-
 }

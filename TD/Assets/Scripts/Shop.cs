@@ -2,6 +2,10 @@
 
 public class Shop : MonoBehaviour
 {
+    public TurretBluePrint standardTurret;
+    public TurretBluePrint aaTurret;
+    public TurretBluePrint railgunTurret;
+
     BuildManager buildManager;
     
     void Start()
@@ -12,26 +16,26 @@ public class Shop : MonoBehaviour
 
     //getting called from UI element, communicating with BuildManager
     //and currency amount
-    public void BuyStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Standard Turret bought.");
         //setting the turret that is being built to the "Standard Turret" prefab
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
     }
 
     //getting called from UI element, communicating with BuildManager
     //and currency amount
-    public void BuyAATurret()
+    public void SelectAATurret()
     {
         Debug.Log("AA Turret bought.");
-        buildManager.SetTurretToBuild(buildManager.aaTurretPrefab);
+        buildManager.SelectTurretToBuild(aaTurret);
     }
 
     //getting called from UI element, communicating with BuildManager
     //and currency amount
-    public void BuyRailTurret()
+    public void SelectRailTurret()
     {
         Debug.Log("Rail Turret bought.");
-        buildManager.SetTurretToBuild(buildManager.railTurretPrefab);
+        buildManager.SelectTurretToBuild(railgunTurret);
     }
 }

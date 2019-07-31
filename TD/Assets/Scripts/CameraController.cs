@@ -89,7 +89,7 @@ public class CameraController : MonoBehaviour
         {
             if(!ZoomInOut)
             {
-                if (Input.GetTouch(0).phase == TouchPhase.Moved)
+                if (Input.GetTouch(1).phase == TouchPhase.Moved)
                 {
                     Vector2 NewPos = WorldPos();
                     Vector2 PosDifference = NewPos - StartPos;
