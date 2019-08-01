@@ -33,12 +33,12 @@ public class Turret : MonoBehaviour
         if (target == null)
             return;
 
-        //I like maths...
         Vector3 direction = target.position - transform.position;
         //look rotation
         Quaternion Rotate = Quaternion.LookRotation(direction);
         Vector3 rotation = Quaternion.Lerp(turretRotationPart.rotation, Rotate, Time.deltaTime * turnSpeed).eulerAngles;
-        turretRotationPart.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        turretRotationPart.rotation = Quaternion.Euler(0, rotation.y, 0);
+        
 
         //firing for the turret
         if (fireCountDown <= 0f)
@@ -63,8 +63,6 @@ public class Turret : MonoBehaviour
         {
             bullet.Seek(target);
         }
-
-        Debug.Log("Shooting..");
     }
 
 

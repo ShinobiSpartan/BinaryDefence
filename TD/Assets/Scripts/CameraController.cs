@@ -14,25 +14,52 @@ public class CameraController : MonoBehaviour
     #endregion
 
     #region VariablesANDRIOD
-
-    public GameObject GameObjectCamera;
-
-    Vector2 StartPos;
-    Vector2 StartDragPos;
-    Vector2 NewDragPos;
-    Vector2 FingerPos;
-
-    private float DistanceBetweenFingers;
-    private bool ZoomInOut;
-
+    public float zoomSpeed = 0.5f; //zoom out min
+    public float orthoZoomSpeed = 0.5f;    //zoom out max
+    public Camera cam;
     #endregion
 
+    private void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
 
     void Update()
     {
-        cameraMovementPhone();
+       
+        if (Input.touchCount == 2)
+        {
+            //Touch Zero
+            Touch tZero = Input.GetTouch(0);
+            //Touch 1
+            Touch tOne = Input.GetTouch(1);
+
+            //Touching previous positions
+            Vector2 zPrevPos = tZero.position - tZero.deltaPosition;
+            Vector2 oPrevPos = tOne.position - tOne.deltaPosition;
+
+            //previous magitude 
+            float prevMag = (zPrevPos - oPrevPos).magnitude;
+            //current magitude
+            float currentMag = (tZero.position - tOne.position).magnitude;
+
+            float difference = currentMag - prevMag;
+
+            if(cam.orthographic)
+            {
+                cam.orthographicSize += difference * orthoZoomSpeed;
+            }
+            else
+            {
+                cam.fieldOfView += difference * zoomSpeed;
+                cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 179.9f);
+
+            }
+
+        }
     }
-    
+
+
     void cameraMovement()
     {
         #region Camera Lock
@@ -74,67 +101,6 @@ public class CameraController : MonoBehaviour
         Debug.Log(scroll);
         #endregion
 
-    }
-
-    void cameraMovementPhone()
-    {
-        //checking for input in touchcount is equal to 0 and for zooming in and out
-        //set ZoomInOut to false
-        if(Input.touchCount == 0 && ZoomInOut)
-        {
-            ZoomInOut = false;
-        }
-
-        if(Input.touchCount == 1)
-        {
-            if(!ZoomInOut)
-            {
-                if (Input.GetTouch(1).phase == TouchPhase.Moved)
-                {
-                    Vector2 NewPos = WorldPos();
-                    Vector2 PosDifference = NewPos - StartPos;
-                    GameObjectCamera.transform.Translate(-PosDifference);
-                }
-                StartPos = WorldPos();
-            }
-        }
-        else if (Input.touchCount == 2)
-        {
-            if (Input.GetTouch(1).phase ==TouchPhase.Moved)
-            {
-                ZoomInOut = true;
-
-                NewDragPos = WorldPosFinger(1);
-                Vector2 positionDifference = NewDragPos - StartDragPos;
-
-                if(Vector2.Distance(NewDragPos, FingerPos) < DistanceBetweenFingers)
-                {
-                    GameObjectCamera.GetComponent<Camera>().orthographicSize += (positionDifference.magnitude);
-                }
-                if (Vector2.Distance(NewDragPos, FingerPos) >= DistanceBetweenFingers)
-                {
-                    GameObjectCamera.GetComponent<Camera>().orthographicSize -= (positionDifference.magnitude);
-                }
-
-                DistanceBetweenFingers = Vector2.Distance(NewDragPos, FingerPos);
-
-            }
-
-            StartDragPos = WorldPosFinger(1);
-            FingerPos = WorldPosFinger(0);
-
-        }
-                              
-    }
-
-    Vector2 WorldPos()
-    {
-        return GameObjectCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
-    }
-    
-    Vector2 WorldPosFinger(int FingerIndex)
-    {
-        return GameObjectCamera.GetComponent<Camera>().ScreenToWorldPoint(Input.GetTouch(FingerIndex).position);
     }
 
 
