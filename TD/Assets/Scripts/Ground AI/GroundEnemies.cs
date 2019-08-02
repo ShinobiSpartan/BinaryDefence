@@ -25,6 +25,13 @@ public class GroundEnemies : MonoBehaviour
     // Distance to final target as a percentage
     private float percentToTarget = 0;
 
+    // Game object representing the 'Base' structure
+    public GameObject baseStructure;
+
+    // Delay between each shot from the enemy
+    private float shotTimer;
+    public float shotTimerMax;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +43,25 @@ public class GroundEnemies : MonoBehaviour
         finalWaypoint = Waypoints.points[Waypoints.points.Length - 1];
         // Get the distance between the last two waypoints
         distBetweenLastTargets = Vector3.Distance(Waypoints.points[Waypoints.points.Length - 2].position, Waypoints.points[Waypoints.points.Length - 1].position);
+
+        // Find the gameobject tagged as the Base structure
+        if(baseStructure == null)
+        {
+            baseStructure = GameObject.FindGameObjectWithTag("BaseStruct");
+        }
+
+        // Sets the time delay for the ai shots
+        shotTimer = shotTimerMax;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MoveAI();
+        AttackBase();
+    }
+
+    void MoveAI()
     {
         // Calculates what direction the AI should be moving in
         Vector3 dir = target.position - transform.position;
@@ -56,16 +78,15 @@ public class GroundEnemies : MonoBehaviour
             GetNextWaypoint();
         }
         // Unless the current target is the final waypoint
-        else if(target == finalWaypoint)
+        else if (target == finalWaypoint)
         {
             // Work out the percentage of the distance to the final waypoint
             percentToTarget = (distToTarget / distBetweenLastTargets);
 
             // Slow down the AI accordingly
             currentSpeed = percentToTarget * maxSpeed;
-        } 
+        }
     }
-
     void GetNextWaypoint()
     {
         // If the Enemy reaches the last waypoint
@@ -81,6 +102,25 @@ public class GroundEnemies : MonoBehaviour
         // Sets the next target to the waypoint of the specified index
         target = Waypoints.points[waypointIndex];
     }
+
+    void AttackBase()
+    {
+        // If the enemy has stopped in front of the base
+        if (currentSpeed == 0 && Vector3.Distance(transform.position, baseStructure.transform.position) < 1.0f)
+        {
+            // Start the shot delay timer
+            shotTimer += Time.deltaTime;
+            // When the shot delay timer maxes out
+            if(shotTimer >= shotTimerMax)
+            {
+                // Shoot
+                shotTimer -= shotTimerMax;
+                Debug.Log("Bang");
+            }
+
+        }
+    }
+
 
     
 }

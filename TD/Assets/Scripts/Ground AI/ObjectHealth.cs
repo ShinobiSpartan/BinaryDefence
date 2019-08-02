@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class ObjectHealth : MonoBehaviour
 {
-    public float health;
+    public float currentHealth;
+    public float fullHealth;
 
     public void TakeDamage(float damageTaken)
     {
-        health -= damageTaken;
+        currentHealth -= damageTaken;
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public float DisplayHealth()
+    {
+        float healthAsPercent;
+        healthAsPercent = (currentHealth / fullHealth) * 100;
+
+        return healthAsPercent;
     }
 }
