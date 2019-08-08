@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundEnemies : MonoBehaviour
 {
     // Max speed the AI will go
-    public float maxSpeed = 10f;
+    public float maxAISpeed = 10f;
     // Keeps track of the current speed of the AI 
     private float currentSpeed;
 
@@ -15,9 +15,9 @@ public class GroundEnemies : MonoBehaviour
     private float distBetweenLastTargets;
 
     // Coordiantes of the next waypoint the ai is tracking to
-    public Transform target;
+    private Transform target;
     // Coordiantes of the last waypoint in the list
-    public Transform finalWaypoint;
+    private Transform finalWaypoint;
 
     // Whereabouts in the list of waypoints the AI is tracking to
     private int waypointIndex = 0;
@@ -26,11 +26,16 @@ public class GroundEnemies : MonoBehaviour
     private float percentToTarget = 0;
 
     // Game object representing the 'Base' structure
-    public GameObject baseStructure;
+    private GameObject baseStructure;
+    // Health of the Base Structure
+    private float baseHealth;
+
+    // Amount of damage the ground units do (to the Base Structure)
+    public float damagePerShot = 1f;
 
     // Delay between each shot from the enemy
     private float shotTimer;
-    public float shotTimerMax;
+    public float shotDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +43,7 @@ public class GroundEnemies : MonoBehaviour
         // Sets the target to the first waypoint
         target = Waypoints.points[0];
         // Current speed is set to the max speed
-        currentSpeed = maxSpeed;
+        currentSpeed = maxAISpeed;
         // Get the position of the last waypoint
         finalWaypoint = Waypoints.points[Waypoints.points.Length - 1];
         // Get the distance between the last two waypoints
@@ -51,7 +56,7 @@ public class GroundEnemies : MonoBehaviour
         }
 
         // Sets the time delay for the ai shots
-        shotTimer = shotTimerMax;
+        shotTimer = shotDelay;
     }
 
     // Update is called once per frame
@@ -84,7 +89,7 @@ public class GroundEnemies : MonoBehaviour
             percentToTarget = (distToTarget / distBetweenLastTargets);
 
             // Slow down the AI accordingly
-            currentSpeed = percentToTarget * maxSpeed;
+            currentSpeed = percentToTarget * maxAISpeed;
         }
     }
     void GetNextWaypoint()
@@ -105,17 +110,24 @@ public class GroundEnemies : MonoBehaviour
 
     void AttackBase()
     {
+        if(baseStructure != null)
+        {
+            baseHealth = baseStructure.GetComponent<ObjectHealth>().currentHealth;
+        }
+
         // If the enemy has stopped in front of the base
         if (currentSpeed == 0 && Vector3.Distance(transform.position, baseStructure.transform.position) < 1.0f)
         {
             // Start the shot delay timer
             shotTimer += Time.deltaTime;
             // When the shot delay timer maxes out
-            if(shotTimer >= shotTimerMax)
+            if(shotTimer >= shotDelay)
             {
                 // Shoot
-                shotTimer -= shotTimerMax;
+                shotTimer -= shotDelay;
+                baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
                 Debug.Log("Bang");
+                Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
             }
 
         }

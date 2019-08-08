@@ -599,6 +599,8 @@ GameObject:
   - component: {fileID: 935896851}
   - component: {fileID: 935896850}
   - component: {fileID: 935896849}
+  - component: {fileID: 935896853}
+  - component: {fileID: 935896854}
   m_Layer: 0
   m_Name: Base
   m_TagString: BaseStruct
@@ -678,6 +680,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935896853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935896848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 50
+  fullHealth: 50
+--- !u!114 &935896854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935896848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17826c4991eec5747acd3efcb70ca8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+  spawnPoint: []
+  wavePauseTime: 5
 --- !u!4 &1309439828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7935103245563167873, guid: 57a037f8912278944bf68c5c188c508e,
@@ -785,11 +828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80468d34e98e5a47b193a51283bff7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  target: {fileID: 0}
-  finalWaypoint: {fileID: 0}
-  baseStructure: {fileID: 0}
-  shotTimerMax: 1
+  maxAISpeed: 10
+  damagePerShot: 1
+  shotDelay: 0
 --- !u!135 &1625516374
 SphereCollider:
   m_ObjectHideFlags: 0
