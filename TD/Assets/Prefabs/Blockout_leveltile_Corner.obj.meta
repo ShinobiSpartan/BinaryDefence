@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 5e8c8e67a5fd8e541a0ad00968f0716f
+guid: f852f30c3dd948a40a59323683537607
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pPlane114
-    400000: //RootNode
-    400002: pPlane114
-    2100000: pPlane114Mat
-    2300000: pPlane114
-    3300000: pPlane114
-    4300000: pPlane114
+    100000: Blockout_leveltile_Corner
+    100002: //RootNode
+    400000: Blockout_leveltile_Corner
+    400002: //RootNode
+    2100000: Blockout_leveltile_CornerMat
+    2300000: Blockout_leveltile_Corner
+    3300000: Blockout_leveltile_Corner
+    4300000: Blockout_leveltile_Corner
   externalObjects: {}
   materials:
     importMaterials: 1
