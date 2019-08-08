@@ -14,51 +14,44 @@ public class CameraController : MonoBehaviour
     #endregion
 
     #region VariablesANDRIOD
-    public float zoomSpeed = 0.5f; //zoom out min
-    public float orthoZoomSpeed = 0.5f;    //zoom out max
-    public Camera cam;
+    Vector3 startTouch;
+    public float zoomOutMin = 1;
+    public float zoomOutMax = 8;
     #endregion
-
-    private void Start()
-    {
-        cam = GetComponent<Camera>();
-    }
 
     void Update()
     {
-       
+        if (Input.GetMouseButtonDown(0))
+        {
+            startTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
         if (Input.touchCount == 2)
         {
-            //Touch Zero
-            Touch tZero = Input.GetTouch(0);
-            //Touch 1
-            Touch tOne = Input.GetTouch(1);
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
 
-            //Touching previous positions
-            Vector2 zPrevPos = tZero.position - tZero.deltaPosition;
-            Vector2 oPrevPos = tOne.position - tOne.deltaPosition;
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
 
-            //previous magitude 
-            float prevMag = (zPrevPos - oPrevPos).magnitude;
-            //current magitude
-            float currentMag = (tZero.position - tOne.position).magnitude;
+            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
 
-            float difference = currentMag - prevMag;
+            float difference = currentMagnitude - prevMagnitude;
 
-            if(cam.orthographic)
-            {
-                cam.orthographicSize += difference * orthoZoomSpeed;
-            }
-            else
-            {
-                cam.fieldOfView += difference * zoomSpeed;
-                cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 179.9f);
-
-            }
-
+            zoom(difference * 0.01f);
         }
+        else if (Input.GetMouseButton(0))
+        {
+            Vector3 direction = startTouch - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Camera.main.transform.position += direction;
+        }
+        zoom(Input.GetAxis("Mouse ScrollWheel"));
     }
 
+    void zoom(float increment)
+    {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
+    }
 
     void cameraMovement()
     {

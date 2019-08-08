@@ -23,15 +23,25 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void StartButton()
-    {
-        SceneManager.LoadScene("Main");
-    }
-
     public void RestartButton()
     {
         SceneManager.LoadScene("Main");
     }
+
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("Lobby");
+    }
+
+    public void PlayMap1()
+    {
+        //change "Main" to "Map1"
+        SceneManager.LoadScene("Main");
+    }
+   // public void PlayMap2()
+   // {
+   //     SceneManager.LoadScene("Map2");
+   // }
 
     public void PauseButton()
     {

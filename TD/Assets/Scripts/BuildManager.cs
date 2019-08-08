@@ -22,6 +22,10 @@ public class BuildManager : MonoBehaviour
     public GameObject railTurretPrefab;
 
     private TurretBluePrint turretToBuild;
+    private Node nodeSelected;
+
+    public NodeUI nodeUI;
+
     #endregion
 
     private void Awake()
@@ -55,8 +59,30 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Turret Built! Remaining money: " + PlayerStats.money);
     }
 
+    public void selecetNode(Node node)
+    {
+        if(nodeSelected == node)
+        {
+            DeselectNode();
+            return;
+        }
+
+
+        nodeSelected = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
     public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
+        DeselectNode();
+    }
+
+    public void DeselectNode()
+    {
+        nodeSelected = null;
+        nodeUI.HideUI();
     }
 }
