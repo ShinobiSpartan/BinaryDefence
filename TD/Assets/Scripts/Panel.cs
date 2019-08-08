@@ -6,6 +6,8 @@ public class Panel : MonoBehaviour
     #region Variables
     public GameObject panelHideShow;
     int counter;
+
+    bool hideThing;
     #endregion
     /// <showHideComments>
     /// checking to see if the player has hidden the panel ingame or not
@@ -14,8 +16,10 @@ public class Panel : MonoBehaviour
     /// </showHide>
     public void showHide()
     {
-        counter++;
-        if (counter % 2 == 1)
+        //counter++;
+
+        hideThing = !hideThing;
+        if (hideThing == true)
         {
             panelHideShow.gameObject.SetActive(false);
         }
