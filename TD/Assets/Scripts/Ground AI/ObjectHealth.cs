@@ -13,7 +13,16 @@ public class ObjectHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            if(this.gameObject.tag == "BaseStruct")
+            {
+                // Insert code for lose state here
+
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+
         }
     }
 
