@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        //giving the player money to start with
         money = startingMoney;
     }
 

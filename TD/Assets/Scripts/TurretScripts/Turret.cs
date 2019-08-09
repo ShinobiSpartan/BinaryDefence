@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     public Transform firePoint;
 
     public string enemyTag = "Enemy";
+
     #endregion
     // Start is called before the first frame update
     void Start()

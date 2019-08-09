@@ -54,18 +54,20 @@ public class Node : MonoBehaviour
         BuildTurret(buildManager.GetTurretToBuild());
     }
 
-   void BuildTurret(TurretBluePrint blueprint)
+   void BuildTurret(TurretBluePrint bluePrint)
    {
-        if (PlayerStats.money < blueprint.costingValue)
+        if (PlayerStats.money < bluePrint.costingValue)
         {
             Debug.Log("YOU'RE POOR AF!");
             return;
         }
 
-        PlayerStats.money -= blueprint.costingValue;
+        PlayerStats.money -= bluePrint.costingValue;
 
-        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPos(), Quaternion.identity);
+        GameObject _turret = (GameObject)Instantiate(bluePrint.prefab, GetBuildPos(), Quaternion.identity);
         turret = _turret;
+
+        turretBluePrint = bluePrint;
 
         Debug.Log("Turret Built! Remaining money: " + PlayerStats.money);
    }

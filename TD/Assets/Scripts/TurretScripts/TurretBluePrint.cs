@@ -10,4 +10,5 @@ public class TurretBluePrint
 
     public GameObject upgradedPrefab;
     public int upgradeCost;
+    public int sellCost;
 }

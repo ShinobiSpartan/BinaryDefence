@@ -126,7 +126,8 @@ MonoBehaviour:
   fireRate: 2.5
   turnSpeed: 5
   turretRotationPart: {fileID: 1297707420723567502}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 5463756785630187080, guid: 74c2667c8c4d4cb4485ee1016ba854f5,
+    type: 3}
   firePoint: {fileID: 0}
   enemyTag: Enemy
 --- !u!1 &1297707420723333038

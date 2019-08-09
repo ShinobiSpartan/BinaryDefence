@@ -43,7 +43,10 @@ public class BuildManager : MonoBehaviour
         get { return turretToBuild != null; }
     }
 
- 
+ /// <summary>
+ /// selecting a node 
+ /// </summary>
+ /// <param name="node"></param>
     public void selecetNode(Node node)
     {
         if(nodeSelected == node)
@@ -59,6 +62,7 @@ public class BuildManager : MonoBehaviour
         nodeUI.SetTarget(node);
     }
 
+
     public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
@@ -70,7 +74,10 @@ public class BuildManager : MonoBehaviour
         nodeSelected = null;
         nodeUI.HideUI();
     }
-
+    /// <summary>
+    /// getting the turret to build and returning "turretToBuild"
+    /// </summary>
+    /// <returns></returns>
     public TurretBluePrint GetTurretToBuild()
     {
         return turretToBuild;

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class NodeUI : MonoBehaviour
@@ -8,12 +7,19 @@ public class NodeUI : MonoBehaviour
 
     private Node target;
 
+    public Text upgradeCost;
+    public Text sellCost;
+
 
     public void SetTarget(Node _target)
     {
         target = _target;
 
         transform.position = target.GetBuildPos();
+
+        upgradeCost.text = "$" + target.turretBluePrint.costingValue;
+        sellCost.text = "$" + target.turretBluePrint.sellCost;
+
         ui.SetActive(true);
     }
 

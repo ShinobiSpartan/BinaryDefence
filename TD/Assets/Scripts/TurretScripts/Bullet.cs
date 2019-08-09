@@ -8,6 +8,10 @@ public class Bullet : MonoBehaviour
 
     public GameObject impactEffects;
 
+    /// <summary>
+    /// finding the target
+    /// </summary>
+    /// <param name="_target"></param>
     public void Seek(Transform _target)
     {
         target = _target;
@@ -15,13 +19,14 @@ public class Bullet : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {   
+        //checking to see if the target is null
         if(target == null)
         {
             Destroy(gameObject);
             return;
         }
-
+        //getting the direction and distance 
         Vector3 direction = target.position - target.position;
         float distanceThisFrame = bulletSpeed * Time.deltaTime;
 
@@ -34,7 +39,10 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
     }
 
-
+    /// <summary>
+    /// adding some effects for when the bullets hit and when the target is destroyed
+    /// the bullet will also get destroyed when hit with target
+    /// </summary>
     void HitTarget()
     {
 

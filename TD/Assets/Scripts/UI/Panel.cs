@@ -1,4 +1,3 @@
-<<<<<<< HEAD:TD/Assets/Scripts/UI/Panel.cs
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +7,7 @@ public class Panel : MonoBehaviour
     public GameObject panelHideShow;
     int counter;
 
-    bool hideThing;
+    bool hideButton;
     #endregion
     /// <showHideComments>
     /// checking to see if the player has hidden the panel ingame or not
@@ -17,10 +16,9 @@ public class Panel : MonoBehaviour
     /// </showHide>
     public void showHide()
     {
-        //counter++;
 
-        hideThing = !hideThing;
-        if (hideThing == true)
+        hideButton = !hideButton;
+        if (hideButton == true)
         {
             panelHideShow.gameObject.SetActive(false);
         }
@@ -31,37 +29,3 @@ public class Panel : MonoBehaviour
     }
 
 }
-=======
-﻿using UnityEngine;
-using UnityEngine.UI;
-
-public class Panel : MonoBehaviour
-{
-    #region Variables
-    public GameObject panelHideShow;
-    int counter;
-
-    bool hideThing;
-    #endregion
-    /// <showHideComments>
-    /// checking to see if the player has hidden the panel ingame or not
-    /// and setting to active or not (SetActive(false/true)) when the player
-    /// pushes the button
-    /// </showHide>
-    public void showHide()
-    {
-        //counter++;
-
-        hideThing = !hideThing;
-        if (hideThing == true)
-        {
-            panelHideShow.gameObject.SetActive(false);
-        }
-        else
-        {
-            panelHideShow.gameObject.SetActive(true);
-        }
-    }
-
-}
->>>>>>> master:TD/Assets/Scripts/Panel.cs
