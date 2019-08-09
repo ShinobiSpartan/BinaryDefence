@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectHealth : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class ObjectHealth : MonoBehaviour
         {
             if(this.gameObject.tag == "BaseStruct")
             {
-                // Insert code for lose state here
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                return;
 
             }
             else
