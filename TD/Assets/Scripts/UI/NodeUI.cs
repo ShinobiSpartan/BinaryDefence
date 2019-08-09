@@ -21,4 +21,13 @@ public class NodeUI : MonoBehaviour
     {
         ui.SetActive(false);
     }
+
+    /// <summary>
+    /// upgrading the turret and then deslecting the menu
+    /// </summary>
+    public void Upgrade()
+    {
+        target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
 }
