@@ -6,6 +6,8 @@ public class WaveSpawner : MonoBehaviour
 {
     #region Variables
     public Transform enemy;
+    public Transform enemy2;
+    public Transform enemy3;
     public Transform spawnPoint;
     
     public float timeBetweenWaves = 5;
@@ -51,6 +53,9 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy2, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy3, spawnPoint.position, spawnPoint.rotation);
+
     }
 
 
