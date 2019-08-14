@@ -87,9 +87,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7992430444762929074}
   - component: {fileID: 5954989069951378785}
+  - component: {fileID: 5105411565099443990}
   m_Layer: 0
   m_Name: Blockout_Behemoth
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,3 +125,17 @@ MonoBehaviour:
   maxAISpeed: 5
   damagePerShot: 1
   shotDelay: 0
+--- !u!114 &5105411565099443990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992430444762827666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 10

@@ -8,6 +8,12 @@ public class ObjectHealth : MonoBehaviour
     public float currentHealth;
     public float fullHealth;
 
+    private void Awake()
+    {
+        currentHealth = fullHealth;
+    }
+
+
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
@@ -16,9 +22,8 @@ public class ObjectHealth : MonoBehaviour
         {
             if(this.gameObject.tag == "BaseStruct")
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(SceneManager.GetSceneByName("Lobby").buildIndex);
                 return;
-
             }
             else
             {

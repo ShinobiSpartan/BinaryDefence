@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5782567704498167720}
   - component: {fileID: 5573163432114609286}
+  - component: {fileID: 2777417101822875035}
   m_Layer: 0
   m_Name: Blockout_Knight
   m_TagString: Enemy
@@ -44,11 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80468d34e98e5a47b193a51283bff7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  target: {fileID: 0}
-  finalWaypoint: {fileID: 0}
-  baseStructure: {fileID: 0}
-  shotTimerMax: 0
+  maxAISpeed: 10
+  damagePerShot: 1
+  shotDelay: 0
+--- !u!114 &2777417101822875035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782567704498389896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 5
 --- !u!1 &5782567704498389898
 GameObject:
   m_ObjectHideFlags: 0
