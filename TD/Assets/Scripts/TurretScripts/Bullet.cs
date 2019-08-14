@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
 
     private Transform target;
-    public float bulletSpeed = 100.0f;
+    public float bulletSpeed = 5.0f;
 
     public GameObject impactEffects;
 

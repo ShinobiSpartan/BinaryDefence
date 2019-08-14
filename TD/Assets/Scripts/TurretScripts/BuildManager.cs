@@ -43,10 +43,15 @@ public class BuildManager : MonoBehaviour
         get { return turretToBuild != null; }
     }
 
- /// <summary>
- /// selecting a node 
- /// </summary>
- /// <param name="node"></param>
+    public bool HasMoney
+    {
+        get { return PlayerStats.money >= turretToBuild.costingValue; }
+    }
+
+    /// <summary>
+    /// selecting a node 
+    /// </summary>
+    /// <param name="node"></param>
     public void selecetNode(Node node)
     {
         if(nodeSelected == node)

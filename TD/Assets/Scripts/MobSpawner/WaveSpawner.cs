@@ -28,7 +28,10 @@ public class WaveSpawner : MonoBehaviour
             countDown = timeBetweenWaves;
         }
         countDown -= Time.deltaTime;
-        waveCounterText.text = Mathf.Round(countDown).ToString();
+
+        countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);
+
+        waveCounterText.text = string.Format("{0:00.00}", countDown);
 
         enemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
         int enemiesAlive = enemiesOnScreen.Length;

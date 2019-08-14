@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
     #region Variables
     public Color hoverColor;
     public Vector3 positionOffest;
+    public Color notEnoughMoney;
 
     [Header("Optional")]
     public GameObject turret;
@@ -99,7 +100,11 @@ public class Node : MonoBehaviour
 
     public void SellTurret()
     {
-        //PlayerStats.money += turretBluePrint.cost * 0.5f;
+        PlayerStats.money += turretBluePrint.sellCost();
+
+
+        Destroy(turret);
+        turretBluePrint = null;
     }
 
 
@@ -112,6 +117,15 @@ public class Node : MonoBehaviour
 
         if (!buildManager.CanBuild)
             return;
+
+        if(buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoney;
+        }
 
         rend.material.color = hoverColor;
     }
