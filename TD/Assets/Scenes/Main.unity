@@ -6884,14 +6884,12 @@ MonoBehaviour:
     costingValue: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
-    sellCost: 50
   aaTurret:
     prefab: {fileID: 1297707420723333034, guid: b5fbe8d8885c4af42a49d15681cc0eca,
       type: 3}
     costingValue: 120
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
-    sellCost: 60
   railgunTurret:
     prefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
       type: 3}
@@ -6899,7 +6897,6 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
       type: 3}
     upgradeCost: 0
-    sellCost: 75
 --- !u!1001 &697841290
 PrefabInstance:
   m_ObjectHideFlags: 0
