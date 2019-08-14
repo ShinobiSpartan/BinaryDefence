@@ -18,6 +18,7 @@ public class Turret : MonoBehaviour
     public Transform firePoint;
 
     public string enemyTag = "Enemy";
+    public string enemyTagAir = "AIREnemy";
 
     #endregion
     // Start is called before the first frame update
@@ -58,12 +59,13 @@ public class Turret : MonoBehaviour
     {
 
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
+        Bullet bull = bulletGO.GetComponent<Bullet>();
 
-        if(bullet != null)
+        if(bull != null)
         {
-            bullet.Seek(target);
+            bull.Seek(target);
         }
+
     }
 
 
@@ -71,6 +73,7 @@ public class Turret : MonoBehaviour
     {
         //finding all the eneimes that are tagged with "enemyTag" and store them into the array
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
         //storing the shortest distance to a enemy
         float shortDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -79,6 +82,7 @@ public class Turret : MonoBehaviour
         foreach (GameObject enemy in enemies)
         {
             float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+
 
             if(distToEnemy < shortDistance)
             {
