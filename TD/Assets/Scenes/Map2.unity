@@ -21112,14 +21112,12 @@ MonoBehaviour:
     costingValue: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
-    sellCost: 50
   aaTurret:
     prefab: {fileID: 1297707420723333034, guid: b5fbe8d8885c4af42a49d15681cc0eca,
       type: 3}
     costingValue: 120
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
-    sellCost: 60
   railgunTurret:
     prefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
       type: 3}
@@ -21127,7 +21125,6 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
       type: 3}
     upgradeCost: 0
-    sellCost: 75
 --- !u!114 &1349019405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21460,17 +21457,17 @@ PrefabInstance:
     - target: {fileID: 5277310386577425897, guid: 2238d2d7b166ce842a28d0756c952cfb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.4396
+      value: -56.86
       objectReference: {fileID: 0}
     - target: {fileID: 5277310386577425897, guid: 2238d2d7b166ce842a28d0756c952cfb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.194956
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 5277310386577425897, guid: 2238d2d7b166ce842a28d0756c952cfb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.13
+      value: -56.01
       objectReference: {fileID: 0}
     - target: {fileID: 5277310386577425897, guid: 2238d2d7b166ce842a28d0756c952cfb,
         type: 3}
@@ -28587,6 +28584,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1807043675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1812956289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812956292}
+  - component: {fileID: 1812956291}
+  - component: {fileID: 1812956290}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1812956290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1812956291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1812956292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812956289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1814131570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32122,7 +32185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ce6be204c10b41b29c0019dd97667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addMoney: 50
+  incomeDelay: 10
   startingMoney: 500
+  Ref: {fileID: 0}
 --- !u!114 &2011414375
 MonoBehaviour:
   m_ObjectHideFlags: 0
