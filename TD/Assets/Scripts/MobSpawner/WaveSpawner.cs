@@ -17,7 +17,10 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
-    private GameObject[] enemiesOnScreen;
+    public GameObject[] groundEnemiesOnScreen;
+    public GameObject[] airEnemiesOnScreen;
+
+    public int enemiesAlive = 0;
     #endregion
 
     private void Update()
@@ -33,8 +36,9 @@ public class WaveSpawner : MonoBehaviour
 
         waveCounterText.text = string.Format("{0:00.00}", countDown);
 
-        enemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
-        int enemiesAlive = enemiesOnScreen.Length;
+        groundEnemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
+        airEnemiesOnScreen = GameObject.FindGameObjectsWithTag("AirEnemy");
+        enemiesAlive = groundEnemiesOnScreen.Length + airEnemiesOnScreen.Length;
     }
 
 

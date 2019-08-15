@@ -102,7 +102,6 @@ public class Node : MonoBehaviour
     {
         PlayerStats.money += turretBluePrint.sellCost();
 
-
         Destroy(turret);
         turretBluePrint = null;
     }

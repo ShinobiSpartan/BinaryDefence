@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
             return;
         }
         //getting the direction and distance 
-        Vector3 direction = target.position - target.position;
+        Vector3 direction = target.position - transform.position;
         float distanceThisFrame = bulletSpeed * Time.deltaTime;
 
         if(direction.magnitude <= distanceThisFrame)

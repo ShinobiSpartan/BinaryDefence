@@ -130,6 +130,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 7743625774472122617}
   enemyTag: Enemy
+  enemyTagAir: AIREnemy
 --- !u!1 &1297707420723333038
 GameObject:
   m_ObjectHideFlags: 0
