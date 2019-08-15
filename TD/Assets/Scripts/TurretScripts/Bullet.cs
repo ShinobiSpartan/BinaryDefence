@@ -2,8 +2,8 @@
 
 public class Bullet : MonoBehaviour
 {
-
-    private Transform target;
+    private GameObject targetObject;
+    private Transform targetTransform;
     public float bulletSpeed = 5.0f;
 
     public GameObject impactEffects;
@@ -14,20 +14,23 @@ public class Bullet : MonoBehaviour
     /// <param name="_target"></param>
     public void Seek(Transform _target)
     {
-        target = _target;
+        targetTransform = _target;
     }
 
     // Update is called once per frame
     void Update()
     {   
         //checking to see if the target is null
-        if(target == null)
+        if(targetTransform == null)
         {
             Destroy(gameObject);
             return;
         }
+
+        targetObject = targetTransform.gameObject;
+
         //getting the direction and distance 
-        Vector3 direction = target.position - transform.position;
+        Vector3 direction = targetTransform.position - transform.position;
         float distanceThisFrame = bulletSpeed * Time.deltaTime;
 
         if(direction.magnitude <= distanceThisFrame)
@@ -49,7 +52,7 @@ public class Bullet : MonoBehaviour
         GameObject effects = (GameObject)Instantiate(impactEffects, transform.position, transform.rotation);
         Destroy(effects, 2f);
 
-        Destroy(target);
+        targetObject.GetComponent<ObjectHealth>().TakeDamage(1);
 
         Destroy(gameObject);
     }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
@@ -17,8 +17,11 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public string enemyTag = "Enemy";
+    private GameObject[] enemies = null;
 
+    public string enemyTag = "Enemy";
+    public string enemyTagAir = "AirEnemy";
+    
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,7 @@ public class Turret : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
 
         if (target == null)
@@ -70,37 +74,47 @@ public class Turret : MonoBehaviour
 
     void UpdatingTarget()
     {
-        //finding all the eneimes that are tagged with "enemyTag" and store them into the array
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-
-        //storing the shortest distance to a enemy
-        float shortDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-
-
-        foreach (GameObject enemy in enemies)
+        if (this.gameObject.tag != "AATurret")
         {
-            float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-
-
-            if(distToEnemy < shortDistance)
-            {
-                shortDistance = distToEnemy;
-                nearestEnemy = enemy;
-
-            }
-        }
-
-        //found a enemy and within the range
-        if(nearestEnemy != null && shortDistance <= turretRange)
-        {
-            target = nearestEnemy.transform;
+            //finding all the eneimes that are tagged with "enemyTag" and store them into the array
+            enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         }
         else
         {
-            target = null;
+            //finding all the eneimes that are tagged with "enemyTagAir" and store them into the array
+            enemies = GameObject.FindGameObjectsWithTag(enemyTagAir);
         }
 
+            //storing the shortest distance to a enemy
+            float shortDistance = Mathf.Infinity;
+            GameObject nearestEnemy = null;
+
+
+            foreach (GameObject enemy in enemies)
+            {
+                float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+
+
+                if (distToEnemy < shortDistance)
+                {
+                    shortDistance = distToEnemy;
+                    nearestEnemy = enemy;
+
+                }
+            }
+
+
+            //found a enemy and within the range
+            if (nearestEnemy != null && shortDistance <= turretRange)
+            {
+                target = nearestEnemy.transform;
+            }
+            else
+            {
+                target = null;
+            }
+
+        
     }
 
     void OnDrawGizmosSelected()
