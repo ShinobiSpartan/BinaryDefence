@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
@@ -18,69 +17,11 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public string enemyTag = "Enemy";
-
-    #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        //calling "UpdatingTarget" twice every second, NOT FRAME!
-        InvokeRepeating("UpdatingTarget", 0f, 0.5f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (target == null)
-            return;
-
-        Vector3 direction = target.position - transform.position;
-        //look rotation
-        Quaternion Rotate = Quaternion.LookRotation(direction);
-        Vector3 rotation = Quaternion.Lerp(turretRotationPart.rotation, Rotate, Time.deltaTime * turnSpeed).eulerAngles;
-        turretRotationPart.rotation = Quaternion.Euler(0, rotation.y, 0);
-        
-
-        //firing for the turret
-        if (fireCountDown <= 0f)
-        {
-            Shoot();
-            fireCountDown = 1f / fireRate;
-        }
-
-        fireCountDown -= Time.deltaTime;
-    }
-    
-    /// <summary>
-    /// instanciating bullets to shoot
-    /// </summary>
-    void Shoot()
-=======
-﻿using UnityEngine;
-
-public class Turret : MonoBehaviour
-{
-    #region Variables
-    private Transform target;
-    [Tooltip("Radius of the range for the turret(s).")]
-    public float turretRange = 10.0f;
-    public float fireRate = 2.5f;
-    private float fireCountDown = 0;
-    [Tooltip("The speed of the turret head turn rate.")]
-    public float turnSpeed = 5.0f;
-    [Tooltip("Add the TurretHead Prefab here.")]
-    public Transform turretRotationPart;
-
-
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-
-    GameObject[] enemies = null;
+    private GameObject[] enemies = null;
 
     public string enemyTag = "Enemy";
     public string enemyTagAir = "AirEnemy";
-
+    
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -91,7 +32,7 @@ public class Turret : MonoBehaviour
 
     // Update is called once per frame
     void Update()
->>>>>>> Stashed changes
+
     {
 
         if (target == null)

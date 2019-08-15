@@ -46,7 +46,8 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     public void RestartButton()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene("Main");
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1f;

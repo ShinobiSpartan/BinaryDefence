@@ -113,5 +113,4 @@ MonoBehaviour:
     costingValue: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
-    sellCost: 0
   isUpgraded: 0
