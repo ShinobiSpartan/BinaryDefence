@@ -66,6 +66,7 @@ public class GroundEnemies : MonoBehaviour
         AttackBase();
     }
 
+
     void MoveAI()
     {
         // Calculates what direction the AI should be moving in
@@ -110,26 +111,27 @@ public class GroundEnemies : MonoBehaviour
 
     void AttackBase()
     {
-        if(baseStructure != null)
+        if (baseStructure != null)
         {
             baseHealth = baseStructure.GetComponent<ObjectHealth>().currentHealth;
-        }
 
-        // If the enemy has stopped in front of the base
-        if (currentSpeed == 0 && Vector3.Distance(transform.position, baseStructure.transform.position) < 1.0f)
-        {
-            // Start the shot delay timer
-            shotTimer += Time.deltaTime;
-            // When the shot delay timer maxes out
-            if(shotTimer >= shotDelay)
+
+            // If the enemy has stopped in front of the base
+            if (currentSpeed == 0 && Vector3.Distance(transform.position, baseStructure.transform.position) < 1.0f)
             {
-                // Shoot
-                shotTimer -= shotDelay;
-                baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                Debug.Log("Bang");
-                Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
-            }
+                // Start the shot delay timer
+                shotTimer += Time.deltaTime;
+                // When the shot delay timer maxes out
+                if (shotTimer >= shotDelay)
+                {
+                    // Shoot
+                    shotTimer -= shotDelay;
+                    baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                    Debug.Log("Bang");
+                    Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                }
 
+            }
         }
     }
 

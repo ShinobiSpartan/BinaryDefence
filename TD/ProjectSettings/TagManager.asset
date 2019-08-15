@@ -7,7 +7,7 @@ TagManager:
   - Enemy
   - BaseStruct
   - AirEnemy
-  - AIREnemey
+  - AATurret
   layers:
   - Default
   - TransparentFX

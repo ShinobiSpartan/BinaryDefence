@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1297707422076073069}
   m_Layer: 0
   m_Name: Blockout_AA_Turret_MKIII
-  m_TagString: Untagged
+  m_TagString: AATurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 7743625774472122617}
   enemyTag: Enemy
-  enemyTagAir: AIREnemy
+  enemyTagAir: AirEnemy
 --- !u!1 &1297707420723333038
 GameObject:
   m_ObjectHideFlags: 0

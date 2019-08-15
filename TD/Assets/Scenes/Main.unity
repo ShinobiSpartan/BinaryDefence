@@ -10604,6 +10604,9 @@ MonoBehaviour:
   timeBetweenWaves: 15
   timeForWaveSpawn: 0.5
   waveCounterText: {fileID: 1077094820}
+  groundEnemiesOnScreen: []
+  airEnemiesOnScreen: []
+  enemiesAlive: 0
 --- !u!4 &1291301840
 Transform:
   m_ObjectHideFlags: 0
@@ -10664,7 +10667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addMoney: 50
   incomeDelay: 10
-  startingMoney: 500
+  startingMoney: 2000
   Ref: {fileID: 5744479088072943815, guid: c9cd53fd11ae9b84bbc8d5e2945b76d3, type: 3}
 --- !u!1 &1315252908
 GameObject:

@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     public float incomeDelay = 10.0f;
 
     public static int money;
-    public int startingMoney = 500;
+    public int startingMoney = 2000;
 
     public GameObject Ref;
 
