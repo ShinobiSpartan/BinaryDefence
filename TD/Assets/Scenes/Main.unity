@@ -10604,6 +10604,9 @@ MonoBehaviour:
   timeBetweenWaves: 15
   timeForWaveSpawn: 0.5
   waveCounterText: {fileID: 1077094820}
+  groundEnemiesOnScreen: []
+  airEnemiesOnScreen: []
+  enemiesAlive: 0
 --- !u!4 &1291301840
 Transform:
   m_ObjectHideFlags: 0

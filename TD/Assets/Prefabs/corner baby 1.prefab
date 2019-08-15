@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2511562345161985396
+--- !u!1 &4339799760382226804
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2511562345162412372}
-  - component: {fileID: 2511562345161118070}
-  - component: {fileID: 2511562345159988150}
+  - component: {fileID: 4339799760382717268}
+  - component: {fileID: 4339799760381390196}
+  - component: {fileID: 4339799760380293044}
   m_Layer: 0
-  m_Name: pPlane112
+  m_Name: Blockout_leveltile_Corner:Blockout_leveltile_Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2511562345162412372
+--- !u!4 &4339799760382717268
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511562345161985396}
+  m_GameObject: {fileID: 4339799760382226804}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2511562345162412374}
+  m_Father: {fileID: 4339799760382717270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2511562345161118070
+--- !u!33 &4339799760381390196
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511562345161985396}
-  m_Mesh: {fileID: 4300000, guid: 9fe00cd174707b74ab063b0ef98a37a0, type: 3}
---- !u!23 &2511562345159988150
+  m_GameObject: {fileID: 4339799760382226804}
+  m_Mesh: {fileID: 4300000, guid: 696f21d441a3dab43afadeb9b25a51a0, type: 3}
+--- !u!23 &4339799760380293044
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511562345161985396}
+  m_GameObject: {fileID: 4339799760382226804}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25bcc845d24bb984ca10e76212885131, type: 2}
+  - {fileID: 2100000, guid: 64558fb0bb88eb94ab1662b9c524c780, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,7 +77,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &2511562345161985398
+--- !u!1 &4339799760382226806
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,49 +85,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2511562345162412374}
-  - component: {fileID: 2063160954670219273}
+  - component: {fileID: 4339799760382717270}
+  - component: {fileID: 4339799760374923956}
   m_Layer: 0
-  m_Name: Blockout_leveltile_1 1
+  m_Name: corner baby 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2511562345162412374
+--- !u!4 &4339799760382717270
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511562345161985398}
+  m_GameObject: {fileID: 4339799760382226806}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 14.6, y: 0.5, z: -45.20109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2511562345162412372}
+  - {fileID: 4339799760382717268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2063160954670219273
-MonoBehaviour:
+--- !u!95 &4339799760374923956
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511562345161985398}
+  m_GameObject: {fileID: 4339799760382226806}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b5c1cbd87da0341b9ae7751f6076cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0.4433962, g: 0.3994749, b: 0.3994749, a: 0}
-  positionOffest: {x: 0, y: 0, z: 0}
-  notEnoughMoney: {r: 0, g: 0, b: 0, a: 0}
-  turret: {fileID: 0}
-  turretBluePrint:
-    prefab: {fileID: 0}
-    costingValue: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
-  isUpgraded: 0
+  m_Avatar: {fileID: 9000000, guid: 696f21d441a3dab43afadeb9b25a51a0, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
