@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAISpeed: 10
   damagePerShot: 1
-  shotDelay: 0
+  shotDelay: 2
 --- !u!114 &2777417101822875035
 MonoBehaviour:
   m_ObjectHideFlags: 0

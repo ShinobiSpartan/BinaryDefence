@@ -12,6 +12,8 @@ public class Spawner : MonoBehaviour
    {
         public string name;
         public Transform enemy;
+        public Transform enemy2;
+        public Transform enemy3;
         public int count;
         public float rate;
    }

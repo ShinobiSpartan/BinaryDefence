@@ -47,7 +47,6 @@ public class MenuManager : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene("Main");
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1f;
@@ -77,6 +76,14 @@ public class MenuManager : MonoBehaviour
     public void PlayMap2()
     {
         SceneManager.LoadScene("Map2");
+    }
+
+    /// <summary>
+    /// plays the third map
+    /// </summary>
+    public void PlayMap3()
+    {
+        SceneManager.LoadScene("map3");
     }
 
     /// <summary>
