@@ -13,6 +13,9 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
     #endregion
     #region Variables
+
+    public NodeUI nodeUI;
+
     [Header("Turret Prefabs")]
     [Tooltip("Add the turret prefabs inside here! (BasicTurret goes here)")]
     public GameObject standardTurretPrefab;
@@ -23,8 +26,6 @@ public class BuildManager : MonoBehaviour
 
     private TurretBluePrint turretToBuild;
     private Node nodeSelected;
-
-    public NodeUI nodeUI;
 
     #endregion
 
@@ -49,9 +50,9 @@ public class BuildManager : MonoBehaviour
     }
 
     /// <summary>
-    /// selecting a node 
+    /// Selecting a Node to build on 
     /// </summary>
-    /// <param name="node"></param>
+    /// <param name="node">The selected Node</param>
     public void selecetNode(Node node)
     {
         if(nodeSelected == node)
@@ -80,7 +81,7 @@ public class BuildManager : MonoBehaviour
         nodeUI.HideUI();
     }
     /// <summary>
-    /// getting the turret to build and returning "turretToBuild"
+    /// Getting the Turret to build and returning "turretToBuild"
     /// </summary>
     /// <returns></returns>
     public TurretBluePrint GetTurretToBuild()
