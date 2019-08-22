@@ -10973,7 +10973,7 @@ GameObject:
   - component: {fileID: 1291301844}
   m_Layer: 0
   m_Name: Master
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11026,13 +11026,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478284e73544bb2448692573f79dc86b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeUI: {fileID: 1417393205}
   standardTurretPrefab: {fileID: 5933083833890482043, guid: 8bde1b601ea8f724b9878f8ac3fc4ed5,
     type: 3}
   aaTurretPrefab: {fileID: 1297707420723333034, guid: b5fbe8d8885c4af42a49d15681cc0eca,
     type: 3}
   railTurretPrefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
     type: 3}
-  nodeUI: {fileID: 1417393205}
 --- !u!114 &1291301843
 MonoBehaviour:
   m_ObjectHideFlags: 0

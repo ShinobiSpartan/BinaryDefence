@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static float money;
+    public static int money;
     public int startingMoney = 2000;
-    
+
     void Start()
     {
-        //giving the player money to start with
+        //Giving the player money to start with
         money = startingMoney;
     }
 
-    public void AddIncome(float moneyIncome)
+    public void AddMoney(int valueToAdd)
+
     {
-        moneyIncome += money;
+        Debug.Log("Money added. New total is: " + money);
+
+        money += valueToAdd;
     }
 
 }
