@@ -97,7 +97,11 @@ public class Node : MonoBehaviour
 
         Debug.Log("Turret upgraded! Remaining money: " + PlayerStats.money);
     }
-
+    /// <summary>
+    /// Selling turrets
+    /// Communicates with the "PlayerStats" class
+    /// Once the player sells ther turret, they will get the money back and it will destroy whatever the current turret is
+    /// </summary>
     public void SellTurret()
     {
         PlayerStats.money += turretBluePrint.sellCost();

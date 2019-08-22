@@ -86,6 +86,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("map3");
     }
 
+    public void PlayMap4()
+    {
+        SceneManager.LoadScene("map4");
+    }
+
     /// <summary>
     /// pauses the game
     /// </summary>
