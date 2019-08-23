@@ -3552,7 +3552,7 @@ MonoBehaviour:
   scrollSpeed: 10
   minY: 5
   maxY: 10
-  zoomOutMin: 1
+  zoomOutMin: 45
   zoomOutMax: 45
 --- !u!4 &544978558 stripped
 Transform:
