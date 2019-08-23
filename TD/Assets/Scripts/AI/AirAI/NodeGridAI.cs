@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class NodeGridAI : MonoBehaviour
 {
+    public LayerMask unwalkableMask;
+    public Vector2 gridWorldSize;
+    public float nodeRadius;
+    NodeAI[,] grid;
+
+    public List<NodeAI> path;
+
     // Start is called before the first frame update
     void Start()
     {
