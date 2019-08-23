@@ -16,9 +16,8 @@ public class PlayerStats : MonoBehaviour
     public void AddMoney(int valueToAdd)
 
     {
-        Debug.Log("Money added. New total is: " + money);
-
         money += valueToAdd;
+        Debug.Log("Money added. New total is: " + money);
     }
 
 }

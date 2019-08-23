@@ -12,10 +12,11 @@ public class WaveSpawner : MonoBehaviour
     
     public float timeBetweenWaves = 5;
     public float timeForWaveSpawn = 0.5f;
-    private float countDown = 2f;
+    public float initialCountDown = 5f;
     public Text waveCounterText;
 
     private int waveIndex = 0;
+    public int waveThreshold = 10;
 
     public GameObject[] groundEnemiesOnScreen;
     public GameObject[] airEnemiesOnScreen;
@@ -25,16 +26,16 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(countDown <= 0f)
+        if(initialCountDown <= 0f && waveIndex < waveThreshold)
         {
             StartCoroutine(SpawnWave());
-            countDown = timeBetweenWaves;
+            initialCountDown = timeBetweenWaves;
         }
-        countDown -= Time.deltaTime;
+        initialCountDown -= Time.deltaTime;
 
-        countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);
+        initialCountDown = Mathf.Clamp(initialCountDown, 0f, Mathf.Infinity);
 
-        waveCounterText.text = string.Format("{0:00.00}", countDown);
+        waveCounterText.text = string.Format("{0:00.00}", initialCountDown);
 
         groundEnemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
         airEnemiesOnScreen = GameObject.FindGameObjectsWithTag("AirEnemy");

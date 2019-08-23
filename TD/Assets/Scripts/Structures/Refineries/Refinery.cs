@@ -13,7 +13,7 @@ public class Refinery : MonoBehaviour
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerStats>();
-        timer = timeBetweenResourceCollection;
+        timer = 0;
 
     }
 
@@ -24,8 +24,8 @@ public class Refinery : MonoBehaviour
 
         if (timer >= timeBetweenResourceCollection)
         {
-            timer -= timeBetweenResourceCollection;
             playerStats.AddMoney(resourcesGainedPerPull);
+            timer -= timeBetweenResourceCollection;
         }
 
     }

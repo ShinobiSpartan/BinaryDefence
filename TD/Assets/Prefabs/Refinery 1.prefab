@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 218060138746487341}
-  - component: {fileID: 7521821422705755634}
+  - component: {fileID: 7731866068715173697}
+  - component: {fileID: 1256902547849913068}
   m_Layer: 0
   m_Name: Refinery 1
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7521821422705755634
+--- !u!114 &7731866068715173697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +42,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 218060138746985997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e57efd2c4d9a447af31900f91da843, type: 3}
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  income: 50
-  interval: 1
-  nextIncomeTime: 10
+  currentHealth: 0
+  fullHealth: 5
+--- !u!114 &1256902547849913068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218060138746985997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fea633654eacee43a6d79f65eddd3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesGainedPerPull: 10
+  timeBetweenResourceCollection: 5
 --- !u!1 &218060138746985999
 GameObject:
   m_ObjectHideFlags: 0
