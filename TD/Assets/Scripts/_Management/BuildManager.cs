@@ -68,13 +68,20 @@ public class BuildManager : MonoBehaviour
         nodeUI.SetTarget(node);
     }
 
-
+    /// <summary>
+    /// Selecting the turret to build
+    /// Making turretToBuild set to turret and then desleceting the current node
+    /// </summary>
+    /// <param name="turret"></param>
     public void SelectTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
         DeselectNode();
     }
 
+    /// <summary>
+    /// Deselecting current node and then hiding the UI for the turret
+    /// </summary>
     public void DeselectNode()
     {
         nodeSelected = null;
