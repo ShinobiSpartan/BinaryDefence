@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1316630092854665929}
-  - component: {fileID: 5719815724081517225}
   - component: {fileID: 7306224889006667674}
+  - component: {fileID: 5719815724081517225}
   - component: {fileID: 6883095999238663636}
   m_Layer: 0
   m_Name: nodefixed
@@ -27,26 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316630092855033577}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.42, y: 6.12, z: -75.422745}
+  m_LocalPosition: {x: -52.4498, y: 79.39607, z: -27.481602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1316630092854665931}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5719815724081517225
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316630092855033577}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 1.5, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7306224889006667674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -84,6 +71,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5719815724081517225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316630092855033577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 1.5, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6883095999238663636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b5c1cbd87da0341b9ae7751f6076cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.5943396, g: 0.19344072, b: 0.19344072, a: 0}
+  hoverColor: {r: 0.5566038, g: 0.31243324, b: 0.31243324, a: 0}
   positionOffest: {x: 0, y: 0, z: 0}
   notEnoughMoney: {r: 1, g: 0, b: 0, a: 0}
   turret: {fileID: 0}
@@ -145,7 +145,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316630092855033579}
-  m_Mesh: {fileID: 4300000, guid: dd0cf558591f90047a5b4149c30d169e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3f51efb6eed5ee34dabb68abd487a385, type: 3}
 --- !u!23 &1316630092852764715
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd0cf558591f90047a5b4149c30d169e, type: 3}
+  - {fileID: 2100000, guid: 3f51efb6eed5ee34dabb68abd487a385, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

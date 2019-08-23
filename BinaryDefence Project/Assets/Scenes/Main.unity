@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -481,7 +481,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1367,7 +1367,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2576,7 +2576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3418,7 +3418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6506,7 +6506,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6839,7 +6839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1189000740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6847,7 +6847,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189000738}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7532,7 +7532,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7817,13 +7817,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b2bed5f3bc4249bcab55bac8d83d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5782567704498167720, guid: c370770152aea9e4188f2714e2eea258, type: 3}
-  enemy2: {fileID: 2926683470578383724, guid: 96824d539961cfd488a401fff0b99487, type: 3}
-  enemy3: {fileID: 7992430444762929074, guid: fd663ecfc2bfd3246845fc0e6adf3c55, type: 3}
+  enemy: {fileID: 6882097239861534598, guid: 781804e5ece4c8b40b3f8bc00d4ec10f, type: 3}
+  enemy2: {fileID: 7532904802892108820, guid: cbc97cca61ccf174f993512681aae6bc, type: 3}
+  enemy3: {fileID: 1298187087287581672, guid: c510f6d337979364c94294670e394806, type: 3}
   spawnPoint: {fileID: 1189000742}
   timeBetweenWaves: 15
   timeForWaveSpawn: 0.5
+  initialCountDown: 5
   waveCounterText: {fileID: 2014527923}
+  waveThreshold: 10
   groundEnemiesOnScreen: []
   airEnemiesOnScreen: []
   enemiesAlive: 0
@@ -7854,11 +7856,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeUI: {fileID: 1417393205}
-  standardTurretPrefab: {fileID: 3600724620502928146, guid: 0104c5b972e25b8468305797997ea810,
+  standardTurretPrefab: {fileID: 486977166421909099, guid: 0104c5b972e25b8468305797997ea810,
     type: 3}
-  aaTurretPrefab: {fileID: 4402997249675999339, guid: 639a095cff7789a469c7c7ed79484d25,
+  aaTurretPrefab: {fileID: 4325269948560967826, guid: 639a095cff7789a469c7c7ed79484d25,
     type: 3}
-  railTurretPrefab: {fileID: 324983549630077015, guid: ad2bd63ed9a25c946b1fd2d483e5b9cf,
+  railTurretPrefab: {fileID: 7743484481970054320, guid: 026790f856b2ca84d8fc0ac76a29514c,
     type: 3}
 --- !u!114 &1291301843
 MonoBehaviour:
@@ -8487,7 +8489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09dc577b5be73f044aabe9181ff69a2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12970,19 +12972,19 @@ PrefabInstance:
         type: 3}
       propertyPath: railgunTurret.prefab
       value: 
-      objectReference: {fileID: 324983549630077015, guid: ad2bd63ed9a25c946b1fd2d483e5b9cf,
+      objectReference: {fileID: 7743484481970054320, guid: 026790f856b2ca84d8fc0ac76a29514c,
         type: 3}
     - target: {fileID: 583282492328801041, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: standardTurret.prefab
       value: 
-      objectReference: {fileID: 3600724620502928146, guid: 0104c5b972e25b8468305797997ea810,
+      objectReference: {fileID: 486977166421909099, guid: 0104c5b972e25b8468305797997ea810,
         type: 3}
     - target: {fileID: 583282492328801041, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: aaTurret.prefab
       value: 
-      objectReference: {fileID: 4402997249675999339, guid: 639a095cff7789a469c7c7ed79484d25,
+      objectReference: {fileID: 4325269948560967826, guid: 639a095cff7789a469c7c7ed79484d25,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019841f9776739642b704edcb7ddff82, type: 3}

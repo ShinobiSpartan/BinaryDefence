@@ -470,19 +470,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurret:
-    prefab: {fileID: 5933083833890482043, guid: 8bde1b601ea8f724b9878f8ac3fc4ed5,
-      type: 3}
+    prefab: {fileID: 486977166421909099, guid: 0104c5b972e25b8468305797997ea810, type: 3}
     costingValue: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   aaTurret:
-    prefab: {fileID: 1297707420723333034, guid: b5fbe8d8885c4af42a49d15681cc0eca,
+    prefab: {fileID: 4325269948560967826, guid: 639a095cff7789a469c7c7ed79484d25,
       type: 3}
     costingValue: 120
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   railgunTurret:
-    prefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
+    prefab: {fileID: 8190911266586025004, guid: ad2bd63ed9a25c946b1fd2d483e5b9cf,
       type: 3}
     costingValue: 150
     upgradedPrefab: {fileID: 6280543828883730501, guid: 9ddcc15f0715ae94099cb953a230995b,
@@ -1753,11 +1752,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
-    - target: {fileID: 2453127072091844599, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
-        type: 3}
-      propertyPath: m_Name
-      value: Basic Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 2453127072091844600, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1863,6 +1857,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2453127072091844599, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
+        type: 3}
+      propertyPath: m_Name
+      value: Basic Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 2453127073503730753, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1934,11 +1933,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
-    - target: {fileID: 3925326273900030482, guid: cf48ac164e6f7594d93b2c2205b2a316,
-        type: 3}
-      propertyPath: m_Name
-      value: AA Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 3925326273900030509, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,6 +2038,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3925326273900030482, guid: cf48ac164e6f7594d93b2c2205b2a316,
+        type: 3}
+      propertyPath: m_Name
+      value: AA Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 3925326273301664875, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2085,11 +2084,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
-    - target: {fileID: 8516303923528402759, guid: 41816613f8d443845af72d432a2a6933,
-        type: 3}
-      propertyPath: m_Name
-      value: Rail Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 8516303923528402758, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2194,6 +2188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516303923528402759, guid: 41816613f8d443845af72d432a2a6933,
+        type: 3}
+      propertyPath: m_Name
+      value: Rail Turret
       objectReference: {fileID: 0}
     - target: {fileID: 8516303924219361794, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
