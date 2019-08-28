@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: enemy
+  m_Shader: {fileID: 4800000, guid: 05aefcd38a9bd7042a81fdfcc89e81e0, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_D0D8CF8_Texture:
+        m_Texture: {fileID: 2800000, guid: dcfc5f15bb8f1994c96cd07ae67939bd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - Color_4962DB80: {r: 1, g: 0.01900063, b: 0, a: 0}
+    - Color_8F1C7006: {r: 1, g: 0.8635321, b: 0, a: 0}
+    - Color_FACA0076: {r: 0.16981125, g: 0.14980516, b: 0.01521893, a: 0}
