@@ -23,6 +23,8 @@ public class BuildManager : MonoBehaviour
     public GameObject aaTurretPrefab;
     [Tooltip("Add the turret prefabs inside here! (RailTurret goes here)")]
     public GameObject railTurretPrefab;
+    [Tooltip("Add the Refinery prefab here!")]
+    public GameObject refineryPlacement;
 
     private TurretBluePrint turretToBuild;
     private Node nodeSelected;

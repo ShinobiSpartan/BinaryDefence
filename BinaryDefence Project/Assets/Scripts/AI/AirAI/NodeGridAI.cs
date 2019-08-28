@@ -87,7 +87,7 @@ public class NodeGridAI : MonoBehaviour
                 if (path != null)
                     if (path.Contains(n))
                         Gizmos.color = Color.black;
-                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - 0.1f));
+                Gizmos.DrawWireCube(n.worldPosition, Vector3.one * (nodeDiameter - 0.1f));
             }
         }
     } 

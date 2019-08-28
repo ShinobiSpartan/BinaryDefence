@@ -5,6 +5,7 @@ public class Shop : MonoBehaviour
     public TurretBluePrint standardTurret;
     public TurretBluePrint aaTurret;
     public TurretBluePrint railgunTurret;
+    public TurretBluePrint refinery;
 
     BuildManager buildManager;
     
@@ -38,4 +39,11 @@ public class Shop : MonoBehaviour
         Debug.Log("Rail Turret bought.");
         buildManager.SelectTurretToBuild(railgunTurret);
     }
+
+    public void SelectRefinery()
+    {
+        Debug.Log("Refinery has been bought.");
+        buildManager.SelectTurretToBuild(refinery);
+    }
+
 }
