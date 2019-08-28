@@ -8,12 +8,12 @@ public class NodeGridAI : MonoBehaviour
     public float nodeRadius;
     NodeAI[,] grid;
 
-    public List<NodeAI> path;
-
     float nodeDiameter;
     int gridSizeX, gridSizeY;
 
-    void Start()
+    public bool displayGrid;
+
+    void Awake()
     {
         nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
@@ -79,14 +79,11 @@ public class NodeGridAI : MonoBehaviour
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 3, gridWorldSize.y));
 
-        if(grid != null)
+        if(grid != null && displayGrid)
         {
             foreach (NodeAI n in grid)
             {
                 Gizmos.color = (n.isWalkable) ? Color.white : Color.red;
-                if (path != null)
-                    if (path.Contains(n))
-                        Gizmos.color = Color.black;
                 Gizmos.DrawWireCube(n.worldPosition, Vector3.one * (nodeDiameter - 0.1f));
             }
         }
