@@ -27,8 +27,7 @@ public class GroundEnemies : MonoBehaviour
 
     // Game object representing the 'Base' structure
     private GameObject baseStructure;
-    // Health of the Base Structure
-    private float baseHealth;
+    public LayerMask baseStructMask;
 
     // Amount of damage the ground units do (to the Base Structure)
     public float damagePerShot = 1f;
@@ -113,11 +112,10 @@ public class GroundEnemies : MonoBehaviour
     {
         if (baseStructure != null)
         {
-            baseHealth = baseStructure.GetComponent<ObjectHealth>().currentHealth;
-
+            bool inRange = Physics.CheckSphere(transform.position, 1.0f, baseStructMask);
 
             // If the enemy has stopped in front of the base
-            if (currentSpeed == 0 && Vector3.Distance(transform.position, baseStructure.transform.position) < 1.0f)
+            if (currentSpeed == 0 && inRange)
             {
                 // Start the shot delay timer
                 shotTimer += Time.deltaTime;
