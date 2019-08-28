@@ -21,6 +21,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+
+        //Camera.main.transform.position.y = 0;
         if (Input.GetMouseButtonDown(0))
         {
             startTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
