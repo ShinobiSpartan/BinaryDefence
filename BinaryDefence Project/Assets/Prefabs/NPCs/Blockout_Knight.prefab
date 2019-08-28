@@ -123,8 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAISpeed: 10
+  baseStructMask:
+    serializedVersion: 2
+    m_Bits: 512
   damagePerShot: 1
-  shotDelay: 0
+  shotDelay: 2
 --- !u!114 &679716674813319415
 MonoBehaviour:
   m_ObjectHideFlags: 0

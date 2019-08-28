@@ -48,9 +48,9 @@ MonoBehaviour:
   maxAISpeed: 5
   baseStructMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   damagePerShot: 1
-  shotDelay: 0
+  shotDelay: 3
 --- !u!114 &8918400089697139269
 MonoBehaviour:
   m_ObjectHideFlags: 0

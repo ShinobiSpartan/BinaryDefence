@@ -112,7 +112,7 @@ public class GroundEnemies : MonoBehaviour
     {
         if (baseStructure != null)
         {
-            bool inRange = Physics.CheckSphere(transform.position, 1.0f, baseStructMask);
+            bool inRange = Physics.CheckSphere(transform.position, 3.0f, baseStructMask);
 
             // If the enemy has stopped in front of the base
             if (currentSpeed == 0 && inRange)
