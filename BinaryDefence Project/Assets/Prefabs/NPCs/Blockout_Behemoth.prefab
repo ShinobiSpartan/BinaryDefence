@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80468d34e98e5a47b193a51283bff7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAISpeed: 10
+  maxAISpeed: 5
+  baseStructMask:
+    serializedVersion: 2
+    m_Bits: 0
   damagePerShot: 1
   shotDelay: 0
 --- !u!114 &8918400089697139269
