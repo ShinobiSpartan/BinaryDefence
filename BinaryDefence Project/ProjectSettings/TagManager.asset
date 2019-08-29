@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - AATurret
   - BaseStruct
+  - Refinery
   layers:
   - Default
   - TransparentFX
