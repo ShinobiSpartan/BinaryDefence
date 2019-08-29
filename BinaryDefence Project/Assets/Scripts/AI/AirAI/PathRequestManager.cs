@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PathRequestManager : MonoBehaviour
 {
+
     Queue<PathRequest> pathRequestQueue = new Queue<PathRequest>();
     PathRequest currentPathRequest;
 
@@ -13,7 +14,7 @@ public class PathRequestManager : MonoBehaviour
 
     bool isProcessingPath;
 
-    private void Awake()
+    void Awake()
     {
         instance = this;
         pathfinding = GetComponent<AirPathfinding>();
@@ -28,7 +29,7 @@ public class PathRequestManager : MonoBehaviour
 
     void TryProcessNext()
     {
-        if(!isProcessingPath && pathRequestQueue.Count > 0)
+        if (!isProcessingPath && pathRequestQueue.Count > 0)
         {
             currentPathRequest = pathRequestQueue.Dequeue();
             isProcessingPath = true;
@@ -55,5 +56,6 @@ public class PathRequestManager : MonoBehaviour
             pathEnd = _end;
             callback = _callback;
         }
+
     }
 }
