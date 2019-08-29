@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7532904802892108820}
   - component: {fileID: 2940387318054509036}
+  - component: {fileID: 8342827678913731013}
   m_Layer: 0
   m_Name: Blockout_Valk
   m_TagString: AirEnemy
@@ -46,6 +47,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   fullHealth: 10
+--- !u!114 &8342827678913731013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532904802891614260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee16609415092a4bbefd3944e4ca6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 10
+  rotationSpeed: 5
+  baseStructMask:
+    serializedVersion: 2
+    m_Bits: 512
+  shotDelay: 1
+  damagePerShot: 1
 --- !u!1 &7532904802891614262
 GameObject:
   m_ObjectHideFlags: 0
