@@ -17,16 +17,19 @@ public class CameraController : MonoBehaviour
     [Header("Andriod Variables")]
     public float zoomOutMin = 1;
     public float zoomOutMax = 8;
+
     #endregion
+
+
+    
 
     void Update()
     {
-
-        //Camera.main.transform.position.y = 0;
         if (Input.GetMouseButtonDown(0))
         {
             startTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+
         if (Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
