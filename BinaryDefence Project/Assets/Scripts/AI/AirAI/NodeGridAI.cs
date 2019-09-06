@@ -8,6 +8,8 @@ public class NodeGridAI : MonoBehaviour
     public float nodeRadius;
     NodeAI[,] grid;
 
+    public LayerMask unwalkableMask;
+
     float nodeDiameter;
     int gridSizeX, gridSizeY;
 
@@ -33,7 +35,7 @@ public class NodeGridAI : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
-                bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius));
+                bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
                 grid[x, y] = new NodeAI(walkable, worldPoint, x, y);
             }
         }
@@ -77,7 +79,7 @@ public class NodeGridAI : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 3, gridWorldSize.y));
+        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
 
         if(grid != null && displayGrid)
         {
