@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AirAIUnit : MonoBehaviour
 {
+
     public Transform target;
     public float speed = 20f;
 
@@ -12,39 +12,9 @@ public class AirAIUnit : MonoBehaviour
     Vector3[] path;
     int targetIndex;
 
-    //GameObject baseStructure;
-    //public LayerMask baseStructMask;
-
-   // private float shotTimer;
-   // public float shotDelay;
-   //
-   // public int damagePerShot;
-   //
-   // GameObject[] listOfRefineries = null;
-   // int numOfRefineries;
-
     private void Start()
     {
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-    }
-
-    private void Update()
-    {
-        //baseStructure = GameObject.FindGameObjectWithTag("BaseStruct");
-        //target = baseStructure.transform;
-        //
-        //
-        //
-        //listOfRefineries = GameObject.FindGameObjectsWithTag("Refinery");
-        //numOfRefineries = listOfRefineries.Length;
-        //
-        //AttackBase();
-        
-        //if (numOfRefineries < 1)
-        //    return;
-        //else
-        //    target = listOfRefineries[0].transform;
-
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -60,8 +30,6 @@ public class AirAIUnit : MonoBehaviour
 
     IEnumerator FollowPath()
     {
-        targetIndex = 0;
-
         Vector3 currentWaypoint = path[0];
         while (true)
         {
@@ -85,31 +53,6 @@ public class AirAIUnit : MonoBehaviour
 
         }
     }
-
-    //void AttackBase()
-    //{
-    //    if (baseStructure != null)
-    //    {
-    //        bool inRange = Physics.CheckSphere(transform.position, 3.0f, baseStructMask);
-    //
-    //        // If the enemy has stopped in front of the base
-    //        if (speed == 0 && inRange)
-    //        {
-    //            // Start the shot delay timer
-    //            shotTimer += Time.deltaTime;
-    //            // When the shot delay timer maxes out
-    //            if (shotTimer >= shotDelay)
-    //            {
-    //                // Shoot
-    //                shotTimer -= shotDelay;
-    //                baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-    //                Debug.Log("Bang");
-    //                Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
-    //            }
-    //
-    //        }
-    //    }
-    //}
     
     public void OnDrawGizmos()
     {
