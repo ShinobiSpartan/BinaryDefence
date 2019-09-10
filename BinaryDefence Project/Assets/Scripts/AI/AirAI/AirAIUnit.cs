@@ -14,6 +14,7 @@ public class AirAIUnit : MonoBehaviour
 
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("BaseStruct").transform;
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
     }
 
