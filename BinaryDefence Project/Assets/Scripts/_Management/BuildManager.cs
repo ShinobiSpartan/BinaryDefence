@@ -33,8 +33,10 @@ public class BuildManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance!=null)
-
+        if(instance==null)
+        {
+            Debug.Log("There is another 'BuildManager' script in scene!(Remove one)");
+        }
         instance = this;
     }
 

@@ -28,6 +28,8 @@ public class Node : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         buildManager = BuildManager.instance;
+        if (buildManager == null)
+            Debug.Log("Start");
     }
 
     /// <summary>
@@ -119,6 +121,8 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if (buildManager == null)
+            Debug.Log("OnMouseEnter");
         if (!buildManager.CanBuild)
             return;
 
