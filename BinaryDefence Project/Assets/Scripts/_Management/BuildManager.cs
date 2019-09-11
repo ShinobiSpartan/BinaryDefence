@@ -37,7 +37,6 @@ public class BuildManager : MonoBehaviour
         {
             Debug.Log("There is another 'BuildManager' script in scene!(Remove one)");
         }
-
         instance = this;
     }
 
@@ -52,7 +51,7 @@ public class BuildManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Selecting a Node to build on 
+    /// Selecting a Node to build on and checking if the selected node is the node
     /// </summary>
     /// <param name="node">The selected Node</param>
     public void selecetNode(Node node)

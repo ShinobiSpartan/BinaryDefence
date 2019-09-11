@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323118dc9c9e9704c9fec9437f2113b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 10
+  turretRange: 15
   fireRate: 2.5
   turnSpeed: 5
   turretRotationPart: {fileID: 2247610164582001762}

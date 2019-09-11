@@ -86,6 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390854228711175330}
+  - component: {fileID: 4932648927359059403}
   m_Layer: 0
   m_Name: new_Knight
   m_TagString: Untagged
@@ -108,3 +109,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4932648927359059403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390854228711467138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80468d34e98e5a47b193a51283bff7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAISpeed: 5
+  baseStructMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damagePerShot: 1
+  shotDelay: 1

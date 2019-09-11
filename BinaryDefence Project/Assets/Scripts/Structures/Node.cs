@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     #region Variables
+    [Header("Color")]
     public Color hoverColor;
+
     public Vector3 positionOffest;
     public Color notEnoughMoney;
 
@@ -18,7 +20,6 @@ public class Node : MonoBehaviour
     public bool isUpgraded = false;
 
     private Renderer rend;
-    private Color startingColor;
 
     BuildManager buildManager;
     #endregion
@@ -26,11 +27,15 @@ public class Node : MonoBehaviour
     private void Start()
     {
         rend = GetComponent<Renderer>();
-        //startingColor = rend.material.color;
-
         buildManager = BuildManager.instance;
+        if (buildManager == null)
+            Debug.Log("Start");
     }
 
+    /// <summary>
+    /// This will return the transforms position and add the positions off set.
+    /// </summary>
+    /// <returns></returns>
     public Vector3 GetBuildPos()
     {
         return transform.position + positionOffest;
@@ -42,7 +47,7 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        
+        //checking to see if the turret is null
         if(turret != null)
         {
             buildManager.selecetNode(this);
@@ -57,9 +62,9 @@ public class Node : MonoBehaviour
 
    void BuildTurret(TurretBluePrint bluePrint)
    {
+        //checking to see if the player has the correct amount of money 
         if (PlayerStats.money < bluePrint.costingValue)
         {
-            Debug.Log("YOU'RE POOR AF!");
             return;
         }
 
@@ -69,8 +74,6 @@ public class Node : MonoBehaviour
         turret = _turret;
 
         turretBluePrint = bluePrint;
-
-        Debug.Log("Turret Built! Remaining money: " + PlayerStats.money);
    }
 
     /// <summary>
@@ -78,9 +81,9 @@ public class Node : MonoBehaviour
     /// </summary>
     public void UpgradeTurret()
     {
+        //checking to see if the player has the correct amount of money to upgrade
         if (PlayerStats.money < turretBluePrint.upgradeCost)
         {
-            Debug.Log("No money to upgrade!");
             return;
         }
 
@@ -94,9 +97,8 @@ public class Node : MonoBehaviour
         turret = _turret;
 
         isUpgraded = true;
-
-        Debug.Log("Turret upgraded! Remaining money: " + PlayerStats.money);
     }
+
     /// <summary>
     /// Selling turrets
     /// Communicates with the "PlayerStats" class
@@ -106,6 +108,7 @@ public class Node : MonoBehaviour
     {
         PlayerStats.money += turretBluePrint.sellCost();
 
+        //destroying whatever turret is placed on the node
         Destroy(turret);
         turretBluePrint = null;
     }
@@ -118,6 +121,8 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if (buildManager == null)
+            Debug.Log("OnMouseEnter");
         if (!buildManager.CanBuild)
             return;
 
@@ -132,12 +137,5 @@ public class Node : MonoBehaviour
 
         rend.material.color = hoverColor;
     }
-
-    void OnMouseExit()
-    {
-        rend.material.color = startingColor;
-    }
-
-
 
 }

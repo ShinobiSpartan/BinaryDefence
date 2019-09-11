@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3265981501787445602}
   m_Layer: 0
   m_Name: new_Behemoth
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAISpeed: 5
+  rotationSpeed: 5
   baseStructMask:
     serializedVersion: 2
     m_Bits: 512

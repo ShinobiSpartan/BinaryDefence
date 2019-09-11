@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AirAIUnit : MonoBehaviour
@@ -8,40 +7,41 @@ public class AirAIUnit : MonoBehaviour
     public float speed = 20f;
     public float rotationSpeed = 5f;
 
-    Vector3[] path;
-    int targetIndex = 0;
+    private GameObject baseStructure;
 
-    GameObject baseStructure;
-    public LayerMask baseStructMask;
+    public float checkRadius = 3.0f;
+    public LayerMask structures;
+
+    Vector3[] path;
+    int targetIndex;
+
+    GameObject[] listOfRefineries;
+    int numOfRefineries = 0;
+    int prev_numOfRefineries = 0;
+
+    public float damagePerShot = 1f;
 
     private float shotTimer;
     public float shotDelay;
 
-    public int damagePerShot;
-
-    GameObject[] listOfRefineries = null;
-    int numOfRefineries;
-
     private void Start()
     {
         baseStructure = GameObject.FindGameObjectWithTag("BaseStruct");
+
         target = baseStructure.transform;
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
     }
 
     private void Update()
     {
-
         listOfRefineries = GameObject.FindGameObjectsWithTag("Refinery");
         numOfRefineries = listOfRefineries.Length;
 
-        AttackBase();
-
-        if (numOfRefineries < 1)
-            return;
-        else
-            target = listOfRefineries[0].transform;
-
+        if (prev_numOfRefineries != numOfRefineries)
+        {
+            AdjustTarget();
+            prev_numOfRefineries = numOfRefineries;
+        }
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -83,31 +83,51 @@ public class AirAIUnit : MonoBehaviour
         }
     }
 
-    void AttackBase()
+    private void AdjustTarget()
+    {
+        if (numOfRefineries > 0)
+        {
+            target = listOfRefineries[0].transform;
+            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("BaseStruct").transform;
+            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        }
+
+    }
+
+    private void AttackStructures()
     {
         if (baseStructure != null)
         {
-            bool inRange = Physics.CheckSphere(transform.position, 3.0f, baseStructMask);
+            bool inRange = Physics.CheckSphere(transform.position, checkRadius, structures);
 
-            // If the enemy has stopped in front of the base
-            if (speed == 0 && inRange)
+            if (inRange)
             {
-                // Start the shot delay timer
                 shotTimer += Time.deltaTime;
-                // When the shot delay timer maxes out
-                if (shotTimer >= shotDelay)
+                if(shotTimer >= shotDelay)
                 {
-                    // Shoot
                     shotTimer -= shotDelay;
-                    baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                    Debug.Log("Bang");
-                    Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                    
+                    if(target == listOfRefineries[0].transform)
+                    {
+                        listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                        Debug.Log("Bang");
+                        Debug.Log("Refinery Health = " + listOfRefineries[0].GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                    }
+                    else
+                    {
+                        baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                        Debug.Log("Bang");
+                        Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                    }
                 }
-
             }
         }
     }
-    
+
     public void OnDrawGizmos()
     {
         if (path != null)

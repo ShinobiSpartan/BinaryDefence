@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         //checking to see if the target is null
         if(targetTransform == null)
         {
+            //destroys the gameobject
             Destroy(gameObject);
             return;
         }

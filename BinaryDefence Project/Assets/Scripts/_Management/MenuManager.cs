@@ -1,6 +1,5 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
-
 public class MenuManager : MonoBehaviour
 {
 
@@ -52,6 +51,13 @@ public class MenuManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+    /// <summary>
+    /// goes back to the main menu
+    /// </summary>
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     /// <summary>
     /// taking the player to the Lobby screen
@@ -86,10 +92,19 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("map3");
     }
 
+    /// <summary>
+    ///plays the fourth map 
+    /// </summary>
     public void PlayMap4()
     {
         SceneManager.LoadScene("map4");
     }
+
+    public void PlayMap5()
+    {
+        SceneManager.LoadScene("map5");
+    }
+
 
     /// <summary>
     /// pauses the game
