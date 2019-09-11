@@ -78,11 +78,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeUI: {fileID: 0}
-  standardTurretPrefab: {fileID: 7231403055859788861, guid: 84bdfd654b04d1f4b96aa613b9a6b1ae,
+  standardTurretPrefab: {fileID: 6231895771010888546, guid: 6d3a543533a08594ca653eeb65c7b41f,
     type: 3}
-  aaTurretPrefab: {fileID: 3037503014019764751, guid: 408bbed37194f0f41930cc193dace9cd,
+  aaTurretPrefab: {fileID: 8227091009827462930, guid: 8ecb4b11f5a04ba498e69dc25f3c4fe0,
     type: 3}
-  railTurretPrefab: {fileID: 2247610164581511234, guid: 9492a5f3470c200459530223ffb850cb,
+  railTurretPrefab: {fileID: 2348776700315293670, guid: 6bdfa75b012f54f43b4679fc2ec62608,
     type: 3}
   refineryPlacement: {fileID: 115569830276694235, guid: 70aa403283ea49540873deb7a6621911,
     type: 3}

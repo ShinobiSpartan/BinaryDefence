@@ -15,7 +15,7 @@ public class Turret : MonoBehaviour
 
 
     public GameObject bulletPrefab;
-    public Transform firePoint;
+    public Transform firePoint1;
 
     private GameObject[] enemies = null;
 
@@ -61,14 +61,17 @@ public class Turret : MonoBehaviour
     void Shoot()
     {
 
-        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bull = bulletGO.GetComponent<Bullet>();
+        GameObject bulletGO1 = Instantiate(bulletPrefab, firePoint1.position, firePoint1.rotation);
 
-        if(bull != null)
+
+        Bullet bull1 = bulletGO1.GetComponent<Bullet>();
+
+
+        if(bull1 != null)
         {
-            bull.Seek(target);
+            bull1.Seek(target);
         }
-
+        
     }
 
 
