@@ -418,7 +418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.45875004, y: 0}
   m_AnchorMax: {x: 0.93100005, y: 0.29555357}
-  m_AnchoredPosition: {x: 58.99997, y: -13.9001465}
+  m_AnchoredPosition: {x: 59, y: -13.900024}
   m_SizeDelta: {x: 353.8999, y: 55.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282492328801042
@@ -1693,7 +1693,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ad645235ef33e924589ce2394a531b35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a089c5fae7fdad640bda0d3b3bb0486c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1918,8 +1918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.5, y: 75.99}
-  m_SizeDelta: {x: 7, y: -144.02}
+  m_AnchoredPosition: {x: 3.5, y: 89.5}
+  m_SizeDelta: {x: 7, y: -141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &66800970439051119
 CanvasRenderer:
@@ -1972,6 +1972,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
+    - target: {fileID: 2453127072091844599, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
+        type: 3}
+      propertyPath: m_Name
+      value: Basic Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 2453127072091844600, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2077,11 +2082,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2453127072091844599, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
-        type: 3}
-      propertyPath: m_Name
-      value: Basic Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 2453127073503730753, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2090,7 +2090,7 @@ PrefabInstance:
     - target: {fileID: 2453127073503730753, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.84375
+      value: 89.5
       objectReference: {fileID: 0}
     - target: {fileID: 2453127073503730753, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
@@ -2100,19 +2100,14 @@ PrefabInstance:
     - target: {fileID: 2453127073503730753, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -140.3125
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 2453127072091844602, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a2068e3dc905a414fa02e337a488aff0,
+      objectReference: {fileID: 21300000, guid: b5b2bf6a1d3fe8a488ddf959a41fce8b,
         type: 3}
-    - target: {fileID: 2453127072091844602, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2453127072091844601, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2145,12 +2140,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2453127073503730754, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
-        type: 3}
-    - target: {fileID: 2453127073503730754, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
-        type: 3}
       propertyPath: m_Color.r
       value: 0.5294118
       objectReference: {fileID: 0}
@@ -2164,6 +2153,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.74509805
       objectReference: {fileID: 0}
+    - target: {fileID: 2453127073503730754, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
+        type: 3}
     - target: {fileID: 2453127073503730754, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
         type: 3}
       propertyPath: m_Text
@@ -2186,6 +2181,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
+    - target: {fileID: 3925326273900030482, guid: cf48ac164e6f7594d93b2c2205b2a316,
+        type: 3}
+      propertyPath: m_Name
+      value: AA Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 3925326273900030509, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2291,11 +2291,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3925326273900030482, guid: cf48ac164e6f7594d93b2c2205b2a316,
-        type: 3}
-      propertyPath: m_Name
-      value: AA Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 3925326273301664875, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2304,7 +2299,7 @@ PrefabInstance:
     - target: {fileID: 3925326273301664875, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 76.9275
+      value: 89.5
       objectReference: {fileID: 0}
     - target: {fileID: 3925326273301664875, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
@@ -2314,13 +2309,13 @@ PrefabInstance:
     - target: {fileID: 3925326273301664875, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -142.145
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 3925326273900030511, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e8450fc62a634bf41bae8fd93a6b4999,
+      objectReference: {fileID: 21300000, guid: 2b82a6a3424316f42ab09024723bf09c,
         type: 3}
     - target: {fileID: 3925326273900030511, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
@@ -2354,12 +2349,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925326273301664874, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
-        type: 3}
-    - target: {fileID: 3925326273301664874, guid: cf48ac164e6f7594d93b2c2205b2a316,
-        type: 3}
       propertyPath: m_Color.r
       value: 0.5294118
       objectReference: {fileID: 0}
@@ -2373,6 +2362,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.74509805
       objectReference: {fileID: 0}
+    - target: {fileID: 3925326273301664874, guid: cf48ac164e6f7594d93b2c2205b2a316,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
+        type: 3}
     - target: {fileID: 3925326273301664874, guid: cf48ac164e6f7594d93b2c2205b2a316,
         type: 3}
       propertyPath: m_Text
@@ -2395,6 +2390,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 583282492328801045}
     m_Modifications:
+    - target: {fileID: 8516303923528402759, guid: 41816613f8d443845af72d432a2a6933,
+        type: 3}
+      propertyPath: m_Name
+      value: Rail Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 8516303923528402758, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2500,11 +2500,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8516303923528402759, guid: 41816613f8d443845af72d432a2a6933,
-        type: 3}
-      propertyPath: m_Name
-      value: Rail Turret
-      objectReference: {fileID: 0}
     - target: {fileID: 8516303924219361794, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2513,7 +2508,7 @@ PrefabInstance:
     - target: {fileID: 8516303924219361794, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.1125
+      value: 89.5
       objectReference: {fileID: 0}
     - target: {fileID: 8516303924219361794, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
@@ -2523,13 +2518,13 @@ PrefabInstance:
     - target: {fileID: 8516303924219361794, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -141.775
+      value: -141
       objectReference: {fileID: 0}
     - target: {fileID: 8516303923528402756, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8a063083a646cf545ad11c8fcd10f266,
+      objectReference: {fileID: 21300000, guid: 686e09a5ad547304ab81accd43b90a27,
         type: 3}
     - target: {fileID: 8516303923528402756, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
@@ -2563,12 +2558,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516303924219361793, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
-        type: 3}
-    - target: {fileID: 8516303924219361793, guid: 41816613f8d443845af72d432a2a6933,
-        type: 3}
       propertyPath: m_Color.r
       value: 0.5294118
       objectReference: {fileID: 0}
@@ -2582,6 +2571,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.74509805
       objectReference: {fileID: 0}
+    - target: {fileID: 8516303924219361793, guid: 41816613f8d443845af72d432a2a6933,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: be69f11810c5dcf44aebba39626ddb3e,
+        type: 3}
     - target: {fileID: 8516303924219361793, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
       propertyPath: m_Text

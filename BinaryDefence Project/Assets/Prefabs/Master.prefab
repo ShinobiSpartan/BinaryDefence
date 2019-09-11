@@ -46,11 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b2bed5f3bc4249bcab55bac8d83d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundEnemy1: {fileID: 0}
-  groundEnemy2: {fileID: 0}
+  groundEnemy1: {fileID: 3011804690351655728, guid: ae0f0972a749fea41a8cafdfe4de2096,
+    type: 3}
+  groundEnemy2: {fileID: 8991154539801042443, guid: a2dc3fc4dfc37b14b9272886df7cabd7,
+    type: 3}
+  airEnemy: {fileID: 5959234625247178089, guid: 90113982d719d04438d96c6bd16fa49a,
+    type: 3}
   groundSpawnPoint: {fileID: 0}
-  airEnemy: {fileID: 0}
-  aerialSpawnPoints: []
+  aerialSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeBetweenWaves: 15
   timeForWaveSpawn: 0.5
   initialCountDown: 5

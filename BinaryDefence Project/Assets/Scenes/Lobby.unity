@@ -191,7 +191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2095610904}
         m_MethodName: PlayMap1
         m_Mode: 1
         m_Arguments:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2095610904}
         m_MethodName: PlayMap2
         m_Mode: 1
         m_Arguments:
