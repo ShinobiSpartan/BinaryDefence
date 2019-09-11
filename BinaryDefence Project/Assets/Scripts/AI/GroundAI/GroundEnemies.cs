@@ -9,6 +9,8 @@ public class GroundEnemies : MonoBehaviour
     // Keeps track of the current speed of the AI 
     private float currentSpeed;
 
+    public float rotationSpeed = 5f;
+
     // Distance to the next waypoint
     private float distToTarget;
     // Distance between the last 2 waypoints
@@ -70,6 +72,11 @@ public class GroundEnemies : MonoBehaviour
     {
         // Calculates what direction the AI should be moving in
         Vector3 dir = target.position - transform.position;
+
+        float step = rotationSpeed * Time.deltaTime;
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, dir, step, 0.00f);
+        transform.rotation = Quaternion.LookRotation(newDir);
+
         // Moves the AI towards the next waypoint
         transform.Translate(dir.normalized * currentSpeed * Time.deltaTime, Space.World);
 
