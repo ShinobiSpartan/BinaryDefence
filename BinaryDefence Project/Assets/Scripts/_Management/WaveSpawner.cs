@@ -5,21 +5,24 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     #region Variables
-
+    [Header("Enemys")]
     public Transform groundEnemy1;
     public Transform groundEnemy2;
-    public Transform groundSpawnPoint;
-
     public Transform airEnemy;
+
+    [Header("Spawns")]
+    public Transform groundSpawnPoint;
     public Transform[] aerialSpawnPoints;
     private Transform selectedAerialSpawn;
     
+    [Header("Times")]
     public float timeBetweenWaves = 5;
     public float timeForWaveSpawn = 0.5f;
     public float initialCountDown = 5f;
     public Text waveCounterText;
 
     private int waveIndex = 0;
+    [Header("Max Wave")]
     public int waveThreshold = 10;
 
     public GameObject[] groundEnemiesOnScreen;

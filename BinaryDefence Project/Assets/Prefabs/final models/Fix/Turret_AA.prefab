@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8325602561643758419}
   m_Layer: 0
   m_Name: Turret_AA
-  m_TagString: Untagged
+  m_TagString: AATurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323118dc9c9e9704c9fec9437f2113b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 10
+  turretRange: 25
   fireRate: 2.5
   turnSpeed: 5
   turretRotationPart: {fileID: 3037503014019796527}
