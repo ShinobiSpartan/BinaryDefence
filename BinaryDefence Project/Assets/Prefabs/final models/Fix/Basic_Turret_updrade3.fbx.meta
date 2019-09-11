@@ -5,10 +5,10 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert10
+    2100000: lambert8
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Basic_Turret_updrade3
+    4300000: Turret_Rail_Upgrade3
   externalObjects: {}
   materials:
     importMaterials: 1

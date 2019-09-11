@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class TurretBluePrint
@@ -8,8 +6,8 @@ public class TurretBluePrint
     public GameObject prefab;
     public int costingValue;
 
-     public GameObject upgradedPrefab;
-     public int upgradeCost;
+    public GameObject upgradedPrefab;
+    public int upgradeCost;
 
     public int sellCost ()
     {
