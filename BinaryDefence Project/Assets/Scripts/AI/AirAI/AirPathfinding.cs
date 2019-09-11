@@ -86,6 +86,10 @@ public class AirPathfinding : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
+
+        if (currentNode == startNode)
+            path.Add(currentNode);
+
         Vector3[] waypoints = SimplifyPath(path);
         Array.Reverse(waypoints);
         return waypoints;

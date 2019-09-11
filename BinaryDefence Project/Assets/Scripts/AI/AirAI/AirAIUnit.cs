@@ -3,19 +3,45 @@ using UnityEngine;
 
 public class AirAIUnit : MonoBehaviour
 {
-
     public Transform target;
     public float speed = 20f;
-
     public float rotationSpeed = 5f;
+
+    private GameObject baseStructure;
+
+    public float checkRadius = 3.0f;
+    public LayerMask structures;
 
     Vector3[] path;
     int targetIndex;
 
+    GameObject[] listOfRefineries;
+    int numOfRefineries = 0;
+    int prev_numOfRefineries = 0;
+
+    public float damagePerShot = 1f;
+
+    private float shotTimer;
+    public float shotDelay;
+
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("BaseStruct").transform;
+        baseStructure = GameObject.FindGameObjectWithTag("BaseStruct");
+
+        target = baseStructure.transform;
         PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+    }
+
+    private void Update()
+    {
+        listOfRefineries = GameObject.FindGameObjectsWithTag("Refinery");
+        numOfRefineries = listOfRefineries.Length;
+
+        if (prev_numOfRefineries != numOfRefineries)
+        {
+            AdjustTarget();
+            prev_numOfRefineries = numOfRefineries;
+        }
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -39,6 +65,8 @@ public class AirAIUnit : MonoBehaviour
                 targetIndex++;
                 if (targetIndex >= path.Length)
                 {
+                    targetIndex = 0;
+                    path = new Vector3[0];
                     yield break;
                 }
                 currentWaypoint = path[targetIndex];
@@ -54,7 +82,52 @@ public class AirAIUnit : MonoBehaviour
 
         }
     }
-    
+
+    private void AdjustTarget()
+    {
+        if (numOfRefineries > 0)
+        {
+            target = listOfRefineries[0].transform;
+            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("BaseStruct").transform;
+            PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        }
+
+    }
+
+    private void AttackStructures()
+    {
+        if (baseStructure != null)
+        {
+            bool inRange = Physics.CheckSphere(transform.position, checkRadius, structures);
+
+            if (inRange)
+            {
+                shotTimer += Time.deltaTime;
+                if(shotTimer >= shotDelay)
+                {
+                    shotTimer -= shotDelay;
+                    
+                    if(target == listOfRefineries[0].transform)
+                    {
+                        listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                        Debug.Log("Bang");
+                        Debug.Log("Refinery Health = " + listOfRefineries[0].GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                    }
+                    else
+                    {
+                        baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                        Debug.Log("Bang");
+                        Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                    }
+                }
+            }
+        }
+    }
+
     public void OnDrawGizmos()
     {
         if (path != null)
