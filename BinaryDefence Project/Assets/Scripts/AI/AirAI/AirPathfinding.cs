@@ -6,13 +6,14 @@ using UnityEngine;
 public class AirPathfinding : MonoBehaviour
 {
     PathRequestManager requestManager;
-    NodeGridAI nGrid;
+    NodeGridAI grid;
 
-    private void Awake()
+    void Awake()
     {
         requestManager = GetComponent<PathRequestManager>();
-        nGrid = GetComponent<NodeGridAI>();
+        grid = GetComponent<NodeGridAI>();
     }
+
 
     public void StartFindPath(Vector3 startPos, Vector3 targetPos)
     {
@@ -25,13 +26,13 @@ public class AirPathfinding : MonoBehaviour
         Vector3[] waypoints = new Vector3[0];
         bool pathSuccess = false;
 
-        NodeAI startNode = nGrid.NodeFromWorldPoint(startPos);
-        NodeAI targetNode = nGrid.NodeFromWorldPoint(targetPos);
+        NodeAI startNode = grid.NodeFromWorldPoint(startPos);
+        NodeAI targetNode = grid.NodeFromWorldPoint(targetPos);
 
 
         if (startNode.isWalkable && targetNode.isWalkable)
         {
-            Heap<NodeAI> openSet = new Heap<NodeAI>(nGrid.MaxSize);
+            Heap<NodeAI> openSet = new Heap<NodeAI>(grid.MaxSize);
             HashSet<NodeAI> closedSet = new HashSet<NodeAI>();
             openSet.Add(startNode);
 
@@ -46,7 +47,7 @@ public class AirPathfinding : MonoBehaviour
                     break;
                 }
 
-                foreach (NodeAI neighbour in nGrid.GetNeighbours(currentNode))
+                foreach (NodeAI neighbour in grid.GetNeighbours(currentNode))
                 {
                     if (!neighbour.isWalkable || closedSet.Contains(neighbour))
                     {
@@ -85,28 +86,15 @@ public class AirPathfinding : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
+
+        if (currentNode == startNode)
+            path.Add(currentNode);
+
         Vector3[] waypoints = SimplifyPath(path);
         Array.Reverse(waypoints);
         return waypoints;
 
     }
-
-    // Vector3[] SimplifyPath(List<NodeAI> path)
-    // {
-    //     List<Vector3> waypoints = new List<Vector3>();
-    //     Vector2 directionOld = Vector2.zero;
-    // 
-    //     for (int i = 1; i < path.Count; i++)
-    //     {
-    //         Vector2 directionNew = new Vector2(path[i - 1].gridX - path[i].gridX, path[i - 1].gridY - path[i].gridY);
-    //         if (directionNew != directionOld)
-    //         {
-    //             waypoints.Add(path[i - 1].worldPosition);
-    //         }
-    //         directionOld = directionNew;
-    //     }
-    //     return waypoints.ToArray();
-    // }
 
     Vector3[] SimplifyPath(List<NodeAI> path)
     {
@@ -117,18 +105,15 @@ public class AirPathfinding : MonoBehaviour
         for (int i = 1; i < path.Count; i++)
         {
             Vector2 directionNew = new Vector2(path[i - 1].gridX - path[i].gridX, path[i - 1].gridY - path[i].gridY);
-
             if (directionNew != directionOld)
             {
-                waypoints.Add(path[i].worldPosition);
+                waypoints.Add(path[i - 1].worldPosition);
             }
-
             directionOld = directionNew;
         }
 
         return waypoints.ToArray();
     }
-
 
     int GetDistance(NodeAI nodeA, NodeAI nodeB)
     {
