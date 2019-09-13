@@ -1,14 +1,45 @@
 fileFormatVersion: 2
-guid: 317576678dffc514e9ab42aa1fd5fff2
+guid: 6ea2440543a1eaa48ac34b6040f3d19b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: base_turret_head
+    100004: main_base
+    100006: refinery
+    100008: refinery1
+    100010: refinery2
+    100012: refinery3
+    100014: Turret_base
+    100016: turret_base
     400000: //RootNode
+    400002: base_turret_head
+    400004: main_base
+    400006: refinery
+    400008: refinery1
+    400010: refinery2
+    400012: refinery3
+    400014: Turret_base
+    400016: turret_base
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: refinery
+    2300000: base_turret_head
+    2300002: main_base
+    2300004: refinery1
+    2300006: refinery2
+    2300008: refinery3
+    2300010: turret_base
+    3300000: base_turret_head
+    3300002: main_base
+    3300004: refinery1
+    3300006: refinery2
+    3300008: refinery3
+    3300010: turret_base
+    4300000: refinery3
+    4300002: refinery2
+    4300004: refinery1
+    4300006: main_base
+    4300008: turret_base
+    4300010: base_turret_head
   externalObjects: {}
   materials:
     importMaterials: 1
