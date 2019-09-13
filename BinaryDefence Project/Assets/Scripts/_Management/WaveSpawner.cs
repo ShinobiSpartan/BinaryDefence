@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 0;
         startWavesButton.onClick.AddListener(delegate { StartWaves(); });
     }
 
@@ -57,11 +59,18 @@ public class WaveSpawner : MonoBehaviour
         groundEnemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
         airEnemiesOnScreen = GameObject.FindGameObjectsWithTag("AirEnemy");
         enemiesAlive = groundEnemiesOnScreen.Length + airEnemiesOnScreen.Length;
+
+        if(waveIndex == waveThreshold && enemiesAlive < 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetSceneByName("Win").buildIndex);
+            return;
+        }
     }
 
     private void StartWaves()
     {
         commenceWaves = true;
+        Time.timeScale = 1;
         startWavesButton.gameObject.SetActive(false);
     }
 

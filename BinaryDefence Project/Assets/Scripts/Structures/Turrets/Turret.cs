@@ -169,19 +169,23 @@ public class Turret : MonoBehaviour
     
     void UpdatingTarget()
     {
-        if (this.gameObject.tag != "AATurret")
+        if (this.gameObject.tag == "GroundTurret")
         {
             //finding all the eneimes that are tagged with "enemyTag" and store them into the array
             enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         }
-        else
+        else if (this.gameObject.tag == "AATurret")
         {
             //finding all the eneimes that are tagged with "enemyTagAir" and store them into the array
             enemies = GameObject.FindGameObjectsWithTag(enemyTagAir);
         }
+        else
+        {
+            enemies = GameObject.FindGameObjectsWithTag(enemyTag + enemyTagAir);
+        }
 
-            //storing the shortest distance to a enemy
-            float shortDistance = Mathf.Infinity;
+        //storing the shortest distance to a enemy
+        float shortDistance = Mathf.Infinity;
             GameObject nearestEnemy = null;
 
 
