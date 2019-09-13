@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3965251568915453047}
   - component: {fileID: 3965251568916584119}
   - component: {fileID: 3171544711085336342}
-  m_Layer: 0
+  - component: {fileID: 3996399715229835957}
+  - component: {fileID: 3367100870617562866}
+  m_Layer: 9
   m_Name: refinery
-  m_TagString: Untagged
+  m_TagString: Refinery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,3 +94,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesGainedPerPull: 50
   timeBetweenResourceCollection: 5
+--- !u!114 &3996399715229835957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965251568918841463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 25
+--- !u!65 &3367100870617562866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965251568918841463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 578.5202, y: 1132.24, z: 578.52026}
+  m_Center: {x: 0.000030517578, y: 563.2, z: -0.000045776367}

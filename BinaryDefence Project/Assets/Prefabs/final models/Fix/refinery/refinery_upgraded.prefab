@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 3180253632113046069}
   - component: {fileID: 3180253632112046325}
   - component: {fileID: 7305159023530135620}
-  m_Layer: 0
+  - component: {fileID: 8253700179858596290}
+  - component: {fileID: 7549254963434348899}
+  m_Layer: 9
   m_Name: refinery_upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,3 +94,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesGainedPerPull: 80
   timeBetweenResourceCollection: 3
+--- !u!114 &8253700179858596290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180253632109850165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 35
+--- !u!65 &7549254963434348899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180253632109850165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1174.3297, y: 713.60516, z: 721.39966}
+  m_Center: {x: 0, y: 356.80258, z: 0}
