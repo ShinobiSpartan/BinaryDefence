@@ -62,11 +62,11 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 10
   rotationSpeed: 5
-  baseStructMask:
+  structures:
     serializedVersion: 2
     m_Bits: 512
-  shotDelay: 1
   damagePerShot: 2
+  shotDelay: 1
 --- !u!1 &5959234625247605067
 GameObject:
   m_ObjectHideFlags: 0

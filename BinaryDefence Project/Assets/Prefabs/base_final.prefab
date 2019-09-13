@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5005757290748739383}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5973535909361135824}
   - component: {fileID: 6064732229366978023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: refinery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5973535909364560116}
   - component: {fileID: 5973535909363561012}
   - component: {fileID: 8873059860570765732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: base_turret_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,9 +193,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5973535909361135828}
   - component: {fileID: 6066661564341050832}
-  m_Layer: 0
+  - component: {fileID: 5394643564835853005}
+  m_Layer: 9
   m_Name: base_final
-  m_TagString: Untagged
+  m_TagString: BaseStruct
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,6 +231,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 4.9, z: 8}
   m_Center: {x: -0.7, y: 4.16, z: -2.4}
+--- !u!114 &5394643564835853005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5973535909361298676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 100
 --- !u!1 &5973535909361298678
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +256,7 @@ GameObject:
   - component: {fileID: 5973535909361135830}
   - component: {fileID: 5973535909364560118}
   - component: {fileID: 5973535909363561014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +333,7 @@ GameObject:
   - component: {fileID: 5973535909361135834}
   - component: {fileID: 5973535909364560126}
   - component: {fileID: 5973535909363561022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: refinery3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +410,7 @@ GameObject:
   - component: {fileID: 5973535909361135836}
   - component: {fileID: 5973535909364560112}
   - component: {fileID: 5973535909363561008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: refinery2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +487,7 @@ GameObject:
   - component: {fileID: 5973535909361135838}
   - component: {fileID: 5973535909364560114}
   - component: {fileID: 5973535909363561010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: refinery1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

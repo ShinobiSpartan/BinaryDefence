@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 
 public class Turret : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Turret : MonoBehaviour
     public float turnSpeed = 5.0f;
     [Tooltip("Add the TurretHead Prefab here.")]
     public Transform turretRotationPart;
-    
+
     public GameObject bulletPrefab;
     [Header("FirePoints")]
     [Tooltip("Firepoints for the turrets.")]
@@ -28,10 +29,13 @@ public class Turret : MonoBehaviour
 
     //public Transform[] firePoints;
 
-    private GameObject[] enemies = null;
+    private GameObject[] targetedEnemies = null;
 
     public string enemyTag = "Enemy";
+    private GameObject[] groundEnemies = null;
+
     public string enemyTagAir = "AirEnemy";
+    private GameObject[] airEnemies = null;
     
     #endregion
     // Start is called before the first frame update
@@ -169,19 +173,22 @@ public class Turret : MonoBehaviour
     
     void UpdatingTarget()
     {
+        groundEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        airEnemies = GameObject.FindGameObjectsWithTag(enemyTagAir);
+
         if (this.gameObject.tag == "GroundTurret")
         {
             //finding all the eneimes that are tagged with "enemyTag" and store them into the array
-            enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+            targetedEnemies = groundEnemies;
         }
         else if (this.gameObject.tag == "AATurret")
         {
             //finding all the eneimes that are tagged with "enemyTagAir" and store them into the array
-            enemies = GameObject.FindGameObjectsWithTag(enemyTagAir);
+            targetedEnemies = airEnemies;
         }
         else
         {
-            enemies = GameObject.FindGameObjectsWithTag(enemyTag + enemyTagAir);
+            targetedEnemies = groundEnemies.Concat(airEnemies).ToArray();
         }
 
         //storing the shortest distance to a enemy
@@ -189,7 +196,7 @@ public class Turret : MonoBehaviour
             GameObject nearestEnemy = null;
 
 
-            foreach (GameObject enemy in enemies)
+            foreach (GameObject enemy in targetedEnemies)
             {
                 float distToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
 

@@ -65,6 +65,7 @@ MonoBehaviour:
   groundEnemiesOnScreen: []
   airEnemiesOnScreen: []
   enemiesAlive: 0
+  startWavesButton: {fileID: 0}
 --- !u!114 &7006701744647814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ce6be204c10b41b29c0019dd97667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMoney: 2000
+  startingMoney: 500
