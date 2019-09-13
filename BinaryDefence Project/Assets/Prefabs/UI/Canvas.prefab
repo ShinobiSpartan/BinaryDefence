@@ -492,10 +492,10 @@ MonoBehaviour:
       type: 3}
     upgradeCost: 250
   refinery:
-    prefab: {fileID: 3965251568918841463, guid: 2ce25874657ca7643a5597492800cf77,
+    prefab: {fileID: 1908378456712548414, guid: 2ce25874657ca7643a5597492800cf77,
       type: 3}
     costingValue: 250
-    upgradedPrefab: {fileID: 3180253632109850165, guid: 76ac993e24cb6154f8faeedab34a57ea,
+    upgradedPrefab: {fileID: 5936386311511695713, guid: 76ac993e24cb6154f8faeedab34a57ea,
       type: 3}
     upgradeCost: 350
 --- !u!114 &461324503154050062

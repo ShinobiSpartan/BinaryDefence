@@ -1,38 +1,23 @@
 fileFormatVersion: 2
-guid: b4f2e32fc74278b40b61922d606ec3cd
+guid: 3f8dcb07d2907dc4295603d8f547b53f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: base
+    100000: default
     100002: //RootNode
-    100004: base_turret_head
-    100006: refinery
-    100008: refinery1
-    100010: refinery2
-    100012: refinery3
-    400000: base
+    100004: Enemy_Ddos_drone_Mesh
+    400000: default
     400002: //RootNode
-    400004: base_turret_head
-    400006: refinery
-    400008: refinery1
-    400010: refinery2
-    400012: refinery3
-    2100000: lambert1
-    2300000: base
-    2300002: base_turret_head
-    2300004: refinery1
-    2300006: refinery2
-    2300008: refinery3
-    3300000: base
-    3300002: base_turret_head
-    3300004: refinery1
-    3300006: refinery2
-    3300008: refinery3
-    4300000: refinery3
-    4300002: refinery2
-    4300004: refinery1
-    4300006: base_turret_head
-    4300008: base
+    400004: Enemy_Ddos_drone_Mesh
+    2100000: defaultMat
+    2100002: Enemy_Ddos_drone_MeshMat
+    2300000: default
+    2300002: Enemy_Ddos_drone_Mesh
+    3300000: default
+    3300002: Enemy_Ddos_drone_Mesh
+    4300000: default
+    4300002: Enemy_Ddos_drone_Mesh
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

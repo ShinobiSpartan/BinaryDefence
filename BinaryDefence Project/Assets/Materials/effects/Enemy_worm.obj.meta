@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 317576678dffc514e9ab42aa1fd5fff2
+guid: 06519894b53580f449a5a815a3c0986f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Enemy_worm_Mesh
     400000: //RootNode
-    2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: refinery
+    400002: Enemy_worm_Mesh
+    2100000: Enemy_worm_MeshMat
+    2300000: Enemy_worm_Mesh
+    3300000: Enemy_worm_Mesh
+    4300000: Enemy_worm_Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
