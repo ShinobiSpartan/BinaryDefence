@@ -416,10 +416,10 @@ RectTransform:
   m_Father: {fileID: 583282493467933945}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.45875004, y: 0}
-  m_AnchorMax: {x: 0.93100005, y: 0.29555357}
-  m_AnchoredPosition: {x: 59, y: -13.899902}
-  m_SizeDelta: {x: 353.8999, y: 55.47}
+  m_AnchorMin: {x: 1, y: 0.22819112}
+  m_AnchorMax: {x: 1, y: 0.22819112}
+  m_AnchoredPosition: {x: -184, y: -1.3999023}
+  m_SizeDelta: {x: 731.8999, y: 220.46997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282492328801042
 CanvasRenderer:
@@ -555,9 +555,9 @@ RectTransform:
   m_Father: {fileID: 583282493467933945}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -190}
+  m_AnchorMin: {x: 0, y: 0.11400001}
+  m_AnchorMax: {x: 0, y: 0.11400001}
+  m_AnchoredPosition: {x: 70, y: -1}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282492350487361
@@ -763,9 +763,9 @@ RectTransform:
   m_Father: {fileID: 583282493187573474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5914267}
+  m_AnchorMax: {x: 0.5, y: 0.5914267}
+  m_AnchoredPosition: {x: 0, y: 3.300003}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282492650406971
@@ -892,9 +892,9 @@ RectTransform:
   m_Father: {fileID: 583282493187573474}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -132}
+  m_AnchorMin: {x: 0.5, y: 0.26279286}
+  m_AnchorMax: {x: 0.5, y: 0.26279286}
+  m_AnchoredPosition: {x: 0, y: 3.1000366}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282492856357425
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0.22352941}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1453,9 +1453,9 @@ RectTransform:
   m_Father: {fileID: 583282493187573474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63}
+  m_AnchorMin: {x: 0.5, y: 0.42746076}
+  m_AnchorMax: {x: 0.5, y: 0.42746076}
+  m_AnchoredPosition: {x: 0, y: 3.699997}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583282493719743586
@@ -1694,7 +1694,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a089c5fae7fdad640bda0d3b3bb0486c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4093c01d1abd61247a44bdad0280e7b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1774,7 +1774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7811251801414958402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1792,7 +1792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266.1, y: -210.09}
+  m_AnchoredPosition: {x: -257.4, y: -135.1}
   m_SizeDelta: {x: 47.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1309874868826051707
@@ -1919,7 +1919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.786}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.5, y: -21.5}
+  m_AnchoredPosition: {x: 3.5, y: -6}
   m_SizeDelta: {x: 7, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &66800970439051119
@@ -2540,7 +2540,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 686e09a5ad547304ab81accd43b90a27,
+      objectReference: {fileID: 21300000, guid: 13758acf592bcef49b2e4badffd9d679,
         type: 3}
     - target: {fileID: 8516303923528402756, guid: 41816613f8d443845af72d432a2a6933,
         type: 3}
