@@ -85,7 +85,7 @@ MonoBehaviour:
     type: 3}
   railTurretPrefab: {fileID: 6410297474201506633, guid: 64a9663ea96ed754891237a229612485,
     type: 3}
-  refineryPlacement: {fileID: 1908378456712548414, guid: 2ce25874657ca7643a5597492800cf77,
+  refineryPlacement: {fileID: 2990436898675217504, guid: 209217a8b02c6c442a23330695a22781,
     type: 3}
 --- !u!114 &7006701744647814497
 MonoBehaviour:
