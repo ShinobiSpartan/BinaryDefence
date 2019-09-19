@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: un
-  m_Shader: {fileID: 4800000, guid: ac76f74923b6aeb4dad89c9e5db1751a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0bc1092206953ea4396475e39f85c047, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,23 +23,43 @@ Material:
         m_Texture: {fileID: 2800000, guid: e3b6265e3681c8a48aea6e2b03097311, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_213A02FC_Texture:
-        m_Texture: {fileID: 2800000, guid: 5495d1c84e18f1f4fb4a68b6d74f2afb, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_46FD5D83_Texture:
         m_Texture: {fileID: 2800000, guid: a7c4e2e6c9045f1458bae32d5e3996ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_2D478344_Out:
-        m_Texture: {fileID: 2800000, guid: 7bae9f3d8fb74334ba3889f53fe7eea0, type: 3}
+    - _SampleTexture2D_66AE32D9_Texture:
+        m_Texture: {fileID: 2800000, guid: 96165da925dfac040aa085996b6d3b61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_B60B5F23_Out:
+    - _SampleTexture2D_6901FDA1_Texture:
+        m_Texture: {fileID: 2800000, guid: 2d74e10e6630a7c4c8f5a5a05d320287, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6CC217EC_Texture:
+        m_Texture: {fileID: 2800000, guid: 871c93e595ad3df47982eae4e7b60922, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_703DD89D_Texture:
+        m_Texture: {fileID: 2800000, guid: c26edb5656bbd6c4f8493d3a3b14b6ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_944018A8_Texture:
+        m_Texture: {fileID: 2800000, guid: c1fb5791c07c9ca4186ee43ff0dda3dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_DC4B19B7_Texture:
+        m_Texture: {fileID: 2800000, guid: 2d74e10e6630a7c4c8f5a5a05d320287, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_F42E4174_Texture:
+        m_Texture: {fileID: 2800000, guid: be049f7c741f366439e007742d9547db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_2086C727_Out:
         m_Texture: {fileID: 2800000, guid: 7bae9f3d8fb74334ba3889f53fe7eea0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_29F48CAA: {r: 0, g: 4, b: 3.74902, a: 0}
-    - Color_2A92918A: {r: 0.4196078, g: 0.9803922, b: 1, a: 0}
+    - Color_29F48CAA: {r: 0, g: 0, b: 0, a: 0}
+    - Color_2A92918A: {r: 0.23429155, g: 0.41184586, b: 0.42452827, a: 0}

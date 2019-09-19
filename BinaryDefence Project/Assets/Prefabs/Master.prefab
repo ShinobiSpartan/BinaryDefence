@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b2bed5f3bc4249bcab55bac8d83d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundEnemy1: {fileID: 3011804690351655728, guid: ae0f0972a749fea41a8cafdfe4de2096,
+  groundEnemy1: {fileID: 7633583996918514864, guid: 928dd7a8aff6aa6468843c3287c19f9e,
     type: 3}
-  groundEnemy2: {fileID: 8991154539801042443, guid: a2dc3fc4dfc37b14b9272886df7cabd7,
+  groundEnemy2: {fileID: 6132835815424749340, guid: 483373d42e6692248b0943a374efe527,
     type: 3}
-  airEnemy: {fileID: 5959234625247178089, guid: 90113982d719d04438d96c6bd16fa49a,
+  airEnemy: {fileID: 7896797428142842405, guid: 2debc67f18fe35143a40378365263884,
     type: 3}
   groundSpawnPoint: {fileID: 0}
   aerialSpawnPoints:
@@ -65,6 +65,7 @@ MonoBehaviour:
   groundEnemiesOnScreen: []
   airEnemiesOnScreen: []
   enemiesAlive: 0
+  startWavesButton: {fileID: 0}
 --- !u!114 &7006701744647814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,13 +79,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeUI: {fileID: 0}
-  standardTurretPrefab: {fileID: 6231895771010888546, guid: 6d3a543533a08594ca653eeb65c7b41f,
+  standardTurretPrefab: {fileID: 9186967111404504142, guid: c76c9219d40383f4e83bc21e63f49077,
     type: 3}
-  aaTurretPrefab: {fileID: 8227091009827462930, guid: 8ecb4b11f5a04ba498e69dc25f3c4fe0,
+  aaTurretPrefab: {fileID: 6403284577851696612, guid: eff349cf863242e4b96a328be2a2c2c6,
     type: 3}
-  railTurretPrefab: {fileID: 2348776700315293670, guid: 6bdfa75b012f54f43b4679fc2ec62608,
+  railTurretPrefab: {fileID: 6410297474201506633, guid: 64a9663ea96ed754891237a229612485,
     type: 3}
-  refineryPlacement: {fileID: 115569830276694235, guid: 70aa403283ea49540873deb7a6621911,
+  refineryPlacement: {fileID: 2990436898675217504, guid: 209217a8b02c6c442a23330695a22781,
     type: 3}
 --- !u!114 &7006701744647814497
 MonoBehaviour:
@@ -111,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ce6be204c10b41b29c0019dd97667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMoney: 2000
+  startingMoney: 1000
