@@ -20,7 +20,7 @@ public class ObjectHealth : MonoBehaviour
         {
             if(this.gameObject.tag == "BaseStruct")
             {
-                SceneManager.LoadScene(SceneManager.GetSceneByName("Lose").buildIndex);
+                SceneManager.LoadScene(4);
                 return;
             }
             else

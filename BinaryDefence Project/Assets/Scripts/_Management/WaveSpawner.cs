@@ -62,7 +62,7 @@ public class WaveSpawner : MonoBehaviour
 
         if(waveIndex == waveThreshold && enemiesAlive < 1)
         {
-            SceneManager.LoadScene(SceneManager.GetSceneByName("Win").buildIndex);
+            SceneManager.LoadScene(5);
             return;
         }
     }
