@@ -9,7 +9,6 @@ public class AirAIUnit : MonoBehaviour
 
     private GameObject baseStructure;
 
-    public float checkRadius = 3.0f;
     public LayerMask structures;
 
     Vector3[] path;
@@ -37,11 +36,16 @@ public class AirAIUnit : MonoBehaviour
         listOfRefineries = GameObject.FindGameObjectsWithTag("Refinery");
         numOfRefineries = listOfRefineries.Length;
 
+        if (numOfRefineries == 0)
+            listOfRefineries = null;
+
         if (prev_numOfRefineries != numOfRefineries)
         {
             AdjustTarget();
             prev_numOfRefineries = numOfRefineries;
         }
+
+        AttackStructures();
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -102,7 +106,7 @@ public class AirAIUnit : MonoBehaviour
     {
         if (baseStructure != null)
         {
-            bool inRange = Physics.CheckSphere(transform.position, checkRadius, structures);
+            bool inRange = Physics.CheckBox(transform.position - new Vector3(0, 10, 0), new Vector3(2, 2, 2), Quaternion.identity, structures);
 
             if (inRange)
             {
@@ -110,12 +114,15 @@ public class AirAIUnit : MonoBehaviour
                 if(shotTimer >= shotDelay)
                 {
                     shotTimer -= shotDelay;
-                    
-                    if(target == listOfRefineries[0].transform)
+
+                    if (listOfRefineries != null)
                     {
-                        listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                        Debug.Log("Bang");
-                        Debug.Log("Refinery Health = " + listOfRefineries[0].GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                        if(target == listOfRefineries[0].transform)
+                        {
+                            listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
+                            Debug.Log("Bang");
+                            Debug.Log("Refinery Health = " + listOfRefineries[0].GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                        }
                     }
                     else
                     {

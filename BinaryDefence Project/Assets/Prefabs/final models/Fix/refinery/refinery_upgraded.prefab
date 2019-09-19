@@ -8,10 +8,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 3180253632109621781}
+  - component: {fileID: 3180253632113046069}
+  - component: {fileID: 3180253632112046325}
+  - component: {fileID: 7305159023530135620}
+  - component: {fileID: 8253700179858596290}
+  - component: {fileID: 7549254963434348899}
+  m_Layer: 9
+=======
   - component: {fileID: 5936386311511539009}
   - component: {fileID: 5936386311510736225}
   - component: {fileID: 5936386311509770145}
   m_Layer: 0
+>>>>>>> Myname
   m_Name: refinery_upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,3 +87,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+--- !u!114 &7305159023530135620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180253632109850165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fea633654eacee43a6d79f65eddd3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesGainedPerPull: 80
+  timeBetweenResourceCollection: 3
+--- !u!114 &8253700179858596290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180253632109850165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  fullHealth: 35
+--- !u!65 &7549254963434348899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180253632109850165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1174.3297, y: 713.60516, z: 721.39966}
+  m_Center: {x: 0, y: 356.80258, z: 0}
+=======
+>>>>>>> Myname

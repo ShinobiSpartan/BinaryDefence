@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -29,26 +30,49 @@ public class WaveSpawner : MonoBehaviour
     public GameObject[] airEnemiesOnScreen;
 
     public int enemiesAlive = 0;
+
+    public Button startWavesButton;
+    bool commenceWaves = false;
     #endregion
+
+    private void OnEnable()
+    {
+        Time.timeScale = 0;
+        startWavesButton.onClick.AddListener(delegate { StartWaves(); });
+    }
 
     private void Update()
     {
-        if(initialCountDown <= 0f && waveIndex < waveThreshold)
+        if(commenceWaves)
+        {
+            initialCountDown -= Time.deltaTime;
+            initialCountDown = Mathf.Clamp(initialCountDown, 0f, Mathf.Infinity);
+            waveCounterText.text = string.Format("{0:00.00}", initialCountDown);
+        }
+
+        if (initialCountDown <= 0f && waveIndex < waveThreshold)
         {
             StartCoroutine(SpawnWave());
             initialCountDown = timeBetweenWaves;
         }
-        initialCountDown -= Time.deltaTime;
-
-        initialCountDown = Mathf.Clamp(initialCountDown, 0f, Mathf.Infinity);
-
-        waveCounterText.text = string.Format("{0:00.00}", initialCountDown);
 
         groundEnemiesOnScreen = GameObject.FindGameObjectsWithTag("Enemy");
         airEnemiesOnScreen = GameObject.FindGameObjectsWithTag("AirEnemy");
         enemiesAlive = groundEnemiesOnScreen.Length + airEnemiesOnScreen.Length;
+
+        if(waveIndex == waveThreshold && enemiesAlive < 1)
+        {
+            SceneManager.LoadScene(5);
+            return;
+        }
     }
 
+    private void StartWaves()
+    {
+        commenceWaves = true;
+        Time.timeScale = 1;
+        startWavesButton.gameObject.SetActive(false);
+    }
 
     IEnumerator SpawnWave()
     {

@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b2bed5f3bc4249bcab55bac8d83d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundEnemy1: {fileID: 3011804690351655728, guid: ae0f0972a749fea41a8cafdfe4de2096,
+  groundEnemy1: {fileID: 7633583996918514864, guid: 928dd7a8aff6aa6468843c3287c19f9e,
     type: 3}
-  groundEnemy2: {fileID: 8991154539801042443, guid: a2dc3fc4dfc37b14b9272886df7cabd7,
+  groundEnemy2: {fileID: 6132835815424749340, guid: 483373d42e6692248b0943a374efe527,
     type: 3}
-  airEnemy: {fileID: 5959234625247178089, guid: 90113982d719d04438d96c6bd16fa49a,
+  airEnemy: {fileID: 7896797428142842405, guid: 2debc67f18fe35143a40378365263884,
     type: 3}
   groundSpawnPoint: {fileID: 0}
   aerialSpawnPoints:
@@ -65,6 +65,7 @@ MonoBehaviour:
   groundEnemiesOnScreen: []
   airEnemiesOnScreen: []
   enemiesAlive: 0
+  startWavesButton: {fileID: 0}
 --- !u!114 &7006701744647814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
     type: 3}
   railTurretPrefab: {fileID: 6410297474201506633, guid: 64a9663ea96ed754891237a229612485,
     type: 3}
-  refineryPlacement: {fileID: 1908378456712548414, guid: 2ce25874657ca7643a5597492800cf77,
+  refineryPlacement: {fileID: 2990436898675217504, guid: 209217a8b02c6c442a23330695a22781,
     type: 3}
 --- !u!114 &7006701744647814497
 MonoBehaviour:
@@ -111,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ce6be204c10b41b29c0019dd97667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMoney: 2000
+  startingMoney: 1000
