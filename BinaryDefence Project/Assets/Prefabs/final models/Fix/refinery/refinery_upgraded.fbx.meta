@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f51c80bcc8e5ec84d9cad8ff411219b5
+guid: 317576678dffc514e9ab42aa1fd5fff2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: refinery_upgrade
+    4300000: refinery
   externalObjects: {}
   materials:
     importMaterials: 1
