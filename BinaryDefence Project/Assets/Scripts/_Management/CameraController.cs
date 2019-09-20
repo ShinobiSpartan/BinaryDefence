@@ -3,6 +3,7 @@
 public class CameraController : MonoBehaviour
 {
     #region VariablesPC
+    [Header("PC Variables")]
     private bool isMoving = true;
 
     public float panSpeed = 35.0f;
@@ -17,11 +18,8 @@ public class CameraController : MonoBehaviour
     [Header("Andriod Variables")]
     public float zoomOutMin = 1;
     public float zoomOutMax = 8;
-
     #endregion
-
-
-    
+        
 
     void Update()
     {

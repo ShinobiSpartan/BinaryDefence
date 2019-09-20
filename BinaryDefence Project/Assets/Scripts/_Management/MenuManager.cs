@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+
 public class MenuManager : MonoBehaviour
 {
 
@@ -26,13 +27,6 @@ public class MenuManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// Quiting the current game that is being plaed
-    /// </summary>
-    public void QuitGame()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-    /// <summary>
     /// fully exiting the game
     /// </summary>
     public void ExitGame()
@@ -51,60 +45,6 @@ public class MenuManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    /// <summary>
-    /// goes back to the main menu
-    /// </summary>
-    public void BackButton()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    /// <summary>
-    /// taking the player to the Lobby screen
-    /// </summary>
-    public void PlayButton()
-    {
-        SceneManager.LoadScene("Lobby");
-    }
-
-    /// <summary>
-    /// Plays the first map
-    /// </summary>
-    public void PlayMap1()
-    {
-        //change "Main" to "Map1"
-        SceneManager.LoadScene("Main");
-    }
-
-    /// <summary>
-    /// plays the second map
-    /// </summary>
-    public void PlayMap2()
-    {
-        SceneManager.LoadScene("Map2");
-    }
-
-    /// <summary>
-    /// plays the third map
-    /// </summary>
-    public void PlayMap3()
-    {
-        SceneManager.LoadScene("map3");
-    }
-
-    /// <summary>
-    ///plays the fourth map 
-    /// </summary>
-    public void PlayMap4()
-    {
-        SceneManager.LoadScene("map4");
-    }
-
-    public void PlayMap5()
-    {
-        SceneManager.LoadScene("map5");
-    }
-
 
     /// <summary>
     /// pauses the game
