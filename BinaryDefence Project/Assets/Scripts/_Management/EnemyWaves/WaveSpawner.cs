@@ -8,13 +8,11 @@ public class WaveSpawner : MonoBehaviour
     public static int EnemiesAlive = 0;
 
     #region Variables
-    [Header("Enemys")]
-    public Transform groundEnemy1;
-   // public Transform groundEnemy2;
-   // public Transform airEnemy;
+
+    public Wave[] waves;
 
     [Header("Spawns")]
-    public Transform groundSpawnPoint;
+    public Transform spawnPoint;
    // public Transform[] aerialSpawnPoints;
    // private Transform selectedAerialSpawn;
     
@@ -23,14 +21,9 @@ public class WaveSpawner : MonoBehaviour
     public float countdown = 5f;
     public Text waveCounterText;
 
-    public float timeBetweenEnemySpawns = 0.5f;
-
     private int waveIndex = 0;
     [Header("Max Wave")]
     public int waveThreshold = 10;
-
-   // public GameObject[] groundEnemiesOnScreen;
-   // public GameObject[] airEnemiesOnScreen;
 
     public Button startWavesButton;
     bool commenceWaves = false;
@@ -80,14 +73,22 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        waveIndex++;
-        for (int i = 0; i < waveIndex; i++)
+        Wave wave = waves[waveIndex];
+
+        for (int i = 0; i < wave.enemyCount; i++)
         {
             //SelectNextAerialSpawn();
-            SpawnEnemy();
-            yield return new WaitForSeconds(timeBetweenEnemySpawns);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f / wave.spawnRate);
         }
 
+        waveIndex++;
+
+        if(waveIndex == waves.Length)
+        {
+            Debug.Log("Level Won!");
+            SceneManager.LoadScene(5);
+        }
     }
    
    // void SelectNextAerialSpawn()
@@ -99,9 +100,9 @@ public class WaveSpawner : MonoBehaviour
     /// <summary>
     /// Spawn the enemy at the starting position
     /// </summary>
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(groundEnemy1, groundSpawnPoint.position, groundSpawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         EnemiesAlive++;
 
     }

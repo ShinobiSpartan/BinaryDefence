@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12794,7 +12794,7 @@ PrefabInstance:
     - target: {fileID: 583282492328801045, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.899918
+      value: -13.899902
       objectReference: {fileID: 0}
     - target: {fileID: 7811251801414958402, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
@@ -12827,7 +12827,7 @@ PrefabInstance:
     - target: {fileID: 583282492350487364, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.2299805
+      value: -3.22995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019841f9776739642b704edcb7ddff82, type: 3}
@@ -13183,6 +13183,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
+      propertyPath: waves.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
       propertyPath: groundSpawnPoint
       value: 
       objectReference: {fileID: 1189000742}
@@ -13211,6 +13216,11 @@ PrefabInstance:
       propertyPath: startWavesButton
       value: 
       objectReference: {fileID: 7943449994452646239}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: timeBetweenWaves
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814499, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: nodeUI
