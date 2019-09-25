@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 7c8c8ee92b9e392458b3ac3385f487c3
+guid: 47d4b8d94db2dd244abb5581ce60c33a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Turret_Head_Basic
-    100002: //RootNode
-    400000: Turret_Head_Basic
-    400002: //RootNode
-    2100000: Turret_Head_BasicMat
-    2300000: Turret_Head_Basic
-    3300000: Turret_Head_Basic
-    4300000: Turret_Head_Basic
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Z_Path
   externalObjects: {}
   materials:
     importMaterials: 1

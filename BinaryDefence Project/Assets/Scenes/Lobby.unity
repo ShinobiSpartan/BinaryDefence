@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 162082306}
   - component: {fileID: 162082305}
   - component: {fileID: 162082304}
+  - component: {fileID: 162082307}
   m_Layer: 0
   m_Name: Map 1
   m_TagString: Untagged
@@ -217,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9764151, b: 0.9764151, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -241,6 +242,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162082302}
   m_CullTransparentMesh: 0
+--- !u!95 &162082307
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162082302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31def27b7a503ed4289c07552e5277fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &485811341
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,6 +967,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454a442da7ba14f4aa60923ab66f3c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelButton:
+  - {fileID: 162082304}
+  - {fileID: 2123456821}
 --- !u!1 &1756767520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.725, y: 0.62100005}
   m_AnchorMax: {x: 0.725, y: 0.62100005}
-  m_AnchoredPosition: {x: -1, y: 3.0000114}
+  m_AnchoredPosition: {x: -1, y: 3.0000153}
   m_SizeDelta: {x: 243.75, y: 157.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123456821
