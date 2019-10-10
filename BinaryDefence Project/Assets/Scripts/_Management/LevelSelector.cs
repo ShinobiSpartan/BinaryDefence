@@ -9,9 +9,12 @@ public class LevelSelector : MonoBehaviour
     void Start()
     {
         int levelReached = PlayerPrefs.GetInt("LevelReached", 1);
-               
+
+        //iterate between the length of buttons for levels       
         for (int i = 0; i < levelButton.Length; i++)
         {
+            //if the level reached is 1 higher then make the
+            //button not interactable
             if(i + 1 < levelReached)
             {
                 levelButton[i].interactable = false;
