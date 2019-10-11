@@ -13,8 +13,8 @@ public class WaveSpawner : MonoBehaviour
 
     [Header("Spawns")]
     public Transform spawnPoint;
-   // public Transform[] aerialSpawnPoints;
-   // private Transform selectedAerialSpawn;
+    public Transform[] aerialSpawnPoints;
+    private Transform selectedAerialSpawn;
     
     [Header("Times")]
     public float timeBetweenWaves = 5;
@@ -22,8 +22,6 @@ public class WaveSpawner : MonoBehaviour
     public Text waveCounterText;
 
     private int waveIndex = 0;
-    [Header("Max Wave")]
-    public int waveThreshold = 10;
 
     public Button startWavesButton;
     bool commenceWaves = false;
@@ -50,18 +48,12 @@ public class WaveSpawner : MonoBehaviour
         }
 
 
-        if (countdown <= 0f && waveIndex < waveThreshold)
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             return;
         }
-
-       // if(waveIndex == waveThreshold && EnemiesAlive < 1)
-       // {
-       //     SceneManager.LoadScene(5);
-       //     return;
-       // }
     }
 
     private void StartWaves()
@@ -75,11 +67,23 @@ public class WaveSpawner : MonoBehaviour
     {
         Wave wave = waves[waveIndex];
 
-        for (int i = 0; i < wave.enemyCount; i++)
+        for (int i = 0; i < wave.ground1Count; i++)
         {
-            //SelectNextAerialSpawn();
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f / wave.spawnRate);
+            SpawnEnemy(wave.ground1);
+            yield return new WaitForSeconds(1f / wave.ground1Rate);
+        }
+
+        for (int i = 0; i < wave.ground2Count; i++)
+        {
+            SpawnEnemy(wave.ground2);
+            yield return new WaitForSeconds(1f / wave.ground2Rate);
+        }
+
+        for (int i = 0; i < wave.airEnemyCount; i++)
+        {
+            SelectNextAerialSpawn();
+            SpawnAirEnemy(wave.airEnemy);
+            yield return new WaitForSeconds(1f / wave.airEnemyRate);
         }
 
         waveIndex++;
@@ -91,22 +95,21 @@ public class WaveSpawner : MonoBehaviour
         }
     }
    
-   // void SelectNextAerialSpawn()
-   // {
-   //     int spawnPointIndex = Random.Range(0, aerialSpawnPoints.Length);
-   //     selectedAerialSpawn = aerialSpawnPoints[spawnPointIndex];
-   // }
+    void SelectNextAerialSpawn()
+    {
+        int spawnPointIndex = Random.Range(0, aerialSpawnPoints.Length);
+        selectedAerialSpawn = aerialSpawnPoints[spawnPointIndex];
+    }
 
-    /// <summary>
-    /// Spawn the enemy at the starting position
-    /// </summary>
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         EnemiesAlive++;
-
     }
 
-
-
+    void SpawnAirEnemy(GameObject enemy)
+    {
+        Instantiate(enemy, selectedAerialSpawn.position, selectedAerialSpawn.rotation);
+        EnemiesAlive++;
+    }
 }

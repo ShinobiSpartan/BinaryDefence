@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ObjectHealth : MonoBehaviour
 {
-    public float currentHealth;
+    private float currentHealth;
     public float fullHealth;
+
+    public Image healthBar;
 
     private void Awake()
     {
@@ -15,6 +18,7 @@ public class ObjectHealth : MonoBehaviour
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
+        healthBar.fillAmount = currentHealth / fullHealth;
 
         if (currentHealth <= 0)
         {
