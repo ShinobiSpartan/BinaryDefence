@@ -222,7 +222,9 @@ public class Turret : MonoBehaviour
 
         
     }
-
+    /// <summary>
+    /// Draws a sphere INSIDE UNITY not gameplay
+    /// </summary>
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
