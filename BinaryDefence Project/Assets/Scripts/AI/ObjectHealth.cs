@@ -6,6 +6,7 @@ public class ObjectHealth : MonoBehaviour
     public float currentHealth;
     public float fullHealth;
 
+
     private void Awake()
     {
         currentHealth = fullHealth;
