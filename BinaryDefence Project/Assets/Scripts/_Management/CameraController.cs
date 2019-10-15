@@ -3,6 +3,7 @@
 public class CameraController : MonoBehaviour
 {
     #region VariablesPC
+    [Header("PC Variables")]
     private bool isMoving = true;
 
     public float panSpeed = 35.0f;
@@ -17,11 +18,12 @@ public class CameraController : MonoBehaviour
     [Header("Android Variables")]
     public float zoomOutMin = 1;
     public float zoomOutMax = 8;
-
     #endregion
+        
 
     void Update()
     {
+        cameraMovement();
         if (Input.GetMouseButtonDown(0))
         {
             startTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -52,7 +54,7 @@ public class CameraController : MonoBehaviour
 
     void zoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
+        //Camera.main.orthographicSize = Mathf.Clamp(Camera.main.p - increment, zoomOutMin, zoomOutMax);
     }
 
     void cameraMovement()

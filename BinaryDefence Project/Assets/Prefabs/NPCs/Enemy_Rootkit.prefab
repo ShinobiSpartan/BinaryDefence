@@ -234,13 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80468d34e98e5a47b193a51283bff7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAISpeed: 5
+  maxAISpeed: 2
   rotationSpeed: 5
   baseStructMask:
     serializedVersion: 2
     m_Bits: 512
   damagePerShot: 5
-  shotDelay: 0
+  shotDelay: 1
 --- !u!1 &6132835815424324414
 GameObject:
   m_ObjectHideFlags: 0

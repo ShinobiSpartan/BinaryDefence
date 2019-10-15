@@ -2,12 +2,18 @@
 
 public class Bullet : MonoBehaviour
 {
-    private GameObject targetObject;
-    private Transform targetTransform;
+    #region Variables
+    [Header("Speed")]
     public float bulletSpeed = 5.0f;
 
+    public int damage = 2;
+
+    [Header("Bullet Effects")]
     public GameObject impactEffects;
 
+    private GameObject targetObject;
+    private Transform targetTransform;
+    #endregion
     /// <summary>
     /// finding the target
     /// </summary>
