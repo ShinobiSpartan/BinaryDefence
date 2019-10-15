@@ -13,9 +13,9 @@ public class CameraController : MonoBehaviour
     public float minY;
     public float maxY;
     #endregion
-    #region VariablesANDRIOD
+    #region VariablesANDROID
     Vector3 startTouch;
-    [Header("Andriod Variables")]
+    [Header("Android Variables")]
     public float zoomOutMin = 1;
     public float zoomOutMax = 8;
     #endregion
