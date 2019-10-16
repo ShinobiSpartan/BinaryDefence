@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -144,16 +144,16 @@ Transform:
   - {fileID: 595351600}
   - {fileID: 126232241}
   - {fileID: 2061777849}
-  - {fileID: 2006993522}
   - {fileID: 552582638}
   - {fileID: 1771385426}
   - {fileID: 738568293}
-  - {fileID: 882481361}
+  - {fileID: 2006993522}
   - {fileID: 1257199356}
   - {fileID: 159063242}
   - {fileID: 1340289994}
   - {fileID: 239807733}
   - {fileID: 1200346933}
+  - {fileID: 882481361}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -397,7 +397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157894367}
   m_LocalRotation: {x: 0, y: 0.92387956, z: -0.38268343, w: 0}
-  m_LocalPosition: {x: -14, y: 55.1, z: 85.3}
+  m_LocalPosition: {x: -5.1, y: 55.1, z: 85.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 707021581}
@@ -423,6 +423,8 @@ MonoBehaviour:
   scrollSpeed: 10
   minY: 5
   maxY: 100
+  minZoom: 0
+  maxZoom: 0
   zoomOutMin: 35
   zoomOutMax: 35
 --- !u!81 &157894370
@@ -458,8 +460,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 35
+  orthographic: 1
+  orthographic size: 41
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2602,6 +2604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneyTimer
       objectReference: {fileID: 0}
+    - target: {fileID: 1678294691616318678, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3186,33 +3193,33 @@ Transform:
   - {fileID: 1173152564}
   - {fileID: 610065832}
   - {fileID: 1310939550}
+  - {fileID: 999602754}
   - {fileID: 389019253}
   - {fileID: 1317767146}
-  - {fileID: 472942299}
   - {fileID: 1044544556}
-  - {fileID: 999602754}
+  - {fileID: 472942299}
   - {fileID: 2072475135}
+  - {fileID: 1385021073}
   - {fileID: 1050252307}
   - {fileID: 1825435232}
-  - {fileID: 1385021073}
   - {fileID: 250315421}
   - {fileID: 1558695975}
   - {fileID: 1799501815}
+  - {fileID: 616577236}
   - {fileID: 1954854098}
   - {fileID: 399795888}
   - {fileID: 621787474}
   - {fileID: 1276896554}
-  - {fileID: 1234285099}
-  - {fileID: 481000022}
-  - {fileID: 1806618035}
-  - {fileID: 462954793}
-  - {fileID: 961827530}
-  - {fileID: 30206729}
-  - {fileID: 353639215}
   - {fileID: 811027210}
-  - {fileID: 616577236}
-  - {fileID: 216350401}
+  - {fileID: 1234285099}
+  - {fileID: 1806618035}
+  - {fileID: 481000022}
+  - {fileID: 353639215}
+  - {fileID: 961827530}
+  - {fileID: 462954793}
   - {fileID: 2051620107}
+  - {fileID: 216350401}
+  - {fileID: 30206729}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
