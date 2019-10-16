@@ -119,16 +119,12 @@ public class AirAIUnit : MonoBehaviour
                     {
                         if(target == listOfRefineries[0].transform)
                         {
-                            listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                            Debug.Log("Bang");
-                            Debug.Log("Refinery Health = " + listOfRefineries[0].GetComponent<ObjectHealth>().DisplayHealth() + "%");
+                            listOfRefineries[0].GetComponent<ObjectHealth>().TakeDamage(damagePerShot);                            
                         }
                     }
                     else
                     {
                         baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                        Debug.Log("Bang");
-                        Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
                     }
                 }
             }

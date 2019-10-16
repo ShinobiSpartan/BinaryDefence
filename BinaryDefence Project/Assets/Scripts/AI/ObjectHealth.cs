@@ -24,7 +24,7 @@ public class ObjectHealth : MonoBehaviour
         {
             if(this.gameObject.tag == "BaseStruct")
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene("Lose");
                 return;
             }
             else
@@ -35,13 +35,5 @@ public class ObjectHealth : MonoBehaviour
             }
 
         }
-    }
-
-    public float DisplayHealth()
-    {
-        float healthAsPercent;
-        healthAsPercent = (currentHealth / fullHealth) * 100;
-
-        return healthAsPercent;
     }
 }
