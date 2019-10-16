@@ -70,21 +70,22 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < wave.ground1Count; i++)
         {
             SpawnEnemy(wave.ground1);
-            yield return new WaitForSeconds(1f / wave.ground1Rate);
+            yield return new WaitForSeconds(1f / wave.enemySpawnRate);
         }
-
-        for (int i = 0; i < wave.ground2Count; i++)
-        {
-            SpawnEnemy(wave.ground2);
-            yield return new WaitForSeconds(1f / wave.ground2Rate);
-        }
-
+        
         for (int i = 0; i < wave.airEnemyCount; i++)
         {
             SelectNextAerialSpawn();
             SpawnAirEnemy(wave.airEnemy);
-            yield return new WaitForSeconds(1f / wave.airEnemyRate);
+            yield return new WaitForSeconds(1f / wave.enemySpawnRate);
         }
+        
+        for (int i = 0; i < wave.ground2Count; i++)
+        {
+            SpawnEnemy(wave.ground2);
+            yield return new WaitForSeconds(1f / wave.enemySpawnRate);
+        }
+
 
         waveIndex++;
 
