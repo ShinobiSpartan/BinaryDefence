@@ -781,15 +781,15 @@ Transform:
   - {fileID: 196237531}
   - {fileID: 444053281}
   - {fileID: 1507298787}
+  - {fileID: 697095777}
   - {fileID: 294127133}
   - {fileID: 1698506801}
   - {fileID: 569706687}
-  - {fileID: 697095777}
+  - {fileID: 635045727}
   - {fileID: 1605892770}
   - {fileID: 114817305}
-  - {fileID: 1387471304}
-  - {fileID: 635045727}
   - {fileID: 1950561242}
+  - {fileID: 1387471304}
   - {fileID: 1926630289}
   - {fileID: 1263431116}
   - {fileID: 2128467806}
@@ -1378,6 +1378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: moneyTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678294691616318678, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
@@ -2352,7 +2357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165240426}
   m_LocalRotation: {x: 0, y: 0.92387956, z: -0.38268343, w: 0}
-  m_LocalPosition: {x: -28, y: 55.1, z: 85.3}
+  m_LocalPosition: {x: -21.8, y: 59, z: 81.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 451573760}
@@ -2378,6 +2383,8 @@ MonoBehaviour:
   scrollSpeed: 10
   minY: 5
   maxY: 100
+  minZoom: 0
+  maxZoom: 0
   zoomOutMin: 35
   zoomOutMax: 35
 --- !u!81 &1165240429
@@ -2413,8 +2420,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 35
+  orthographic: 1
+  orthographic size: 40
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

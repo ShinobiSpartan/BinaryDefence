@@ -1,40 +1,55 @@
 fileFormatVersion: 2
-guid: 1c666bf027845d44cb6eb59e4592a38d
+guid: d505aad7ec96d2d4c94593685a7ef61a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: AA_barrel1
-    100002: AA_barrel2
-    100004: AA_barrel3
-    100006: AA_barrel4
-    100008: AA_head
-    100010: AA_head 1
-    100012: base_small
-    100014: //RootNode
-    400000: AA_barrel1
-    400002: AA_barrel2
-    400004: AA_barrel3
-    400006: AA_barrel4
-    400008: AA_head
-    400010: AA_head 1
-    400012: base_small
-    400014: //RootNode
+    100000: Chest
+    100002: //RootNode
+    100004: Enemy_Ddos_drone_Mesh
+    100006: Enemy_worm_Mesh
+    100008: Hand
+    100010: Head
+    100012: Laser_gun
+    100014: Ring1
+    100016: Ring2
+    100018: Ring3
+    400000: Chest
+    400002: //RootNode
+    400004: Enemy_Ddos_drone_Mesh
+    400006: Enemy_worm_Mesh
+    400008: Hand
+    400010: Head
+    400012: Laser_gun
+    400014: Ring1
+    400016: Ring2
+    400018: Ring3
     2100000: lambert1
-    2300000: AA_head 1
-    2300002: base_small
-    3300000: AA_head 1
-    3300002: base_small
-    4300000: AA_barrel4
-    4300002: AA_barrel3
-    4300004: AA_barrel2
-    4300006: AA_barrel1
-    4300008: AA_head
-    4300010: base_small
+    2300000: Chest
+    2300002: Enemy_worm_Mesh
+    2300004: Hand
+    2300006: Head
+    2300008: Laser_gun
+    2300010: Ring1
+    2300012: Ring2
+    2300014: Ring3
+    3300000: Chest
+    3300002: Enemy_worm_Mesh
+    3300004: Hand
+    3300006: Head
+    3300008: Laser_gun
+    3300010: Ring1
+    3300012: Ring2
+    3300014: Ring3
+    4300000: Chest
+    4300002: Head
+    4300004: Laser_gun
+    4300006: Hand
+    4300008: Ring1
+    4300010: Ring2
+    4300012: Ring3
+    4300014: Enemy_worm_Mesh
+    7400000: Take 001
     9500000: //RootNode
-    13700000: AA_barrel1
-    13700002: AA_barrel2
-    13700004: AA_barrel3
-    13700006: AA_barrel4
   externalObjects: {}
   materials:
     importMaterials: 1
