@@ -15,46 +15,57 @@ public class CameraController : MonoBehaviour
     #endregion
     #region VariablesANDROID
     Vector3 startTouch;
-    [Header("Android Variables")]
-    public float zoomOutMin = 1;
-    public float zoomOutMax = 8;
+    //min and max zoom
+    public float minZoom;
+    public float maxZoom;
+    public float zoomOutMin;
+    public float zoomOutMax;
     #endregion
-        
 
     void Update()
     {
-        cameraMovement();
-        if (Input.GetMouseButtonDown(0))
-        {
+       if(Input.GetMouseButtonDown(0))
+       {
             startTouch = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        }
+       }
 
-        if (Input.touchCount == 2)
-        {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
+       if(Input.touchCount == 2)
+       {
+            //setting the first and second touch
+            Touch firstTouch = Input.GetTouch(0);
+            Touch secondTouch = Input.GetTouch(1);
+            
+            //setting the prevous first and second touch to their first and second touch position
+            //& taking their deltaPosition away from their position
+            Vector2 prevousTouchFirst = firstTouch.position - firstTouch.deltaPosition;
+            Vector2 prevousTouchSecond = secondTouch.position - secondTouch.deltaPosition;
+            
+            //setting the magnitudes for the current and previous magnitudes
+            float previouseMag = (firstTouch.position - secondTouch.position).magnitude;
+            float currentMag = (prevousTouchFirst - prevousTouchSecond).magnitude;
 
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
-
-            float difference = currentMagnitude - prevMagnitude;
-
+            //setting the difference to currentMag - previousMag
+            float difference = currentMag - previouseMag;
+            //getting the zoom difference for the magnitudes of the first and second touch positions
+            //and * by 0.01
             zoom(difference * 0.01f);
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            Vector3 direction = startTouch - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Camera.main.transform.position += direction;
-        }
+       }
+       else if(Input.GetMouseButton(0))
+       {
+            Vector3 dir = startTouch - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Camera.main.transform.position += dir;
+       }
+
         zoom(Input.GetAxis("Mouse ScrollWheel"));
     }
-
-    void zoom(float increment)
+    
+    /// <summary>
+    /// Zooming increment
+    /// </summary>
+    /// <param name="increment"></param>
+    void zoom (float increment)
     {
-        //Camera.main.orthographicSize = Mathf.Clamp(Camera.main.p - increment, zoomOutMin, zoomOutMax);
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
     }
 
     void cameraMovement()
@@ -95,7 +106,7 @@ public class CameraController : MonoBehaviour
         pos.y -= scroll * 1000 * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
        
-        Debug.Log(scroll);
+        // Debug.Log(scroll);
         #endregion
 
     }

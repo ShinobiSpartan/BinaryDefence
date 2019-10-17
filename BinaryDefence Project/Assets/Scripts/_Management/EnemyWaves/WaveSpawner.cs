@@ -40,7 +40,13 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if(commenceWaves)
+        if (waveIndex == waves.Length)
+        {
+            Debug.Log("Level Won!");
+            SceneManager.LoadScene("Win");
+        }
+
+        if (commenceWaves)
         {
             countdown -= Time.deltaTime;
             countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
@@ -72,27 +78,21 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy(wave.ground1);
             yield return new WaitForSeconds(1f / wave.ground1Rate);
         }
-
-        for (int i = 0; i < wave.ground2Count; i++)
-        {
-            SpawnEnemy(wave.ground2);
-            yield return new WaitForSeconds(1f / wave.ground2Rate);
-        }
-
+        
         for (int i = 0; i < wave.airEnemyCount; i++)
         {
             SelectNextAerialSpawn();
             SpawnAirEnemy(wave.airEnemy);
             yield return new WaitForSeconds(1f / wave.airEnemyRate);
         }
+        
+        for (int i = 0; i < wave.ground2Count; i++)
+        {
+            SpawnEnemy(wave.ground2);
+            yield return new WaitForSeconds(1f / wave.ground2Rate);
+        }
 
         waveIndex++;
-
-        if(waveIndex == waves.Length)
-        {
-            Debug.Log("Level Won!");
-            SceneManager.LoadScene(5);
-        }
     }
    
     void SelectNextAerialSpawn()
