@@ -1,40 +1,38 @@
 fileFormatVersion: 2
-guid: 142f9b4cf17e4c447bc2f21c18108b02
+guid: 6d0ca6860d115e449b3b0ce302306cd6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: AA_barrel1
-    100002: AA_barrel2
-    100004: AA_barrel3
-    100006: AA_barrel4
-    100008: AA_head
-    100010: AA_head 1
-    100012: base_small
-    100014: //RootNode
-    400000: AA_barrel1
-    400002: AA_barrel2
-    400004: AA_barrel3
-    400006: AA_barrel4
-    400008: AA_head
-    400010: AA_head 1
-    400012: base_small
-    400014: //RootNode
+    100000: //RootNode
+    100002: Body
+    100004: HoverPad
+    100006: Left_Cannon
+    100008: MisslePods
+    100010: Right_Cannon
+    400000: //RootNode
+    400002: Body
+    400004: HoverPad
+    400006: Left_Cannon
+    400008: MisslePods
+    400010: Right_Cannon
     2100000: lambert1
-    2300000: AA_head 1
-    2300002: base_small
-    3300000: AA_head 1
-    3300002: base_small
-    4300000: AA_barrel4
-    4300002: AA_barrel3
-    4300004: AA_barrel2
-    4300006: AA_barrel1
-    4300008: AA_head
-    4300010: base_small
+    2300000: Body
+    2300002: HoverPad
+    2300004: Left_Cannon
+    2300006: MisslePods
+    2300008: Right_Cannon
+    3300000: Body
+    3300002: HoverPad
+    3300004: Left_Cannon
+    3300006: MisslePods
+    3300008: Right_Cannon
+    4300000: Body
+    4300002: Right_Cannon
+    4300004: Left_Cannon
+    4300006: MisslePods
+    4300008: HoverPad
+    7400000: Take 001
     9500000: //RootNode
-    13700000: AA_barrel1
-    13700002: AA_barrel2
-    13700004: AA_barrel3
-    13700006: AA_barrel4
   externalObjects: {}
   materials:
     importMaterials: 1
