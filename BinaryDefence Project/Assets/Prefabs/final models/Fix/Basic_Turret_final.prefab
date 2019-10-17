@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323118dc9c9e9704c9fec9437f2113b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 20
-  fireRate: 2.5
+  turretRange: 25
+  fireRate: 3
   shootSounds: {fileID: 0}
   lowVolLevels: 0
   highVolLevels: 0
