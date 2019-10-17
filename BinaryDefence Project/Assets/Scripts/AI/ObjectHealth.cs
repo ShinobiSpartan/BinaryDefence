@@ -30,7 +30,6 @@ public class ObjectHealth : MonoBehaviour
             else
             {
                 WaveSpawner.EnemiesAlive--;
-
                 Destroy(this.gameObject);
             }
 
