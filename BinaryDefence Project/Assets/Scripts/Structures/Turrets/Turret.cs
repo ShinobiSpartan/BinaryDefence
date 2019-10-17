@@ -11,6 +11,11 @@ public class Turret : MonoBehaviour
     public float fireRate = 2.5f;
     private float fireCountDown = 0;
 
+    public AudioClip shootSounds;
+    private AudioSource audioFile;
+    public float lowVolLevels;
+    public float highVolLevels;
+    
     [Header("Rotation")]
     [Tooltip("The speed of the turret head turn rate.")]
     public float turnSpeed = 5.0f;
@@ -36,8 +41,15 @@ public class Turret : MonoBehaviour
 
     public string enemyTagAir = "AirEnemy";
     private GameObject[] airEnemies = null;
-    
+
     #endregion
+
+    private void Awake()
+    {
+        audioFile = GetComponent<AudioSource>();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
