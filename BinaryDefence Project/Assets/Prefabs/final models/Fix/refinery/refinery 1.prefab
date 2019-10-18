@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullHealth: 25
+  ws: {fileID: 0}
   healthBar: {fileID: 3979554556381591731}
 --- !u!65 &5360598100784952955
 BoxCollider:
