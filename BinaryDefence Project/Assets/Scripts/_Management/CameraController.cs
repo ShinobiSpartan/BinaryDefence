@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     public float minY;
     public float maxY;
     #endregion
-    #region VariablesANDRIOD
+    #region VariablesANDROID
     Vector3 startTouch;
     //min and max zoom
     public float minZoom;
@@ -106,7 +106,7 @@ public class CameraController : MonoBehaviour
         pos.y -= scroll * 1000 * scrollSpeed * Time.deltaTime;
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
        
-        Debug.Log(scroll);
+        // Debug.Log(scroll);
         #endregion
 
     }

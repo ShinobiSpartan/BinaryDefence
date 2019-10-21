@@ -46,26 +46,258 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040b2bed5f3bc4249bcab55bac8d83d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundEnemy1: {fileID: 7633583996918514864, guid: 928dd7a8aff6aa6468843c3287c19f9e,
-    type: 3}
-  groundEnemy2: {fileID: 6132835815424749340, guid: 483373d42e6692248b0943a374efe527,
-    type: 3}
-  airEnemy: {fileID: 7896797428142842405, guid: 2debc67f18fe35143a40378365263884,
-    type: 3}
-  groundSpawnPoint: {fileID: 0}
+  EnemiesAlive: 0
+  waves:
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 1
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 0
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 3
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 0
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 6
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 0
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 0
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 1
+    airEnemyRate: 1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 0
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 2
+    airEnemyRate: 1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 1
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 3
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 3
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 4
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 2
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 5
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 5
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 0
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 0
+    ground1Rate: 0
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 0
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 2
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 0
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 0
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 2
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 2
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 2
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 4
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 4
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 8
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 8
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 1
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 4
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 4
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 2
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 8
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 8
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 2
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 12
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 6
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 3
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 14
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 7
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 4
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 16
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 8
+    airEnemyRate: 0
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 5
+    ground2Rate: 0.2
+  - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
+      type: 3}
+    ground1Count: 20
+    ground1Rate: 1
+    airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
+      type: 3}
+    airEnemyCount: 10
+    airEnemyRate: 0.1
+    ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
+      type: 3}
+    ground2Count: 10
+    ground2Rate: 0.2
+  spawnPoint: {fileID: 0}
   aerialSpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  timeBetweenWaves: 15
-  timeForWaveSpawn: 0.5
-  initialCountDown: 5
+  timeBetweenWaves: 10
+  countdown: 5
   waveCounterText: {fileID: 0}
-  waveThreshold: 10
-  groundEnemiesOnScreen: []
-  airEnemiesOnScreen: []
-  enemiesAlive: 0
   startWavesButton: {fileID: 0}
+  nyoomButton: 32
 --- !u!114 &7006701744647814499
 MonoBehaviour:
   m_ObjectHideFlags: 0

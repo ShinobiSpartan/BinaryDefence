@@ -132,8 +132,6 @@ public class GroundEnemies : MonoBehaviour
                     // Shoot
                     shotTimer -= shotDelay;
                     baseStructure.GetComponent<ObjectHealth>().TakeDamage(damagePerShot);
-                    Debug.Log("Bang");
-                    Debug.Log(baseStructure.GetComponent<ObjectHealth>().DisplayHealth() + "%");
                 }
 
             }

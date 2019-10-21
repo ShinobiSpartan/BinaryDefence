@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
     public GameObject pausePanel;
 
     /// <summary>
-    /// disabling pause panel
+    /// Disabling pause panel
     /// </summary>
     void Start()
     {
@@ -27,7 +27,14 @@ public class MenuManager : MonoBehaviour
         }
     }
     /// <summary>
-    /// fully exiting the game
+    /// Quitting the current game that is being played
+    /// </summary>
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    /// <summary>
+    /// Fully exiting the game
     /// </summary>
     public void ExitGame()
     {
@@ -35,7 +42,7 @@ public class MenuManager : MonoBehaviour
     }
 
     /// <summary>
-    /// restarting the game
+    /// Restarting the game
     /// </summary>
     public void RestartButton()
     {
@@ -45,9 +52,63 @@ public class MenuManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+    /// <summary>
+    /// Goes back to the main menu
+    /// </summary>
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     /// <summary>
-    /// pauses the game
+    /// Taking the player to the Lobby screen
+    /// </summary>
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("Lobby");
+    }
+
+    /// <summary>
+    /// Plays the first map
+    /// </summary>
+    public void PlayMap1()
+    {
+        //change "Main" to "Map1"
+        SceneManager.LoadScene("Main");
+    }
+
+    /// <summary>
+    /// Plays the second map
+    /// </summary>
+    public void PlayMap2()
+    {
+        SceneManager.LoadScene("Map2");
+    }
+
+    /// <summary>
+    /// Plays the third map
+    /// </summary>
+    public void PlayMap3()
+    {
+        SceneManager.LoadScene("map3");
+    }
+
+    /// <summary>
+    /// Plays the fourth map 
+    /// </summary>
+    public void PlayMap4()
+    {
+        SceneManager.LoadScene("map4");
+    }
+
+    public void PlayMap5()
+    {
+        SceneManager.LoadScene("map5");
+    }
+
+
+    /// <summary>
+    /// Pauses the game
     /// </summary>
     public void PauseButton()
     {
@@ -57,7 +118,7 @@ public class MenuManager : MonoBehaviour
     }
 
     /// <summary>
-    /// unpauses the game
+    /// Unpauses the game
     /// </summary>
     public void UnpauseGame()
     {
@@ -67,10 +128,9 @@ public class MenuManager : MonoBehaviour
     }
     
     /// <summary>
-    /// if the game is paused it will time will stop completely
-    /// till game is unpasued and set back to normal
+    /// If the game is paused it will time will stop completely
+    /// till the game is unpasued and set back to normal
     /// </summary>
-    /// <returns></returns>
     bool pauseToggled()
     {
         if(Time.timeScale == 0f)
