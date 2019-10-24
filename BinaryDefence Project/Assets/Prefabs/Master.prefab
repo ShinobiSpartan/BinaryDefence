@@ -91,7 +91,7 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 1
-    airEnemyRate: 1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 0
@@ -103,11 +103,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 2
-    airEnemyRate: 1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 0
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 1
@@ -115,11 +115,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 3
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 0
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 3
@@ -175,11 +175,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 2
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 1
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 2
@@ -187,11 +187,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 2
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
-    ground2Count: 1
-    ground2Rate: 0.2
+    ground2Count: 2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 4
@@ -211,11 +211,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 8
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 1
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 4
@@ -223,11 +223,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 4
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 2
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 8
@@ -235,11 +235,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 8
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 2
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 12
@@ -247,11 +247,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 6
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 3
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 14
@@ -259,11 +259,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 7
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 4
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 16
@@ -271,11 +271,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 8
-    airEnemyRate: 0
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 5
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   - ground1: {fileID: 7633583996918093968, guid: 928dd7a8aff6aa6468843c3287c19f9e,
       type: 3}
     ground1Count: 20
@@ -283,11 +283,11 @@ MonoBehaviour:
     airEnemy: {fileID: 7896797428142816773, guid: 2debc67f18fe35143a40378365263884,
       type: 3}
     airEnemyCount: 10
-    airEnemyRate: 0.1
+    airEnemyRate: 0.6
     ground2: {fileID: 6132835815424324412, guid: 483373d42e6692248b0943a374efe527,
       type: 3}
     ground2Count: 10
-    ground2Rate: 0.2
+    ground2Rate: 0.7
   spawnPoint: {fileID: 0}
   aerialSpawnPoints:
   - {fileID: 0}
@@ -297,7 +297,6 @@ MonoBehaviour:
   countdown: 5
   waveCounterText: {fileID: 0}
   startWavesButton: {fileID: 0}
-  nyoomButton: 32
 --- !u!114 &7006701744647814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,11 +310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeUI: {fileID: 0}
-  standardTurretPrefab: {fileID: 9186967111404504142, guid: c76c9219d40383f4e83bc21e63f49077,
+  standardTurretPrefab: {fileID: 1603894297305542085, guid: 92301de8e2d127342990ad8f9df8460a,
     type: 3}
-  aaTurretPrefab: {fileID: 6403284577851696612, guid: eff349cf863242e4b96a328be2a2c2c6,
+  aaTurretPrefab: {fileID: 212384236930404625, guid: f6acc3b53e64a7a4a84a2dfac345b884,
     type: 3}
-  railTurretPrefab: {fileID: 6410297474201506633, guid: 64a9663ea96ed754891237a229612485,
+  railTurretPrefab: {fileID: 3548827655769593555, guid: eb4113c45295d464ea72aed8b010d50e,
     type: 3}
   refineryPlacement: {fileID: 2990436898675217504, guid: 209217a8b02c6c442a23330695a22781,
     type: 3}

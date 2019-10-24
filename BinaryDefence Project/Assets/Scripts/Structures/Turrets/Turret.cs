@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [Tooltip("Radius of the range for the turret(s).")]
     public float turretRange = 10.0f;
     public float fireRate = 2.5f;
-    private float fireCountDown = 0;
+    private float fireCountDown = 1;
 
     public AudioClip shootSounds;
     private AudioSource audioFile;
@@ -226,12 +226,12 @@ public class Turret : MonoBehaviour
             if (nearestEnemy != null && shortDistance <= turretRange)
             {
                 target = nearestEnemy.transform;
+              
             }
             else
             {
                 target = null;
             }
-
         
     }
     /// <summary>

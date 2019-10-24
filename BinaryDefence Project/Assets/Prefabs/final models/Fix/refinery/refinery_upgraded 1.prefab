@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea633654eacee43a6d79f65eddd3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcesGainedPerPull: 10
+  resourcesGainedPerPull: 50
   timeBetweenResourceCollection: 5
   currencyIndicator: {fileID: 0}
 --- !u!114 &3267396190145883818
