@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fea633654eacee43a6d79f65eddd3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcesGainedPerPull: 10
+  resourcesGainedPerPull: 25
   timeBetweenResourceCollection: 5
   currencyIndicator: {fileID: 8140209059606561575}
 --- !u!114 &7346638189265870991

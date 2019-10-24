@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour
     public Button startWavesButton;
     bool commenceWaves = false;
 
-    public KeyCode nyoomButton;
+    //public KeyCode nyoomButton;
     #endregion
 
     private void OnEnable()
@@ -37,14 +37,14 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(nyoomButton))
-        {
-            Time.timeScale = 5f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+       // if (Input.GetKey(nyoomButton))
+       // {
+       //     Time.timeScale = 5f;
+       // }
+       // else
+       // {
+       //     Time.timeScale = 1f;
+       // }
 
         if(EnemiesAlive > 0)
         {

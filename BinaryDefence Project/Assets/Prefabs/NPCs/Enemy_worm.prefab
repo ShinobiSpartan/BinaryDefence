@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: 10
+  fullHealth: 50
+  ws: {fileID: 0}
   healthBar: {fileID: 5745224341293216400}
 --- !u!114 &4850543152751826753
 MonoBehaviour:
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 7
+  speed: 14
   rotationSpeed: 5
   structures:
     serializedVersion: 2
