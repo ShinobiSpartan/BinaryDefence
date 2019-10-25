@@ -20,6 +20,9 @@ public class NodeUI : MonoBehaviour
         transform.position = target.GetBuildPos();
         //setting the upgrade cost of the structure that is being upgraded 
         upgradeCost.text = "$" + target.turretBluePrint.costingValue;
+        //setting the sell cost of the structure that is being sold
+        //then dividing the costing value of the turret by 2
+        sellCost.text = "$" + target.turretBluePrint.costingValue / 2;
         //setting UI to true
         ui.SetActive(true);
     }

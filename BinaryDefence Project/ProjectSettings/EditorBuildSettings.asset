@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps/Main.unity
     guid: 3ed7b897d25294e4da908e23404bf3fa
   - enabled: 0
-    path: Assets/Scenes/Maps/Map2.unity
+    path: Assets/Scenes/Maps/oldmap ref/Map2.unity
     guid: 22a7b508e6970ef4fbc6b980d5282ad9
   - enabled: 1
     path: Assets/Scenes/Menus/Lose.unity

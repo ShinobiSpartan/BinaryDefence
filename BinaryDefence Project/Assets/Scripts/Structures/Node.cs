@@ -26,6 +26,7 @@ public class Node : MonoBehaviour
 
     private void Start()
     {
+
         rend = GetComponent<Renderer>();
         buildManager = BuildManager.instance;
         if (buildManager == null)
@@ -67,13 +68,16 @@ public class Node : MonoBehaviour
         {
             return;
         }
-
+        //taking money away from the costing value of the blueprint
         PlayerStats.money -= bluePrint.costingValue;
-
+        //instantiating the blueprint prefab and allowing the "GetBuildPos()" to have a offset
+        //keeping the identity
         GameObject _turret = (GameObject)Instantiate(bluePrint.prefab, GetBuildPos(), Quaternion.identity);
+      
         turret = _turret;
-
+       
         turretBluePrint = bluePrint;
+
    }
 
     /// <summary>
@@ -96,7 +100,7 @@ public class Node : MonoBehaviour
         GameObject _turret = (GameObject)Instantiate(turretBluePrint.upgradedPrefab, GetBuildPos(), Quaternion.identity);
         turret = _turret;
 
-        isUpgraded = true;
+        isUpgraded = true;        
     }
 
     /// <summary>
@@ -123,6 +127,7 @@ public class Node : MonoBehaviour
 
         if (buildManager == null)
             Debug.Log("OnMouseEnter");
+
         if (!buildManager.CanBuild)
             return;
 

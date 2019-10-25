@@ -32,6 +32,9 @@ public class Turret : MonoBehaviour
     public Transform firePoint5;
     public Transform firePoint6;
 
+    public GameObject placementEffects;
+    public Vector3 effectsPositionOffset;
+
     //public Transform[] firePoints;
 
     private GameObject[] targetedEnemies = null;
@@ -55,6 +58,9 @@ public class Turret : MonoBehaviour
     {
         //calling "UpdatingTarget" twice every second, NOT FRAME!
         InvokeRepeating("UpdatingTarget", 0f, 0.5f);
+        //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
+        //keeping the identity
+        GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -97,6 +103,14 @@ public class Turret : MonoBehaviour
         }
 
         fireCountDown -= Time.deltaTime;
+    }
+    /// <summary>
+    /// adding the transforms position with nthe effects offset
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetPlacementPos()
+    {
+        return transform.position + effectsPositionOffset;
     }
 
 

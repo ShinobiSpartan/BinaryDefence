@@ -50,6 +50,7 @@ MonoBehaviour:
   damage: 5
   impactEffects: {fileID: 7277879530910727139, guid: bc74338f489a80549a6dab6fda89b6a8,
     type: 3}
+  impactEffectsOffset: {x: 0, y: 4, z: 0}
 --- !u!65 &2113707683783945554
 BoxCollider:
   m_ObjectHideFlags: 0

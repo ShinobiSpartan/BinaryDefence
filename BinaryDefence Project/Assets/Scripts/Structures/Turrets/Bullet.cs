@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
 
     [Header("Bullet Effects")]
     public GameObject impactEffects;
+    public Vector3 impactEffectsOffset;
 
     private GameObject targetObject;
     private Transform targetTransform;
@@ -21,6 +22,11 @@ public class Bullet : MonoBehaviour
     public void Seek(Transform _target)
     {
         targetTransform = _target;
+    }
+
+    public Vector3 GetImpactEffectsPos()
+    {
+        return transform.position + impactEffectsOffset;
     }
 
     // Update is called once per frame
@@ -56,7 +62,7 @@ public class Bullet : MonoBehaviour
     void HitTarget()
     {
 
-        GameObject effects = (GameObject)Instantiate(impactEffects, transform.position, transform.rotation);
+        GameObject effects = (GameObject)Instantiate(impactEffects, GetImpactEffectsPos(), transform.rotation);
         Destroy(effects, 2f);
 
         targetObject.GetComponent<ObjectHealth>().TakeDamage(damage);
