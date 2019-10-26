@@ -104,6 +104,36 @@ Transform:
   m_Father: {fileID: 7719317911384511439}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3183628403975328579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4506575677019537990}
+  m_Layer: 0
+  m_Name: PlacementEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4506575677019537990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183628403975328579}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5770798, y: 2.849156, z: 2.1430173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7719317911384511437}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4326115726734551515
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +520,8 @@ MonoBehaviour:
   firePoint4: {fileID: 0}
   firePoint5: {fileID: 0}
   firePoint6: {fileID: 0}
+  placementEffects: {fileID: 3183628403975328579}
+  effectsPositionOffset: {x: 0, y: 0, z: 0}
   enemyTag: Enemy
   enemyTagAir: AirEnemy
 --- !u!1 &7719317911384739813
@@ -805,6 +837,7 @@ Transform:
   - {fileID: 7719317911384511435}
   - {fileID: 7719317911384511427}
   - {fileID: 7517271641244600833}
+  - {fileID: 4506575677019537990}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

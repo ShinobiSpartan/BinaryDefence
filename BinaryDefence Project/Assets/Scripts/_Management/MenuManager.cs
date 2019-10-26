@@ -16,15 +16,17 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
+        //checking if keybind "p" is pressed to pause game
         if(Input.GetKeyDown("p"))
         {
-            if(!pausePanel.activeInHierarchy)
-            {
-                PauseButton();
-            }
-            else
-                UnpauseGame();
+           if(!pausePanel.activeInHierarchy)
+           {
+               PauseButton();
+           }
+           else
+               UnpauseGame();
         }
+
     }
     /// <summary>
     /// Quitting the current game that is being played
@@ -52,61 +54,7 @@ public class MenuManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    /// <summary>
-    /// Goes back to the main menu
-    /// </summary>
-    public void BackButton()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    /// <summary>
-    /// Taking the player to the Lobby screen
-    /// </summary>
-    public void PlayButton()
-    {
-        SceneManager.LoadScene("Lobby");
-    }
-
-    /// <summary>
-    /// Plays the first map
-    /// </summary>
-    public void PlayMap1()
-    {
-        //change "Main" to "Map1"
-        SceneManager.LoadScene("Main");
-    }
-
-    /// <summary>
-    /// Plays the second map
-    /// </summary>
-    public void PlayMap2()
-    {
-        SceneManager.LoadScene("Map2");
-    }
-
-    /// <summary>
-    /// Plays the third map
-    /// </summary>
-    public void PlayMap3()
-    {
-        SceneManager.LoadScene("map3");
-    }
-
-    /// <summary>
-    /// Plays the fourth map 
-    /// </summary>
-    public void PlayMap4()
-    {
-        SceneManager.LoadScene("map4");
-    }
-
-    public void PlayMap5()
-    {
-        SceneManager.LoadScene("map5");
-    }
-
-
+  
     /// <summary>
     /// Pauses the game
     /// </summary>
