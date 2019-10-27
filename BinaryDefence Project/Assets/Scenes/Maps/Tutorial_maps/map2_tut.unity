@@ -1365,10 +1365,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is basic information about the Basic Turret and it's stats. The Basic
-    Turret can only fire at ground enemies and deals weak damage with a moderate fire
-    rate. The Upgraded Turrert also fires at ground enemies and deals moderate damage
-    with a moderate fire rate.
+  m_Text: This is basic information about the AA Turret and it's stats. The AA Turret
+    can only fire at air enemies and deals moderate damage with a moderate fire rate.
+    The upgraded AA Turrert also fires at air enemies and deals high damage with a
+    moderate fire rate.
 --- !u!222 &1217916872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1394,6 +1394,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+        type: 3}
+      propertyPath: panelHideShow
+      value: 
+      objectReference: {fileID: 564959064}
+    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+        type: 3}
+      propertyPath: buttonHideShow
+      value: 
+      objectReference: {fileID: 1737951769}
     - target: {fileID: 583282493467933945, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1679,16 +1689,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.6000061
       objectReference: {fileID: 0}
-    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
-        type: 3}
-      propertyPath: panelHideShow
-      value: 
-      objectReference: {fileID: 564959064}
-    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
-        type: 3}
-      propertyPath: buttonHideShow
-      value: 
-      objectReference: {fileID: 1737951769}
     - target: {fileID: 583282492789831488, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_IsActive
