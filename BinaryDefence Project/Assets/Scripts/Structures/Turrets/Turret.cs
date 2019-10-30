@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [Tooltip("Radius of the range for the turret(s).")]
     public float turretRange = 10.0f;
     public float fireRate = 2.5f;
-    private float fireCountDown = 1;
+    public float fireCountDown = 1;
 
     public AudioClip shootSounds;
     private AudioSource audioFile;
@@ -65,7 +65,6 @@ public class Turret : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-
     {
 
         if (target == null)
