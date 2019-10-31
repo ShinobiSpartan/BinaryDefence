@@ -98,7 +98,7 @@ MonoBehaviour:
   highVolLevels: 0
   turnSpeed: 5
   turretRotationPart: {fileID: 6410297474201341801}
-  bulletPrefab: {fileID: 1426729729102005661, guid: dc77c3415535668498c7c2175a9420bc,
+  bulletPrefab: {fileID: 1426729729102005661, guid: f3308d5600cea09478ded1199858fa29,
     type: 3}
   firePoint1: {fileID: 2552426023469957612}
   firePoint2: {fileID: 0}

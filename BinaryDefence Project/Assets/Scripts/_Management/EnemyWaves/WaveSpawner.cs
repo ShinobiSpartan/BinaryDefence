@@ -24,27 +24,36 @@ public class WaveSpawner : MonoBehaviour
     private int waveIndex = 0;
 
     public Button startWavesButton;
+    public Text currentWaveCounter;
     bool commenceWaves = false;
 
-    public KeyCode nyoomButton;
+    int amountOfWaves;
+
+    //public KeyCode nyoomButton;
     #endregion
 
     private void OnEnable()
     {
         Time.timeScale = 0;
         startWavesButton.onClick.AddListener(delegate { StartWaves(); });
+        amountOfWaves = waves.Length;
+    }
+
+    void OnGUI()
+    {
+        currentWaveCounter.text = "Wave: " + waveIndex + "/" + amountOfWaves.ToString();   
     }
 
     private void Update()
     {
-        if (Input.GetKey(nyoomButton))
-        {
-            Time.timeScale = 5f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+       // if (Input.GetKey(nyoomButton))
+       // {
+       //     Time.timeScale = 5f;
+       // }
+       // else
+       // {
+       //     Time.timeScale = 1f;
+       // }
 
         if(EnemiesAlive > 0)
         {
