@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public static int EnemiesAlive = 0;
-
     #region Variables
+    //no more static
+    public int EnemiesAlive = 0;
 
     public Wave[] waves;
 
@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
     private Transform selectedAerialSpawn;
     
     [Header("Times")]
-    public float timeBetweenWaves = 5;
+    public float timeBetweenWaves = 5f;
     public float countdown = 5f;
     public Text waveCounterText;
 
@@ -25,6 +25,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Button startWavesButton;
     bool commenceWaves = false;
+
+    //public KeyCode nyoomButton;
     #endregion
 
     private void OnEnable()
@@ -35,6 +37,15 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+       // if (Input.GetKey(nyoomButton))
+       // {
+       //     Time.timeScale = 5f;
+       // }
+       // else
+       // {
+       //     Time.timeScale = 1f;
+       // }
+
         if(EnemiesAlive > 0)
         {
             return;
@@ -53,12 +64,14 @@ public class WaveSpawner : MonoBehaviour
             waveCounterText.text = string.Format("{0:00.00}", countdown);
         }
 
-
-        if (countdown <= 0f)
+        if(EnemiesAlive <= 0)
         {
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
-            return;
+            if (countdown <= 0f)
+            {
+                StartCoroutine(SpawnWave());
+                countdown = timeBetweenWaves;
+                return;
+            }
         }
     }
 

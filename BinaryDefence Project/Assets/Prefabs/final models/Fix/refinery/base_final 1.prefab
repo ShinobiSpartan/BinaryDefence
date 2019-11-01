@@ -131,7 +131,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4326115726734551515}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0.38268343, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -7.38}
   m_LocalScale: {x: 0.030000003, y: 0.030000005, z: 1}
   m_Children:
   - {fileID: 8200032242350336735}
@@ -141,8 +141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -45.000004, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 0, y: 2.62}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4027584347124669705
 Canvas:
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesGainedPerPull: 35
-  timeBetweenResourceCollection: 5
+  timeBetweenResourceCollection: 10
   currencyIndicator: {fileID: 1107369010146253802}
 --- !u!1 &7719317911384739821
 GameObject:
@@ -833,7 +833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ad096a9cad6924a917aaf586d20302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: 100
+  fullHealth: 150
+  ws: {fileID: 0}
   healthBar: {fileID: 9107338414800540618}
 --- !u!1 &7719317911384739823
 GameObject:
