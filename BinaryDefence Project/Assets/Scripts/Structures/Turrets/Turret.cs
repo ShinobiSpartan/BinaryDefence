@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [Tooltip("Radius of the range for the turret(s).")]
     public float turretRange = 10.0f;
     public float fireRate = 2.5f;
-    private float fireCountDown = 1;
+    public float fireCountDown = 1;
 
     public AudioClip shootSounds;
     private AudioSource audioFile;
@@ -31,6 +31,9 @@ public class Turret : MonoBehaviour
     public Transform firePoint4;
     public Transform firePoint5;
     public Transform firePoint6;
+
+    public GameObject placementEffects;
+    public Vector3 effectsPositionOffset;
 
     //public Transform[] firePoints;
 
@@ -55,11 +58,13 @@ public class Turret : MonoBehaviour
     {
         //calling "UpdatingTarget" twice every second, NOT FRAME!
         InvokeRepeating("UpdatingTarget", 0f, 0.5f);
+        //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
+        //keeping the identity
+        GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
-
     {
 
         if (target == null)
@@ -97,6 +102,14 @@ public class Turret : MonoBehaviour
         }
 
         fireCountDown -= Time.deltaTime;
+    }
+    /// <summary>
+    /// adding the transforms position with nthe effects offset
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetPlacementPos()
+    {
+        return transform.position + effectsPositionOffset;
     }
 
 

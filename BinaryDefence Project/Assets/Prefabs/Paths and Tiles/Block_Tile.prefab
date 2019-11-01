@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00b912bf679bf67489f83b9efd598ac6, type: 3}
+  - {fileID: 2100000, guid: 8d1ce795990d7804892a4f218b3a680a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,6 +163,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.82
       objectReference: {fileID: 0}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: placementEffects
+      value: 
+      objectReference: {fileID: 8054679952242427227, guid: 799a5b12dace7d34884505a41c5f0b0d,
+        type: 3}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: effectsPositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7398fca866cb7584095964f9381d01a5, type: 3}
 --- !u!4 &1800422433871040264 stripped
@@ -252,6 +263,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: placementEffects
+      value: 
+      objectReference: {fileID: 8054679952242427227, guid: 799a5b12dace7d34884505a41c5f0b0d,
+        type: 3}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: effectsPositionOffset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7398fca866cb7584095964f9381d01a5, type: 3}
@@ -343,6 +365,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.82
       objectReference: {fileID: 0}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: placementEffects
+      value: 
+      objectReference: {fileID: 8054679952242427227, guid: 799a5b12dace7d34884505a41c5f0b0d,
+        type: 3}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: effectsPositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7398fca866cb7584095964f9381d01a5, type: 3}
 --- !u!4 &3349882823300076315 stripped
@@ -432,6 +465,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: placementEffects
+      value: 
+      objectReference: {fileID: 8054679952242427227, guid: 799a5b12dace7d34884505a41c5f0b0d,
+        type: 3}
+    - target: {fileID: 6121796949177392195, guid: 7398fca866cb7584095964f9381d01a5,
+        type: 3}
+      propertyPath: effectsPositionOffset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7398fca866cb7584095964f9381d01a5, type: 3}

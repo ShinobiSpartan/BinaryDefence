@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 2236665416312858681}
   m_Layer: 0
   m_Name: Railgun-Turret-1
-  m_TagString: Untagged
+  m_TagString: GroundTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

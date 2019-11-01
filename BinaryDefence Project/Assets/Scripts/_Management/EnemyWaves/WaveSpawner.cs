@@ -24,7 +24,10 @@ public class WaveSpawner : MonoBehaviour
     private int waveIndex = 0;
 
     public Button startWavesButton;
+    public Text currentWaveCounter;
     bool commenceWaves = false;
+
+    int amountOfWaves;
 
     //public KeyCode nyoomButton;
     #endregion
@@ -33,6 +36,12 @@ public class WaveSpawner : MonoBehaviour
     {
         Time.timeScale = 0;
         startWavesButton.onClick.AddListener(delegate { StartWaves(); });
+        amountOfWaves = waves.Length;
+    }
+
+    void OnGUI()
+    {
+        currentWaveCounter.text = "Wave: " + waveIndex + "/" + amountOfWaves.ToString();   
     }
 
     private void Update()
@@ -70,6 +79,8 @@ public class WaveSpawner : MonoBehaviour
             {
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
+
+                waveIndex++;
                 return;
             }
         }
@@ -105,7 +116,6 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.ground2Rate);
         }
 
-        waveIndex++;
     }
    
     void SelectNextAerialSpawn()
