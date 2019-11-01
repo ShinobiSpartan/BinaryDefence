@@ -79,6 +79,8 @@ public class WaveSpawner : MonoBehaviour
             {
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
+
+                waveIndex++;
                 return;
             }
         }
@@ -114,7 +116,6 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.ground2Rate);
         }
 
-        waveIndex++;
     }
    
     void SelectNextAerialSpawn()
