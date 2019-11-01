@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public float panBorderThick = 20.0f;
 
     public float scrollSpeed;
+    //zoom in and out
     public float minY;
     public float maxY;
     #endregion
@@ -18,9 +19,33 @@ public class CameraController : MonoBehaviour
     //min and max zoom
     public float minZoom;
     public float maxZoom;
+    //Orthographic zoom in and out
     public float zoomOutMin;
     public float zoomOutMax;
     #endregion
+
+    //private void LateUpdate()
+    //{
+    //    if(Input.mousePosition.x >= Screen.width - panBorderThick)
+    //    {
+    //        transform.position.x = Mathf.Clamp(transform.position.x, -100, 100);
+    //        transform.position += transform.right * Time.deltaTime * panSpeed; 
+    //    }
+    //    if(Input.mousePosition.x <= 0 + panBorderThick)
+    //    {
+    //        transform.position -= transform.right * Time.deltaTime;
+    //    }
+    //    if(Input.mousePosition.y >=Screen.height - panBorderThick)
+    //    {
+    //        transform.position += transform.right * Time.deltaTime * panSpeed;
+    //    }
+    //    if(Input.mousePosition.y <= 0 + panBorderThick)
+    //    {
+    //        transform.position -= transform.right * Time.deltaTime;
+    //    }
+    //
+    //}
+
 
     void Update()
     {

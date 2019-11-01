@@ -18,6 +18,7 @@ public class AirAIUnit : MonoBehaviour
     int numOfRefineries = 0;
     int prev_numOfRefineries = 0;
 
+    public float heightDisplacement = 12f;
     public float damagePerShot = 1f;
 
     private float shotTimer;
@@ -106,7 +107,7 @@ public class AirAIUnit : MonoBehaviour
     {
         if (baseStructure != null)
         {
-            bool inRange = Physics.CheckBox(transform.position - new Vector3(0, 10, 0), new Vector3(2, 2, 2), Quaternion.identity, structures);
+            bool inRange = Physics.CheckBox(transform.position - new Vector3(0, heightDisplacement, 0), new Vector3(2, 2, 2), Quaternion.identity, structures);
 
             if (inRange)
             {
