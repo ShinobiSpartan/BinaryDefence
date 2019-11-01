@@ -552,20 +552,20 @@ MonoBehaviour:
   standardTurret:
     prefab: {fileID: 1603894297305542085, guid: 92301de8e2d127342990ad8f9df8460a,
       type: 3}
-    costingValue: 125
+    costingValue: 150
     upgradedPrefab: {fileID: 836859753138840530, guid: 147e6ec07b8abae4c9a7f49ded925449,
       type: 3}
     upgradeCost: 175
   aaTurret:
     prefab: {fileID: 212384236930404625, guid: f6acc3b53e64a7a4a84a2dfac345b884, type: 3}
-    costingValue: 150
+    costingValue: 175
     upgradedPrefab: {fileID: 633739215015212126, guid: 7647af8e857ead8499ba52737ecdd7c4,
       type: 3}
     upgradeCost: 200
   railgunTurret:
     prefab: {fileID: 3548827655769593555, guid: eb4113c45295d464ea72aed8b010d50e,
       type: 3}
-    costingValue: 200
+    costingValue: 225
     upgradedPrefab: {fileID: 5576728148226126386, guid: 77c28952633d9134aa4091a5026f949c,
       type: 3}
     upgradeCost: 250
@@ -2428,6 +2428,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2453127073503730754, guid: f1eeecf00a06d7442bd51d31f08d5cf4,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Basic Turret
+
+        $150'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1eeecf00a06d7442bd51d31f08d5cf4, type: 3}
 --- !u!224 &583282492789831503 stripped
@@ -2894,7 +2901,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Rail Turret
 
-        $200'
+        $225'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41816613f8d443845af72d432a2a6933, type: 3}
