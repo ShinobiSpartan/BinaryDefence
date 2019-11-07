@@ -73,6 +73,7 @@ public class Node : MonoBehaviour
         //instantiating the blueprint prefab and allowing the "GetBuildPos()" to have a offset
         //keeping the identity
         GameObject _turret = (GameObject)Instantiate(bluePrint.prefab, GetBuildPos(), Quaternion.identity);
+        Vibration.Vibrate(50);
       
         turret = _turret;
        
