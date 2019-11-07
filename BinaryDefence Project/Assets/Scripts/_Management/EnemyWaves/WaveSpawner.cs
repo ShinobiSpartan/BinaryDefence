@@ -41,20 +41,12 @@ public class WaveSpawner : MonoBehaviour
 
     void OnGUI()
     {
+        //GUI Text for wave counter
         currentWaveCounter.text = "Wave: " + waveIndex + "/" + amountOfWaves.ToString();   
     }
 
     private void Update()
     {
-       // if (Input.GetKey(nyoomButton))
-       // {
-       //     Time.timeScale = 5f;
-       // }
-       // else
-       // {
-       //     Time.timeScale = 1f;
-       // }
-
         if(EnemiesAlive > 0)
         {
             return;
