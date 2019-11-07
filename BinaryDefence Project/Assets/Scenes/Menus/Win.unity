@@ -334,15 +334,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 805947038}
-        m_MethodName: PlayButton
-        m_Mode: 1
+      - m_Target: {fileID: 1229821426}
+        m_MethodName: Select
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Lobby
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -692,10 +692,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1229821425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ccc86478772c340acbc5a26df6495e, type: 3}
+  m_Script: {fileID: 11500000, guid: 454a442da7ba14f4aa60923ab66f3c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
 --- !u!114 &1229821427
 MonoBehaviour:
   m_ObjectHideFlags: 0
