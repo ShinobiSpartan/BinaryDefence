@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f1629f05a2b547ab0969cb91c8aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panLimitX: 15
+  panLimitX: 11
   CamPosY: 41.4
   CamPosZ: 61.4
 --- !u!1 &610306234
@@ -2842,6 +2842,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1493805133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1497728685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5103104144123954567, guid: aed833c0a37043f4a903cc1323688d9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5103104145471005598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1526688311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7935103245563167873, guid: 57a037f8912278944bf68c5c188c508e,
@@ -3287,7 +3293,7 @@ PrefabInstance:
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -42
+      value: -55.5
       objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
@@ -4240,6 +4246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NodeUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5103104144200488875, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: upgradeButton
+      value: 
+      objectReference: {fileID: 1497728685}
     - target: {fileID: 5103104144200488872, guid: aed833c0a37043f4a903cc1323688d9e,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,8 +13,6 @@ public class ObjectHealth : MonoBehaviour
     bool fullyDead = false;
     public Image healthBar;
 
-    public CameraShake cShake;
-
     private void Awake()
     {
         currentHealth = fullHealth;
@@ -42,8 +40,7 @@ public class ObjectHealth : MonoBehaviour
             // If base is dead
             if (this.gameObject.tag == "BaseStruct")
             {
-                StartCoroutine(cShake.Shake(2,0.4f));
-                // SceneManager.LoadScene("Lose");
+                SceneManager.LoadScene("Lose");
                 return;
             }
         }

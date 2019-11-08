@@ -11,6 +11,9 @@ public class NodeUI : MonoBehaviour
     [Header("Upgrading/Selling")]
     public Text upgradeCost;
     public Text sellCost;
+
+    // private bool beenUpgraded = false;
+    // public GameObject upgradeButton;
     #endregion
 
     public void SetTarget(Node _target)
@@ -40,6 +43,7 @@ public class NodeUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+        beenUpgraded = true;
         BuildManager.instance.DeselectNode();
     }
 
@@ -51,4 +55,10 @@ public class NodeUI : MonoBehaviour
         target.SellTurret();
         BuildManager.instance.DeselectNode();
     }
+
+   // private void Update()
+   // {
+   //     if (beenUpgraded == true)
+   //         upgradeButton.SetActive(false);
+   // }
 }
