@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4325,6 +4325,36 @@ PrefabInstance:
       propertyPath: upgradeButton
       value: 
       objectReference: {fileID: 1497728687}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1417393205}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5103104144200488872, guid: aed833c0a37043f4a903cc1323688d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4379,36 +4409,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1417393205}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Upgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 5103104144123954565, guid: aed833c0a37043f4a903cc1323688d9e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5103104144731279593, guid: aed833c0a37043f4a903cc1323688d9e,
         type: 3}
@@ -4747,17 +4747,17 @@ PrefabInstance:
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: waves.Array.data[0].ground1Count
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
-        type: 3}
-      propertyPath: waves.Array.data[1].ground1Count
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
+      propertyPath: waves.Array.data[1].ground1Count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
       propertyPath: waves.Array.data[1].airEnemyCount
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
@@ -4767,7 +4767,12 @@ PrefabInstance:
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: waves.Array.data[2].ground2Count
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[1].airEnemyRate
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814499, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
@@ -4777,7 +4782,7 @@ PrefabInstance:
     - target: {fileID: 7006701744647814502, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: startingMoney
-      value: 500
+      value: 240
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f, type: 3}

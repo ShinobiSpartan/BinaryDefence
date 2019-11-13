@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRange: 25
-  fireRate: 3
-  fireCountDown: 1
+  fireRate: 0.5
+  fireCountDown: 3.5
   shootSounds: {fileID: 8300000, guid: 3012da35779cb9a4aa3c8502a3e5e092, type: 3}
   turnSpeed: 5
   turretRotationPart: {fileID: 2361251349409750688}
