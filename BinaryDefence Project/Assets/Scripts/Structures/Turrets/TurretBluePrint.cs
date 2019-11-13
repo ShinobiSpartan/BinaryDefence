@@ -4,11 +4,11 @@
 public class TurretBluePrint
 {
     #region Variables
-    [Header("First Turret")]
+    [Header("Base Turret")]
     public GameObject prefab;
     public int costingValue;
 
-    [Header("Second(Upgraded) Turret")]
+    [Header("Upgraded Turret")]
     public GameObject upgradedPrefab;
     public int upgradeCost;
     #endregion

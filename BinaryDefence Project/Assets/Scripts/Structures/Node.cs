@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     public Vector3 positionOffest;
     public Color notEnoughMoney;
 
-    [Header("Optional")]
+    [Header("Optional")] 
     public GameObject turret;
 
     [HideInInspector]
@@ -73,11 +73,11 @@ public class Node : MonoBehaviour
         //instantiating the blueprint prefab and allowing the "GetBuildPos()" to have a offset
         //keeping the identity
         GameObject _turret = (GameObject)Instantiate(bluePrint.prefab, GetBuildPos(), Quaternion.identity);
-        Vibration.Vibrate(50);
-      
         turret = _turret;
-       
+
         turretBluePrint = bluePrint;
+
+        Vibration.Vibrate(50);
 
    }
 
