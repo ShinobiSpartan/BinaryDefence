@@ -699,9 +699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretRange: 30
   fireRate: 4
-  shootSounds: {fileID: 0}
-  lowVolLevels: 0
-  highVolLevels: 0
+  fireCountDown: 1
+  shootSounds: {fileID: 8300000, guid: de2eac16cad095043a4efe18f221fc16, type: 3}
   turnSpeed: 5
   turretRotationPart: {fileID: 1377459966454624438}
   bulletPrefab: {fileID: 1426729729102005661, guid: 8f7ff5763644d604a8487a751af0fc0d,
@@ -712,6 +711,8 @@ MonoBehaviour:
   firePoint4: {fileID: 5482012361089153515}
   firePoint5: {fileID: 2521268413595110629}
   firePoint6: {fileID: 4879619105267294177}
+  placementEffects: {fileID: 0}
+  effectsPositionOffset: {x: 0, y: 0, z: 0}
   enemyTag: Enemy
   enemyTagAir: AirEnemy
 --- !u!1 &1471791519043239351

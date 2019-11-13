@@ -68,9 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretRange: 20
   fireRate: 3
-  shootSounds: {fileID: 0}
-  lowVolLevels: 0
-  highVolLevels: 0
+  fireCountDown: 1
+  shootSounds: {fileID: 8300000, guid: de2eac16cad095043a4efe18f221fc16, type: 3}
   turnSpeed: 5
   turretRotationPart: {fileID: 5442417645324820855}
   bulletPrefab: {fileID: 1426729729102005661, guid: dc77c3415535668498c7c2175a9420bc,
