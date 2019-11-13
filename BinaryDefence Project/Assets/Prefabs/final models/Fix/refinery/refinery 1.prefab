@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 8813880179916241496}
   - component: {fileID: 7346638189265870991}
   - component: {fileID: 5360598100784952955}
+  - component: {fileID: 3979838838362502869}
   m_Layer: 9
   m_Name: refinery 1
   m_TagString: Refinery
@@ -240,6 +241,7 @@ MonoBehaviour:
   fullHealth: 25
   ws: {fileID: 0}
   healthBar: {fileID: 3979554556381591731}
+  cShake: {fileID: 0}
 --- !u!65 &5360598100784952955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -251,8 +253,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 500, y: 250, z: 500}
+  m_Center: {x: 0, y: 132.63, z: 0}
+--- !u!65 &3979838838362502869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990436898675217504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300, z: 150}
+  m_Center: {x: 0, y: 400, z: 0}
 --- !u!1 &2990436898675217506
 GameObject:
   m_ObjectHideFlags: 0

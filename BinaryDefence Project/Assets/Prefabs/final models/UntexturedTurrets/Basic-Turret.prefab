@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61f5376f6e6e57042a9ea4d5edd9deb5, type: 2}
+  - {fileID: 2100000, guid: 1ed557d2006dbd448a1954b69ac9eb44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61f5376f6e6e57042a9ea4d5edd9deb5, type: 2}
+  - {fileID: 2100000, guid: 1ed557d2006dbd448a1954b69ac9eb44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,9 +226,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretRange: 25
   fireRate: 1
-  shootSounds: {fileID: 0}
-  lowVolLevels: 0
-  highVolLevels: 0
+  fireCountDown: 1
+  shootSounds: {fileID: 8300000, guid: e206fc12412e2bd49b029c4431feae11, type: 3}
+  lowVolLevels: 1
+  highVolLevels: 5
   turnSpeed: 5
   turretRotationPart: {fileID: 1603894297305575905}
   bulletPrefab: {fileID: 1426729729102005661, guid: dc77c3415535668498c7c2175a9420bc,
@@ -300,7 +301,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61f5376f6e6e57042a9ea4d5edd9deb5, type: 2}
+  - {fileID: 2100000, guid: 0475190ba55875e458739767703f09f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -377,7 +378,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61f5376f6e6e57042a9ea4d5edd9deb5, type: 2}
+  - {fileID: 2100000, guid: 1ed557d2006dbd448a1954b69ac9eb44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -454,7 +455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61f5376f6e6e57042a9ea4d5edd9deb5, type: 2}
+  - {fileID: 2100000, guid: 1ed557d2006dbd448a1954b69ac9eb44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
