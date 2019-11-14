@@ -11,7 +11,8 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        pausePanel.SetActive(false);
+        if (pausePanel != null) 
+            pausePanel.SetActive(false);
     }
 
     void Update()

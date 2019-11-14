@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6121796949177392195}
   - component: {fileID: 7782195272634422674}
   - component: {fileID: 6148400007563251618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: nodefixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7686758936102542864}
   - component: {fileID: 7686758936099675698}
   - component: {fileID: 7686758936100642034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pPlane112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
