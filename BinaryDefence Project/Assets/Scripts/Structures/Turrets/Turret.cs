@@ -51,7 +51,7 @@ public class Turret : MonoBehaviour
     {
         //calling "UpdatingTarget" twice every second, NOT FRAME!
         InvokeRepeating("UpdatingTarget", 0f, 0.5f);
-
+        //audio clip
         objectAudioSource.clip = musicClip;
         //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
         //keeping the identity
