@@ -3,6 +3,8 @@ using System.Linq;
 
 public class Turret : MonoBehaviour
 {
+
+    
     #region Variables
     private Transform target;
     [Header("Fire Rate & Range")]
@@ -11,10 +13,8 @@ public class Turret : MonoBehaviour
     public float fireRate = 2.5f;
     public float fireCountDown = 1;
 
-    public AudioClip shootSounds;
-    private AudioSource audioFile;
-    public float lowVolLevels;
-    public float highVolLevels;
+    public AudioClip musicClip;
+    public AudioSource objectAudioSource;
     
     [Header("Rotation")]
     [Tooltip("The speed of the turret head turn rate.")]
@@ -46,18 +46,13 @@ public class Turret : MonoBehaviour
     private GameObject[] airEnemies = null;
 
     #endregion
-
-    private void Awake()
-    {
-        audioFile = GetComponent<AudioSource>();
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
         //calling "UpdatingTarget" twice every second, NOT FRAME!
         InvokeRepeating("UpdatingTarget", 0f, 0.5f);
+        //audio clip
+        objectAudioSource.clip = musicClip;
         //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
         //keeping the identity
         GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
@@ -75,7 +70,7 @@ public class Turret : MonoBehaviour
         Quaternion Rotate = Quaternion.LookRotation(direction);
         Vector3 rotation = Quaternion.Lerp(turretRotationPart.rotation, Rotate, Time.deltaTime * turnSpeed).eulerAngles;
         turretRotationPart.rotation = Quaternion.Euler(0, rotation.y, 0);
-        
+       
 
         //firing for the turret
         if (fireCountDown <= 0f)
@@ -97,8 +92,6 @@ public class Turret : MonoBehaviour
 
             Shoot6();
             fireCountDown = 3.5f / fireRate;
-
-            //firePoint();
         }
 
         fireCountDown -= Time.deltaTime;
@@ -113,16 +106,16 @@ public class Turret : MonoBehaviour
     }
 
 
-    // void firePoint(Transform _firePoint)
-    // {
-    //     GameObject bulletFIRE = Instantiate(bulletPrefab, _firePoint.position, _firePoint.rotation);
-    //     Bullet bullet = bulletFIRE.GetComponent<Bullet>();
-    //
-    //     if(bullet != null)
-    //     {
-    //         bullet.Seek(target);
-    //     }
-    // }
+   // void firePoint(Transform _firePoint)
+   // {
+   //     GameObject bulletFIRE = Instantiate(bulletPrefab, _firePoint.position, _firePoint.rotation);
+   //     Bullet bullet = bulletFIRE.GetComponent<Bullet>();
+   // 
+   //     if(bullet != null)
+   //     {
+   //         Shoot();
+   //     }
+   // }
     #region Bullet Shots
     /// <summary>
     /// instanciating bullets to shoot
@@ -135,6 +128,7 @@ public class Turret : MonoBehaviour
 
         if(bull1 != null)
         {
+            objectAudioSource.Play();
             bull1.Seek(target);
         }
         

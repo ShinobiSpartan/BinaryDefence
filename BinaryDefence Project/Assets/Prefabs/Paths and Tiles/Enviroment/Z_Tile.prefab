@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1100910200318232880}
   - component: {fileID: 1100910200319559952}
   - component: {fileID: 1100910200320658384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: L_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1100910200318232882}
   - component: {fileID: 1100910200319559954}
   - component: {fileID: 1100910200320658386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 1100910200318232884}
   - component: {fileID: 1100910200319559956}
   - component: {fileID: 1100910200320658388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: T_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 1100910200318232886}
   - component: {fileID: 1100910200319559958}
   - component: {fileID: 1100910200320658390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Long_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 1100910200318232888}
   - component: {fileID: 1100910200319559962}
   - component: {fileID: 1100910200320658394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Z_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100910200318232890}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Z_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100910200318399770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.79, y: -10.94, z: 33.36}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1100910200318232882}

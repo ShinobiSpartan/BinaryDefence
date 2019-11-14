@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6121796949177392195}
   - component: {fileID: 7782195272634422674}
   - component: {fileID: 6148400007563251618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: nodefixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316630092855033577}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.517553, y: 0.75, z: -2.0957177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7686758936102542864}
@@ -67,8 +67,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 0.1, z: 5.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.5, y: 0.2, z: 5.5}
+  m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!23 &6148400007563251618
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7686758936102542864}
   - component: {fileID: 7686758936099675698}
   - component: {fileID: 7686758936100642034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pPlane112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
