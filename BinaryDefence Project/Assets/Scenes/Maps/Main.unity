@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4697,17 +4697,17 @@ PrefabInstance:
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: waves.Array.data[0].ground1Count
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
-        type: 3}
-      propertyPath: waves.Array.data[1].ground1Count
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
+      propertyPath: waves.Array.data[1].ground1Count
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
       propertyPath: waves.Array.data[1].airEnemyCount
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
@@ -4717,7 +4717,12 @@ PrefabInstance:
     - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: waves.Array.data[2].ground2Count
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[1].airEnemyRate
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814499, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
@@ -4727,7 +4732,7 @@ PrefabInstance:
     - target: {fileID: 7006701744647814502, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: startingMoney
-      value: 500
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7006701744647814497, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
