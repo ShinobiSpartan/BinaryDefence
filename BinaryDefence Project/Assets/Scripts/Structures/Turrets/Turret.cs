@@ -13,8 +13,8 @@ public class Turret : MonoBehaviour
     public float fireRate = 2.5f;
     public float fireCountDown = 1;
 
-    public AudioClip shootSounds;
-    private AudioSource audioFile;
+    public AudioClip musicClip;
+    public AudioSource objectAudioSource;
     
     [Header("Rotation")]
     [Tooltip("The speed of the turret head turn rate.")]
@@ -46,19 +46,13 @@ public class Turret : MonoBehaviour
     private GameObject[] airEnemies = null;
 
     #endregion
-
-    private void Awake()
-    {
-        //audio
-        audioFile = GetComponent<AudioSource>();
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
         //calling "UpdatingTarget" twice every second, NOT FRAME!
         InvokeRepeating("UpdatingTarget", 0f, 0.5f);
+
+        objectAudioSource.clip = musicClip;
         //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
         //keeping the identity
         GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
@@ -134,6 +128,7 @@ public class Turret : MonoBehaviour
 
         if(bull1 != null)
         {
+            objectAudioSource.Play();
             bull1.Seek(target);
         }
         
