@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f1629f05a2b547ab0969cb91c8aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xAxisBoundaries: {x: -19.2, y: -19.2}
+  xAxisBoundaries: {x: -25, y: -15}
   CamPosY: 55.1
   CamPosZ: 85.3
 --- !u!81 &157894370
@@ -2477,7 +2477,7 @@ PrefabInstance:
     - target: {fileID: 9047246213827678492, guid: bc032395d3494c34580850092ea6895e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32
+      value: -33.2
       objectReference: {fileID: 0}
     - target: {fileID: 9047246213827678492, guid: bc032395d3494c34580850092ea6895e,
         type: 3}
@@ -3496,10 +3496,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6325146947199363262, guid: 019841f9776739642b704edcb7ddff82,
+    - target: {fileID: 583282492328801045, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.5999985
+      value: 0.7000122
       objectReference: {fileID: 0}
     - target: {fileID: 583282492350487364, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
@@ -3511,10 +3511,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.999939
       objectReference: {fileID: 0}
-    - target: {fileID: 583282492328801045, guid: 019841f9776739642b704edcb7ddff82,
+    - target: {fileID: 6325146947199363262, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.7000122
+      value: -0.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 583282492328801041, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
@@ -5987,11 +5987,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Master
       objectReference: {fileID: 0}
-    - target: {fileID: 7006701744647814497, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
-        type: 3}
-      propertyPath: pausePanel
-      value: 
-      objectReference: {fileID: 928258773}
     - target: {fileID: 7006701744647814498, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6222,6 +6217,11 @@ PrefabInstance:
       propertyPath: startingMoney
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814497, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 928258773}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f, type: 3}
 --- !u!114 &1650468750 stripped
