@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1009,20 +1009,25 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 583282492486725723, guid: 019841f9776739642b704edcb7ddff82,
+    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+        type: 3}
+      propertyPath: panelHideShow
+      value: 
+      objectReference: {fileID: 845760546}
+    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+        type: 3}
+      propertyPath: buttonHideShow
+      value: 
+      objectReference: {fileID: 1275399385}
+    - target: {fileID: 583282492328801046, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 583282492328801045, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -59
-      objectReference: {fileID: 0}
-    - target: {fileID: 583282493228200824, guid: 019841f9776739642b704edcb7ddff82,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 583282492350487364, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
@@ -1034,16 +1039,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.999939
       objectReference: {fileID: 0}
-    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+    - target: {fileID: 583282491990768298, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
-      propertyPath: panelHideShow
-      value: 
-      objectReference: {fileID: 845760546}
-    - target: {fileID: 583282493467933944, guid: 019841f9776739642b704edcb7ddff82,
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 583282492486725723, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
-      propertyPath: buttonHideShow
-      value: 
-      objectReference: {fileID: 1275399385}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 583282493228200824, guid: 019841f9776739642b704edcb7ddff82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6480481182076960215, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1053,16 +1063,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.6000061
-      objectReference: {fileID: 0}
-    - target: {fileID: 583282491990768298, guid: 019841f9776739642b704edcb7ddff82,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 583282492328801046, guid: 019841f9776739642b704edcb7ddff82,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8871381830214448299, guid: 019841f9776739642b704edcb7ddff82,
         type: 3}
@@ -2154,6 +2154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Master
       objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814497, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 396526982}
     - target: {fileID: 7006701744647814498, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,11 +2284,6 @@ PrefabInstance:
       propertyPath: nodeUI
       value: 
       objectReference: {fileID: 1683264752}
-    - target: {fileID: 7006701744647814497, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
-        type: 3}
-      propertyPath: pausePanel
-      value: 
-      objectReference: {fileID: 396526982}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f, type: 3}
 --- !u!114 &1095497726 stripped
@@ -2680,7 +2680,7 @@ PrefabInstance:
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42.2
+      value: 43.3
       objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
@@ -2725,12 +2725,12 @@ PrefabInstance:
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20.5
+      value: -9.2
       objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -24.8
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 1678294691616318506, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
@@ -2787,15 +2787,35 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000014
       objectReference: {fileID: 0}
+    - target: {fileID: 1678294691345913096, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678294691345913096, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678294691345913096, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 41
+      objectReference: {fileID: 0}
     - target: {fileID: 1678294692231910306, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.5999985
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1678294692231910306, guid: c38048b0726b0234581f0bfb99e883a1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.1067505
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678294692231910306, guid: c38048b0726b0234581f0bfb99e883a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38048b0726b0234581f0bfb99e883a1, type: 3}
@@ -3892,6 +3912,7 @@ MonoBehaviour:
   xAxisBoundaries: {x: -35, y: 30}
   CamPosY: 41.4
   CamPosZ: 61.4
+  CamPosX: 0
 --- !u!81 &2124239886
 AudioListener:
   m_ObjectHideFlags: 0

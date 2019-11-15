@@ -56,7 +56,7 @@ public class Turret : MonoBehaviour
         //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
         //keeping the identity
         GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
-        if (_turretEffect != null)
+        if (placementEffects != null)
             return;
     }
 
