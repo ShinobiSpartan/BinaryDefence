@@ -56,6 +56,8 @@ public class Turret : MonoBehaviour
         //instantiating the placement effects and allowing the effects to have a offset via "GetPlacementPos()"
         //keeping the identity
         GameObject _turretEffect = (GameObject)Instantiate(placementEffects, GetPlacementPos(), Quaternion.identity);
+        if (placementEffects != null)
+            return;
     }
 
     // Update is called once per frame
@@ -121,8 +123,8 @@ public class Turret : MonoBehaviour
     /// instanciating bullets to shoot
     /// </summary>
     void Shoot()
-    {
-        
+    {        
+
         GameObject bulletGO1 = Instantiate(bulletPrefab, firePoint1.position, firePoint1.rotation);
         Bullet bull1 = bulletGO1.GetComponent<Bullet>();
 
@@ -136,6 +138,9 @@ public class Turret : MonoBehaviour
 
     void Shoot2()
     {
+        if (bulletPrefab != null)
+            return;
+
         GameObject bulletGO2 = Instantiate(bulletPrefab, firePoint2.position, firePoint2.rotation);
         Bullet bull2 = bulletGO2.GetComponent<Bullet>();
 
@@ -147,6 +152,9 @@ public class Turret : MonoBehaviour
 
     void Shoot3()
     {
+        if (bulletPrefab != null)
+            return;
+
         GameObject bulletGO3 = Instantiate(bulletPrefab, firePoint3.position, firePoint3.rotation);
         Bullet bull3 = bulletGO3.GetComponent<Bullet>();
 
@@ -158,6 +166,9 @@ public class Turret : MonoBehaviour
 
     void Shoot4()
     {
+        if (bulletPrefab != null)
+            return;
+
         GameObject bulletGO4 = Instantiate(bulletPrefab, firePoint4.position, firePoint4.rotation);
         Bullet bull4 = bulletGO4.GetComponent<Bullet>();
 
@@ -169,6 +180,9 @@ public class Turret : MonoBehaviour
 
     void Shoot5()
     {
+        if (bulletPrefab != null)
+            return;
+
         GameObject bulletGO5 = Instantiate(bulletPrefab, firePoint5.position, firePoint5.rotation);
         Bullet bull5 = bulletGO5.GetComponent<Bullet>();
 
@@ -180,6 +194,9 @@ public class Turret : MonoBehaviour
 
     void Shoot6()
     {
+        if (bulletPrefab != null)
+            return;
+
         GameObject bulletGO6 = Instantiate(bulletPrefab, firePoint6.position, firePoint6.rotation);
         Bullet bull6 = bulletGO6.GetComponent<Bullet>();
 

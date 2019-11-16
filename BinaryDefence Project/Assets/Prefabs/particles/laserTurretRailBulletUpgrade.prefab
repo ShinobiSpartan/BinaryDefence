@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 75
   damage: 1000
-  impactEffects: {fileID: 7277879530910727139, guid: bc74338f489a80549a6dab6fda89b6a8,
+  impactEffects: {fileID: 7277879530910727139, guid: 004295d3777f9254ca8360b507b935f2,
     type: 3}
   impactEffectsOffset: {x: 0, y: 0, z: 0}
 --- !u!65 &2113707683783945554
@@ -91,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 5125634311480645882}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 2424760012840825283}
   m_RootOrder: 0
