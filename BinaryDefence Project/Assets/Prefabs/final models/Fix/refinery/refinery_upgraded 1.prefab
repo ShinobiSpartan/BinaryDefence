@@ -337,9 +337,6 @@ GameObject:
   - component: {fileID: 1269621035307562611}
   - component: {fileID: 3267396190145883818}
   - component: {fileID: 8434918311979375355}
-  - component: {fileID: 7587682239521844796}
-  - component: {fileID: 5224190709878151263}
-  - component: {fileID: 1835533884682906586}
   m_Layer: 9
   m_Name: refinery_upgraded 1
   m_TagString: Refinery
@@ -437,7 +434,6 @@ MonoBehaviour:
   fullHealth: 35
   ws: {fileID: 0}
   healthBar: {fileID: 0}
-  cShake: {fileID: 0}
 --- !u!65 &8434918311979375355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -449,44 +445,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 500, y: 250, z: 500}
+  m_Size: {x: 100, y: 100, z: 100}
   m_Center: {x: 0, y: 146, z: 0}
---- !u!65 &7587682239521844796
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8354903270734484766}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 125, y: 250, z: 125}
-  m_Center: {x: 0, y: 395, z: 0}
---- !u!65 &5224190709878151263
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8354903270734484766}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 90, y: 182, z: 125}
-  m_Center: {x: 132.8, y: 369, z: 0}
---- !u!65 &1835533884682906586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8354903270734484766}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 90, y: 182, z: 125}
-  m_Center: {x: -128.3, y: 369, z: 0}
