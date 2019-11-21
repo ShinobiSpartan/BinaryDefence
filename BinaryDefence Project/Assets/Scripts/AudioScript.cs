@@ -2,8 +2,9 @@
 
 public class AudioScript : MonoBehaviour
 {
+    //audio source for the menu Audio
     AudioSource menuAudio;
-
+    
     bool playMusic;
     bool toggleChange;
 

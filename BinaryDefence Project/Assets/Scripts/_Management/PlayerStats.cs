@@ -3,7 +3,9 @@
 public class PlayerStats : MonoBehaviour
 {
     [Header("Money")]
+    //static money
     public static int money;
+    //starting money for the player
     public int startingMoney = 500;
 
     void Start()
@@ -17,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     /// <param name="valueToAdd"></param>
     public void AddMoney(int valueToAdd)
     {
+        //adding money
         money += valueToAdd;
         Debug.Log("Money added. New total is: " + money);
     }

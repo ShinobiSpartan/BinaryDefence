@@ -5,18 +5,22 @@ public class NodeUI : MonoBehaviour
 {
     #region Variables
     [Header("UI Element")]
+    //game object for the ui
     public GameObject ui;
-
+    //node for the target
     private Node target;
     [Header("Upgrading/Selling")]
+    //text for the upgrade cost
     public Text upgradeCost;
+    //text for the sell cost
     public Text sellCost;
-
+    //button for the upgrade button
     public Button upgradeButton;
     #endregion
 
     public void SetTarget(Node _target)
     {
+        //setting target to _target
         target = _target;
         //setting the position for the targets build position
         transform.position = target.GetBuildPos() + new Vector3(-1.34f, 1.49f, -0.06f);
@@ -29,6 +33,7 @@ public class NodeUI : MonoBehaviour
         }
         else
         {
+            //making the Upgrade button not interactable
             upgradeCost.text = "N/A";
             upgradeButton.interactable = false;
 
@@ -66,10 +71,4 @@ public class NodeUI : MonoBehaviour
         target.SellTurret();
         BuildManager.instance.DeselectNode();
     }
-
-   // private void Update()
-   // {
-   //     if (beenUpgraded == true)
-   //         upgradeButton.SetActive(false);
-   // }
 }

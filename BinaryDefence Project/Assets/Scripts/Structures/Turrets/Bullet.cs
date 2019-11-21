@@ -4,15 +4,19 @@ public class Bullet : MonoBehaviour
 {
     #region Variables
     [Header("Speed")]
+    //bullet speed 
     public float bulletSpeed = 5.0f;
-
+    //damage values
     public int damage = 2;
 
     [Header("Bullet Effects")]
+    //game object for the impact effects
     public GameObject impactEffects;
+    //position for the impact effect offset
     public Vector3 impactEffectsOffset;
-
+    //game object for the targetObject
     private GameObject targetObject;
+    //transform for the targetTransform
     private Transform targetTransform;
     #endregion
     /// <summary>
@@ -23,7 +27,10 @@ public class Bullet : MonoBehaviour
     {
         targetTransform = _target;
     }
-
+    /// <summary>
+    /// getting impact offset postioning
+    /// </summary>
+    /// <returns></returns>
     public Vector3 GetImpactEffectsPos()
     {
         return transform.position + impactEffectsOffset;
@@ -39,7 +46,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        //setting the targetObject to the targetTransform gameObject
         targetObject = targetTransform.gameObject;
 
         //getting the direction and distance 
