@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-
+    //game object for the pause panel
     public GameObject pausePanel;
 
     /// <summary>

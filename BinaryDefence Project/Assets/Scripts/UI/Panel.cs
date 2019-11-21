@@ -5,8 +5,10 @@ public class Panel : MonoBehaviour
 {
     #region Variables
     [Tooltip("Set a panel here to hide")]
+    //game object for the panelHideShow
     public GameObject panelHideShow;
     [Tooltip("Set a button here to hide")]
+    //game object for the buttonHideShow
     public GameObject buttonHideShow;
 
     bool hideButton;

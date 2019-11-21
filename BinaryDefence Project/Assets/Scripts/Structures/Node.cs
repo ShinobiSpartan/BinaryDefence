@@ -6,21 +6,26 @@ public class Node : MonoBehaviour
 {
     #region Variables
     [Header("Color")]
+    //hover color of the item
     public Color hoverColor;
-
+    //offset of position for turrets
     public Vector3 positionOffest;
+    //color for not enough money
     public Color notEnoughMoney;
 
     [Header("Optional")] 
+    //game object for the turret
     public GameObject turret;
 
     [HideInInspector]
+    //blueprint for the turret
     public TurretBluePrint turretBluePrint;
     [HideInInspector]
+    //is it upgradeable
     public bool isUpgraded = false;
-
+    //renderer
     private Renderer rend;
-
+    //singleton buildmanager
     BuildManager buildManager;
     #endregion
 
@@ -28,7 +33,9 @@ public class Node : MonoBehaviour
     {
 
         rend = GetComponent<Renderer>();
+        //setting buildManger to the instance of BuildManager
         buildManager = BuildManager.instance;
+        //if buildManager is null
         if (buildManager == null)
             Debug.Log("Start");
     }
@@ -132,6 +139,12 @@ public class Node : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
+        //checking if the player has the money to do that action
+        //if the player does have enough money;
+        //
+        //set the render material color to the hoverColor
+        //          OR
+        //set the render material color to notEnoughMoney
         if(buildManager.HasMoney)
         {
             rend.material.color = hoverColor;
