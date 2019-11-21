@@ -3,15 +3,20 @@
 public class Shop : MonoBehaviour
 {
     #region Variables
+    //turret blue print for standardTurret
     public TurretBluePrint standardTurret;
+    //turret blue print for aaTurret
     public TurretBluePrint aaTurret;
+    //turret blue print for railgunTurret
     public TurretBluePrint railgunTurret;
+    //turret blue print for refinery
     public TurretBluePrint refinery;
 
     BuildManager buildManager;
     #endregion
     void Start()
     {
+        //setting buildManager to the instance of BuildManager
         buildManager = BuildManager.instance;
     }
 

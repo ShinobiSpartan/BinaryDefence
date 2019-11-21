@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-
+    //game object for the pause panel
     public GameObject pausePanel;
 
     /// <summary>
@@ -11,7 +11,8 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        pausePanel.SetActive(false);
+        if (pausePanel != null) 
+            pausePanel.SetActive(false);
     }
 
     void Update()

@@ -122,7 +122,7 @@ public class GroundEnemies : MonoBehaviour
             bool inRange = Physics.CheckSphere(transform.position, 3.0f, baseStructMask);
 
             // If the enemy has stopped in front of the base
-            if (currentSpeed <= 0.5f && inRange)
+            if (inRange)
             {
                 // Start the shot delay timer
                 shotTimer += Time.deltaTime;

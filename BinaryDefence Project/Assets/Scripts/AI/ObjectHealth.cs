@@ -6,11 +6,11 @@ public class ObjectHealth : MonoBehaviour
 {
     private float currentHealth;
     public float fullHealth;
-
-    bool fullyDead = false;
-    //referencing WaveSpawner
+    
+    // Referencing WaveSpawner
     public WaveSpawner ws;
 
+    bool fullyDead = false;
     public Image healthBar;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class ObjectHealth : MonoBehaviour
 
     private void Start()
     {
-        //finding WaveSpawner script
+        // Finding WaveSpawner script
         ws = FindObjectOfType<WaveSpawner>();
     }
 
@@ -31,13 +31,13 @@ public class ObjectHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            //checking to see if NPC(s) is fully dead once(not twice)
+            // Checking to see if NPC(s) is fully dead once(not twice)
             if(fullyDead == false)
             {
-                HasDied();
+                HasDied(); 
                 fullyDead = true;
             }
-            //if base is dead
+            // If base is dead
             if (this.gameObject.tag == "BaseStruct")
             {
                 SceneManager.LoadScene("Lose");
