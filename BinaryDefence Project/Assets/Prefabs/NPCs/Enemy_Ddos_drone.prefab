@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 7633583996918514864}
   - component: {fileID: 1020971355420804063}
   - component: {fileID: 4655793462206868307}
+  - component: {fileID: 3970420787808016345}
   m_Layer: 0
   m_Name: Enemy_Ddos_drone
   m_TagString: Enemy
@@ -256,6 +257,25 @@ MonoBehaviour:
     m_Bits: 512
   damagePerShot: 2
   shotDelay: 2
+--- !u!95 &3970420787808016345
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633583996918093968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7633583996918093974
 GameObject:
   m_ObjectHideFlags: 0
