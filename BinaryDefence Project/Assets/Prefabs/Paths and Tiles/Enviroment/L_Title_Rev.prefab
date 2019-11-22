@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7278998465445055658}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: L_Title_Rev
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7278998465445055660}
   - component: {fileID: 7278998465441631372}
   - component: {fileID: 7278998465442631244}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: L_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 7278998465445055662}
   - component: {fileID: 7278998465441631374}
   - component: {fileID: 7278998465442631246}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -33,18 +33,24 @@ public class BuildManager : MonoBehaviour
 
     private void Awake()
     {
+        //checking if the instance is not null
         if(instance!=null)
         {
             Debug.Log("There is another 'BuildManager' script in scene!(Remove one)");
         }
+        //setting the instance to this
         instance = this;
     }
-
+    /// <summary>
+    /// checking to see if the turret can build 
+    /// </summary>
     public bool CanBuild
     {
         get { return turretToBuild != null; }
     }
-
+    /// <summary>
+    /// checking if the player has money to build the turret
+    /// </summary>
     public bool HasMoney
     {
         get { return PlayerStats.money >= turretToBuild.costingValue; }

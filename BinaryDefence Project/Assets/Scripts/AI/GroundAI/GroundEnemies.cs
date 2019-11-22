@@ -38,6 +38,8 @@ public class GroundEnemies : MonoBehaviour
     private float shotTimer;
     public float shotDelay;
 
+    Animator animations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,10 +52,15 @@ public class GroundEnemies : MonoBehaviour
         // Get the distance between the last two waypoints
         distBetweenLastTargets = Vector3.Distance(Waypoints.points[Waypoints.points.Length - 2].position, Waypoints.points[Waypoints.points.Length - 1].position);
 
+        animations = GetComponent<Animator>();
         // Find the gameobject tagged as the Base structure
         if(baseStructure == null)
         {
             baseStructure = GameObject.FindGameObjectWithTag("BaseStruct");
+        }
+        if (currentSpeed > 0.01)
+        {
+            animations.SetFloat("Walking", currentSpeed);
         }
 
         // Sets the time delay for the ai shots
@@ -122,11 +129,13 @@ public class GroundEnemies : MonoBehaviour
             bool inRange = Physics.CheckSphere(transform.position, 3.0f, baseStructMask);
 
             // If the enemy has stopped in front of the base
-            if (currentSpeed <= 0.5f && inRange)
+            if (inRange)
             {
                 // Start the shot delay timer
                 shotTimer += Time.deltaTime;
                 // When the shot delay timer maxes out
+                animations = GetComponent<Animator>();
+                animations.SetBool("Fire", true);
                 if (shotTimer >= shotDelay)
                 {
                     // Shoot

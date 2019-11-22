@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1890421861164001092}
   - component: {fileID: 1890421861165328234}
   - component: {fileID: 1890421861166425514}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: T_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100006, guid: 0cbfe766127104840ab309d18a554361, type: 3}
+  - {fileID: 2100000, guid: 0d68c250845a14d4ea4f683b1fe809a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1890421861164001094}
   - component: {fileID: 1890421861165328228}
   - component: {fileID: 1890421861166425508}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Z_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 1890421861164001096}
   - component: {fileID: 1890421861165328232}
   - component: {fileID: 1890421861166425512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Long_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890421861164001098}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: T_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 1890421861164001100}
   - component: {fileID: 1890421861165328236}
   - component: {fileID: 1890421861166425516}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 1890421861164001102}
   - component: {fileID: 1890421861165328238}
   - component: {fileID: 1890421861166425518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: L_Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
