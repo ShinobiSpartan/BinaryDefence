@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6105724468657730890}
   m_Layer: 0
   m_Name: Enemy_worm_Mesh
-  m_TagString: Untagged
+  m_TagString: AirEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
