@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 6132835815424749340}
   - component: {fileID: 4497353844713366556}
   - component: {fileID: 1330084578061257269}
+  - component: {fileID: 7961041100780771183}
   m_Layer: 0
   m_Name: Enemy_Rootkit
   m_TagString: Enemy
@@ -256,6 +257,25 @@ MonoBehaviour:
     m_Bits: 512
   damagePerShot: 5
   shotDelay: 1
+--- !u!95 &7961041100780771183
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132835815424324412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: dffe3c3df1c186e49820279ccd560489, type: 3}
+  m_Controller: {fileID: 9100000, guid: b5c46f9666a24854394d4dd7ca3f0101, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6132835815424324414
 GameObject:
   m_ObjectHideFlags: 0
