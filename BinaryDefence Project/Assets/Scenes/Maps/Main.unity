@@ -4844,6 +4844,60 @@ PrefabInstance:
       propertyPath: waves.Array.data[1].airEnemyRate
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[0].ground1
+      value: 
+      objectReference: {fileID: 6350981154120559916, guid: b656116386477514e949f0cd517db8c5,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[0].airEnemy
+      value: 
+      objectReference: {fileID: 5427862114670507277, guid: a5f4fe8298bcdfe41a66bd80120bc248,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[0].ground2
+      value: 
+      objectReference: {fileID: 6409353875036181658, guid: 4cb64a401bbcdb344825de0e7e143382,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[1].ground1
+      value: 
+      objectReference: {fileID: 6350981154120559916, guid: b656116386477514e949f0cd517db8c5,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[2].ground1
+      value: 
+      objectReference: {fileID: 6350981154120559916, guid: b656116386477514e949f0cd517db8c5,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[1].airEnemy
+      value: 
+      objectReference: {fileID: 5427862114670507277, guid: a5f4fe8298bcdfe41a66bd80120bc248,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[2].airEnemy
+      value: 
+      objectReference: {fileID: 5427862114670507277, guid: a5f4fe8298bcdfe41a66bd80120bc248,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[1].ground2
+      value: 
+      objectReference: {fileID: 6409353875036181658, guid: 4cb64a401bbcdb344825de0e7e143382,
+        type: 3}
+    - target: {fileID: 7006701744647814525, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
+        type: 3}
+      propertyPath: waves.Array.data[2].ground2
+      value: 
+      objectReference: {fileID: 6409353875036181658, guid: 4cb64a401bbcdb344825de0e7e143382,
+        type: 3}
     - target: {fileID: 7006701744647814499, guid: 09b8ebdd5f96bab44bec6c5e2e12c16f,
         type: 3}
       propertyPath: nodeUI
